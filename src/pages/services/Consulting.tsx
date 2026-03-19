@@ -31,7 +31,7 @@ const roadmap = [
 const stats = [
   { value: '98%', label: 'Client Retention Rate' },
   { value: '12+', label: 'Years of Expertise' },
-  { value: '$2B+', label: 'Revenue Impacted' },
+  { value: '90%', label: 'Automation' },
   { value: 'Zero', label: 'Security Breaches' },
 ];
 
