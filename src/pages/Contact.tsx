@@ -16,8 +16,25 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Construct WhatsApp message
+    const message = `*New Contact Form Submission*%0A%0A` +
+      `*Name:* ${formState.name}%0A` +
+      `*Email:* ${formState.email}%0A` +
+      `*Company:* ${formState.company || 'N/A'}%0A` +
+      `*Phone:* ${formState.phone}%0A` +
+      `*Project:* ${formState.projectType || 'Not selected'}%0A` +
+      `*Budget:* ${formState.budget || 'Not selected'}%0A` +
+      `*Message:* ${formState.message}`;
+    
+    const whatsappUrl = `https://wa.me/919438171771?text=${message}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+    
     setSubmitted(true);
   };
+
 
   return (
     <div className="pt-32">
