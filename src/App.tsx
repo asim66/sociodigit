@@ -32,6 +32,9 @@ import Startups from './pages/industries/Startups';
 import Enterprises from './pages/industries/Enterprises';
 import NonProfits from './pages/industries/NonProfits';
 
+// Landing Pages
+import BhubaneswarSEO from './pages/BhubaneswarSEO';
+
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -68,6 +71,9 @@ export default function App() {
           <Route path="/services/tech-audit" element={<TechAudit />} />
           <Route path="/services/security-consulting" element={<SecurityConsulting />} />
           
+          {/* Landing Pages */}
+          <Route path="/seo-agency-bhubaneswar" element={<BhubaneswarSEO />} />
+
           {/* Industry Routes */}
           <Route path="/industries/saas" element={<Saas />} />
           <Route path="/industries/ecommerce" element={<Ecommerce />} />
