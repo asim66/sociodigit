@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Brain, Cpu, Search, Zap, Activity, ChevronRight, BarChart, Crosshair, ArrowRight, TrendingUp, Layers, Code2, AlertTriangle, CheckCircle2, RefreshCw, Clock, Settings, PieChart } from 'lucide-react';
+import { Brain, Cpu, Search, Zap, Activity, ChevronRight, BarChart, Crosshair, ArrowRight, TrendingUp, Layers, Code2, AlertTriangle, CheckCircle2, RefreshCw, Clock, Settings, PieChart, Plus, Minus } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const comparisonData = [
@@ -51,10 +52,74 @@ const processSteps = [
   }
 ];
 
+const faqs = [
+  {
+    q: "Why do I need a specialized local SEO company in Bhubaneswar?",
+    a: "Search intent in Odisha is highly localized and competitive. Generic SEO no longer works. You need a partner who understands hyper-localized entity optimization and how to structure your Google Business Profile to capture high-value queries in your specific market."
+  },
+  {
+    q: "How is AI SEO different from traditional digital marketing?",
+    a: "Traditional agencies guess which keywords to target and buy spammy backlinks. We use AI and semantic entity extraction to reverse-engineer exactly what Google's algorithm wants to see, ensuring your content perfectly matches user intent and builds sustainable authority."
+  },
+  {
+    q: "How long until my Bhubaneswar business sees organic traffic growth?",
+    a: "While SEO builds compounding equity over time, our programmatic optimization and technical audits often yield initial ranking improvements and traffic spikes within the first 30 to 60 days, especially for localized long-tail keywords."
+  }
+];
+
+const FAQItem: React.FC<{ faq: { q: string; a: string } }> = ({ faq }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="glass rounded-2xl border border-white/10 overflow-hidden">
+      <button onClick={() => setIsOpen(!isOpen)} className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-white/5 transition-colors">
+        <span className="text-lg font-bold text-white pr-4">{faq.q}</span>
+        {isOpen ? <Minus className="text-brand-orange shrink-0" /> : <Plus className="text-brand-orange shrink-0" />}
+      </button>
+      {isOpen && (
+        <div className="px-8 pb-6 text-white/60 leading-relaxed border-t border-white/5 pt-4">
+          {faq.a}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const BhubaneswarSEO = () => {
   return (
     <div className="pt-32 pb-24 overflow-hidden" style={{ background: 'linear-gradient(180deg, #0f0500 0%, #0c0400 100%)' }}>
       
+      <Helmet>
+        <title>Best SEO Agency in Bhubaneswar | AI-Driven Digital Marketing | Sociodigit</title>
+        <meta name="description" content="Stop relying on outdated keywords. Sociodigit is Bhubaneswar's top AI-driven SEO agency. We engineer organic growth, local search visibility, and ROI for Odisha businesses." />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Sociodigit",
+              "image": "https://sociodigit.com/logo.png",
+              "description": "Bhubaneswar's premier AI-driven SEO and digital marketing agency.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bhubaneswar",
+                "addressRegion": "Odisha",
+                "addressCountry": "IN"
+              },
+              "priceRange": "$$",
+              "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 20.2961,
+                  "longitude": 85.8245
+                },
+                "geoRadius": "50000"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+
       {/* ── HERO ── */}
       <section className="relative px-6 py-20 lg:py-32">
         <div className="absolute inset-0 -z-10 opacity-30" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(249,115,22,0.1) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
@@ -79,7 +144,7 @@ const BhubaneswarSEO = () => {
                 {' '}Agency
               </h1>
               <p className="text-xl mb-10 leading-relaxed text-white/60">
-                We don't just do SEO. We engineer search visibility using <strong className="text-white/90">modern technology, AI content analysis, and data science</strong>. Stop relying on outdated keywords and spammy backlinks.
+                We don't just do SEO. We engineer <strong className="text-white/90">local search visibility in Odisha</strong> using modern technology, AI content analysis, and data science. Stop relying on outdated keywords and spammy backlinks.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact" className="btn-primary group flex items-center justify-center">
@@ -209,7 +274,7 @@ const BhubaneswarSEO = () => {
         <div className="container-custom max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-display font-bold mb-4 text-white">Our AI-Powered SEO Process</h2>
-            <p className="text-xl text-white/50 max-w-2xl mx-auto">Scalable, data-driven methodologies engineered to dominate the search engines in Bhubaneswar and beyond.</p>
+            <p className="text-xl text-white/50 max-w-2xl mx-auto">Scalable, data-driven methodologies engineered to dominate Google Business Profiles and search engines in Bhubaneswar, Odisha, and beyond.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -358,6 +423,22 @@ const BhubaneswarSEO = () => {
               </div>
             </motion.div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ── LOCAL SEO FAQ ── */}
+      <section className="py-24 bg-black/40 border-y border-white/5">
+        <div className="container-custom max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-bold text-brand-orange uppercase tracking-[0.3em] mb-4">Semantic Search Intent</h2>
+            <h3 className="text-4xl lg:text-5xl font-display font-bold mb-4 text-white">Bhubaneswar SEO FAQs</h3>
+            <p className="text-xl text-white/50 max-w-2xl mx-auto">Common questions about scaling your organic presence and local search visibility in Odisha.</p>
+          </div>
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <FAQItem key={i} faq={faq} />
+            ))}
           </div>
         </div>
       </section>
