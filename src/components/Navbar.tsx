@@ -79,6 +79,8 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
             { name: 'FinTech', path: '/industries/fintech' },
             { name: 'Healthcare', path: '/industries/healthcare' },
             { name: 'Education', path: '/industries/education' },
+            { name: 'Hospitality & Hotels', path: '/industries/hospitality-hotels' },
+
           ]
         },
         {

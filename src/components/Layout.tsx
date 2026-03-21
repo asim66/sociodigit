@@ -55,11 +55,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Sticky WhatsApp Button */}
       <a
-        href="https://wa.me/15550000000"
+        href="https://wa.me/919438171771"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 left-8 z-40 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 group"
+        className="fixed bottom-6 left-4 md:left-8 z-40 w-12 h-12 md:w-14 md:h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 group"
       >
+
+
         <MessageCircle size={32} />
         <span className="absolute left-full ml-4 px-4 py-2 glass text-white text-sm font-bold rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-white/10">
           Chat with us
@@ -74,8 +76,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
             onClick={scrollToTop}
-            className="fixed bottom-28 right-8 z-40 w-12 h-12 glass text-brand-orange rounded-full flex items-center justify-center shadow-2xl hover:bg-brand-orange hover:text-white transition-all duration-300 border border-white/10"
+            className="fixed bottom-20 right-4 md:right-8 z-40 w-10 h-10 md:w-12 md:h-12 glass text-brand-orange rounded-full flex items-center justify-center shadow-2xl hover:bg-brand-orange hover:text-white transition-all duration-300 border border-white/10"
+
           >
+
             <ArrowUp size={24} />
           </motion.button>
         )}

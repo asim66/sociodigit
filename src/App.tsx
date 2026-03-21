@@ -31,6 +31,8 @@ import Education from './pages/industries/Education';
 import Startups from './pages/industries/Startups';
 import Enterprises from './pages/industries/Enterprises';
 import NonProfits from './pages/industries/NonProfits';
+import HospitalityHotels from './pages/industries/HospitalityHotels';
+
 
 // Landing Pages
 import BhubaneswarSEO from './pages/BhubaneswarSEO';
@@ -83,6 +85,8 @@ export default function App() {
           <Route path="/industries/startups" element={<Startups />} />
           <Route path="/industries/enterprises" element={<Enterprises />} />
           <Route path="/industries/non-profits" element={<NonProfits />} />
+          <Route path="/industries/hospitality-hotels" element={<HospitalityHotels />} />
+
         </Routes>
       </Layout>
     </Router>

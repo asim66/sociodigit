@@ -163,9 +163,10 @@ const Services = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-6xl lg:text-8xl font-display font-bold mb-8">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-display font-bold mb-8">
                 Our <span className="gradient-text">Services</span>.
               </h1>
+
               <p className="text-2xl text-white/60 leading-relaxed">
                 From the first line of code to the final marketing campaign, we provide the full-stack expertise needed to build and grow digital products.
               </p>
@@ -207,7 +208,8 @@ const Services = () => {
                       <div className="w-20 h-20 bg-brand-orange/10 text-brand-orange rounded-3xl flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(0,85,255,0.2)]">
                         {service.icon}
                       </div>
-                      <h2 className="text-4xl lg:text-5xl font-display font-bold mb-6">{service.title}</h2>
+                      <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">{service.title}</h2>
+
                       <p className="text-xl text-white/60 mb-10 leading-relaxed">
                         {service.desc}
                       </p>
@@ -298,7 +300,8 @@ const Services = () => {
             <div className="absolute inset-0 grid-bg opacity-10 -z-10"></div>
             <div className="glow-bg top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-orange/10 blur-[150px] -z-10" />
             
-            <h2 className="text-4xl lg:text-7xl font-display font-bold mb-8">Not Sure What You Need?</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-8">Not Sure What You Need?</h2>
+
             <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto">
               Book a free 30-minute consultation with our experts to discuss your project and find the best solution for your business.
             </p>

@@ -102,9 +102,10 @@ const Home = () => {
                 </span>
                 <span>Engineering the Future of Digital Solutions</span>
               </div>
-              <h1 className="text-6xl lg:text-8xl font-display font-bold leading-[1.05] mb-8">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-display font-bold leading-[1.05] mb-8">
                 Engineering Digital Products for the <span className="gradient-text">Future</span>
               </h1>
+
               <p className="text-xl text-white/60 mb-12 leading-relaxed max-w-xl">
                 We build scalable software, automate quality, power cloud infrastructure, and drive growth with digital marketing.
               </p>
@@ -280,7 +281,8 @@ const Home = () => {
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-sm font-bold text-brand-orange uppercase tracking-[0.3em] mb-4">Our Expertise</h2>
-            <h3 className="text-4xl lg:text-6xl font-display font-bold mb-8">Cutting-Edge Tech Solutions</h3>
+            <h3 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold mb-8">Cutting-Edge Tech Solutions</h3>
+
             <p className="text-lg text-white/60">
               We provide end-to-end services to help you build, scale, and market your digital products with engineering precision.
             </p>
@@ -359,7 +361,8 @@ const Home = () => {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1">
-              <div className="code-block neon-glow">
+              <div className="code-block neon-glow overflow-x-auto">
+
                 <div className="flex space-x-2 mb-6">
                   <div className="w-3 h-3 rounded-full bg-rose-500"></div>
                   <div className="w-3 h-3 rounded-full bg-amber-500"></div>
@@ -389,9 +392,10 @@ const Home = () => {
 
             <div className="order-1 lg:order-2 px-4">
               <h2 className="text-sm font-bold text-brand-orange uppercase tracking-[0.3em] mb-4">Why Sociodigit</h2>
-              <h3 className="text-4xl lg:text-6xl font-display font-bold mb-8 leading-tight">
+              <h3 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold mb-8 leading-tight">
                 Engineering Excellence Meets <span className="gradient-text">Strategic</span> Growth
               </h3>
+
               <p className="text-lg text-white/60 mb-12 leading-relaxed">
                 We don't just build software; we build businesses. Our integrated approach combines deep technical expertise with growth-focused marketing strategies.
               </p>
@@ -446,7 +450,8 @@ const Home = () => {
             <div className="glow-bg top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-orange/10 blur-[150px]" />
             
             <div className="max-w-3xl mx-auto relative z-10">
-              <h2 className="text-4xl lg:text-7xl font-display font-bold mb-8">Ready to Scale Your Digital Product?</h2>
+              <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-8">Ready to Scale Your Digital Product?</h2>
+
               <p className="text-xl text-white/60 mb-12">
                 Join 200+ companies that trust Sociodigit for their engineering and growth needs. Let's build something extraordinary together.
               </p>

@@ -136,13 +136,14 @@ const BhubaneswarSEO = () => {
                 </span>
                 <span>Exclusive for Bhubaneswar</span>
               </div>
-              <h1 className="text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-white">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-white">
                 Bhubaneswar's Best{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-pink-500 to-purple-500">
                   AI-Driven SEO
                 </span>
                 {' '}Agency
               </h1>
+
               <p className="text-xl mb-10 leading-relaxed text-white/60">
                 We don't just do SEO. We engineer <strong className="text-white/90">local search visibility in Odisha</strong> using modern technology, AI content analysis, and data science. Stop relying on outdated keywords and spammy backlinks.
               </p>
@@ -224,7 +225,8 @@ const BhubaneswarSEO = () => {
         <div className="container-custom max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-sm font-bold text-indigo-400 uppercase tracking-[0.3em] mb-4">The Sociodigit Difference</h2>
-            <h3 className="text-4xl lg:text-5xl font-display font-bold text-white">SEO Has Evolved. <span className="text-white/40">Have You?</span></h3>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white">SEO Has Evolved. <span className="text-white/40">Have You?</span></h3>
+
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -273,7 +275,8 @@ const BhubaneswarSEO = () => {
       <section className="py-24">
         <div className="container-custom max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-display font-bold mb-4 text-white">Our AI-Powered SEO Process</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 text-white">Our AI-Powered SEO Process</h2>
+
             <p className="text-xl text-white/50 max-w-2xl mx-auto">Scalable, data-driven methodologies engineered to dominate Google Business Profiles and search engines in Bhubaneswar, Odisha, and beyond.</p>
           </div>
 
@@ -314,9 +317,10 @@ const BhubaneswarSEO = () => {
                 <RefreshCw size={16} className="animate-spin-slow" />
                 <span>The SEO Engine</span>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-display font-bold mb-6 text-white">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-white">
                 Real SEO is an <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-pink-500">Engine</span>, Not a Switch.
               </h2>
+
               <p className="text-lg text-white/60 mb-8 leading-relaxed">
                 Many agencies treat SEO like a one-time setup: "Optimize some tags and wait." <strong>That methodology is dead.</strong> Google updates its core search algorithm over 3,000 times a year. To dominate search results, your strategy must be a continuous cycle of data analysis, testing, and engineering.
               </p>
@@ -448,9 +452,10 @@ const BhubaneswarSEO = () => {
         <div className="container-custom max-w-4xl mx-auto">
           <div className="glass p-12 lg:p-20 rounded-[3rem] text-center relative overflow-hidden border border-brand-orange/20 shadow-[0_0_80px_rgba(249,115,22,0.15)]">
             <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/10 to-transparent" />
-            <h2 className="text-4xl lg:text-6xl font-display font-bold mb-6 text-white relative z-10">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold mb-6 text-white relative z-10">
               Dominate <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-pink-500">Bhubaneswar</span> Search Results
             </h2>
+
             <p className="text-lg text-white/60 mb-10 relative z-10 max-w-2xl mx-auto">
               Ready to leave your competitors behind? Let our AI engine and growth engineers build a customized SEO strategy for your business.
             </p>

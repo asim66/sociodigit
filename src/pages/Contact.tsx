@@ -33,9 +33,10 @@ const Contact = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-6xl lg:text-8xl font-display font-bold mb-8">
+              <h1 className="text-5xl lg:text-8xl font-display font-bold mb-8">
                 Let's <span className="gradient-text">Connect</span>.
               </h1>
+
               <p className="text-2xl text-white/60 leading-relaxed">
                 Ready to start your next project? Have a question for our experts? We're here to help you build and grow.
               </p>
@@ -135,8 +136,9 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="glass p-8 lg:p-16 rounded-[3rem] border-white/10 neon-border relative"
+                className="glass p-8 lg:p-16 rounded-[3rem] border-white/10 relative"
               >
+
                 {submitted ? (
                   <motion.div 
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -165,10 +167,12 @@ const Contact = () => {
                         type="text" 
                         required
                         placeholder="John Doe"
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-orange outline-none transition-all text-white placeholder:text-white/20"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/40"
                         value={formState.name}
                         onChange={(e) => setFormState({...formState, name: e.target.value})}
                       />
+
+
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Work Email</label>
@@ -176,38 +180,42 @@ const Contact = () => {
                         type="email" 
                         required
                         placeholder="john@company.com"
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-orange outline-none transition-all text-white placeholder:text-white/20"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/20"
                         value={formState.email}
                         onChange={(e) => setFormState({...formState, email: e.target.value})}
                       />
+
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Company</label>
                       <input 
                         type="text" 
                         placeholder="Sociodigit Inc."
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-orange outline-none transition-all text-white placeholder:text-white/20"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/20"
                         value={formState.company}
                         onChange={(e) => setFormState({...formState, company: e.target.value})}
                       />
+
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Phone Number</label>
                       <input 
                         type="tel" 
                         placeholder="+1 (555) 000-0000"
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-orange outline-none transition-all text-white placeholder:text-white/20"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/20"
                         value={formState.phone}
                         onChange={(e) => setFormState({...formState, phone: e.target.value})}
                       />
+
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Project Type</label>
                       <select 
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-orange outline-none transition-all appearance-none text-white"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all appearance-none text-white text-white/60"
                         value={formState.projectType}
                         onChange={(e) => setFormState({...formState, projectType: e.target.value})}
                       >
+
                         <option value="" className="bg-deep-space-blue">Select Project Type</option>
                         <option value="software" className="bg-deep-space-blue">Software Development</option>
                         <option value="cloud" className="bg-deep-space-blue">Cloud & DevOps</option>
@@ -219,10 +227,11 @@ const Contact = () => {
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Budget Range</label>
                       <select 
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-orange outline-none transition-all appearance-none text-white"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all appearance-none text-white text-white/60"
                         value={formState.budget}
                         onChange={(e) => setFormState({...formState, budget: e.target.value})}
                       >
+
                         <option value="" className="bg-deep-space-blue">Select Budget</option>
                         <option value="5-10k" className="bg-deep-space-blue">$5k - $10k</option>
                         <option value="10-25k" className="bg-deep-space-blue">$10k - $25k</option>
@@ -235,10 +244,12 @@ const Contact = () => {
                       <textarea 
                         rows={4}
                         placeholder="Tell us about your project goals and challenges..."
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-orange outline-none transition-all resize-none text-white placeholder:text-white/20"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all resize-none text-white placeholder:text-white/40"
                         value={formState.message}
                         onChange={(e) => setFormState({...formState, message: e.target.value})}
                       />
+
+
                     </div>
                     <div className="md:col-span-2 pt-4">
                       <button type="submit" className="btn-primary w-full flex justify-center items-center space-x-2">
