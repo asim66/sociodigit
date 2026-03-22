@@ -192,26 +192,26 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Trusted By - Infinite Marquee */}
+      {/* Powered By - Infinite Marquee */}
       <section className="py-6 md:py-10 border-y border-white/5 bg-white/2 overflow-hidden relative">
         <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-deep-space-blue to-transparent z-10 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-deep-space-blue to-transparent z-10 pointer-events-none"></div>
         <div className="container-custom">
-          <p className="text-center text-[10px] md:text-xs font-bold text-white/30 uppercase tracking-[0.3em] mb-6 md:mb-8">Trusted by industry leaders globally</p>
+          <p className="text-center text-[10px] md:text-xs font-bold text-white/30 uppercase tracking-[0.3em] mb-6 md:mb-8">Powered by next-gen technologies</p>
         </div>
         
         <div className="flex marquee-container overflow-hidden w-full">
           <div className="flex animate-marquee whitespace-nowrap items-center min-w-max">
             {/* First set of logos */}
             <div className="flex space-x-16 md:space-x-24 px-8 md:px-12 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-300">
-              {['MICROSOFT', 'GOOGLE', 'AMAZON', 'NETFLIX', 'SPOTIFY', 'STRIPE', 'UBER', 'AIRBNB'].map((brand) => (
-                <span key={`1-${brand}`} className="text-2xl md:text-3xl font-display font-black tracking-tighter hover:text-brand-orange transition-colors cursor-default select-none">{brand}</span>
+              {['REACT', 'NEXT.JS', 'NODE.JS', 'AWS', 'KUBERNETES', 'POSTGRESQL', 'TERRAFORM', 'PLAYWRIGHT'].map((tech) => (
+                <span key={`1-${tech}`} className="text-2xl md:text-3xl font-display font-black tracking-tighter hover:text-brand-orange transition-colors cursor-default select-none">{tech}</span>
               ))}
             </div>
             {/* Duplicated set for seamless loop */}
             <div className="flex space-x-16 md:space-x-24 px-8 md:px-12 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-300">
-              {['MICROSOFT', 'GOOGLE', 'AMAZON', 'NETFLIX', 'SPOTIFY', 'STRIPE', 'UBER', 'AIRBNB'].map((brand) => (
-                <span key={`2-${brand}`} className="text-2xl md:text-3xl font-display font-black tracking-tighter hover:text-brand-orange transition-colors cursor-default select-none">{brand}</span>
+              {['REACT', 'NEXT.JS', 'NODE.JS', 'AWS', 'KUBERNETES', 'POSTGRESQL', 'TERRAFORM', 'PLAYWRIGHT'].map((tech) => (
+                <span key={`2-${tech}`} className="text-2xl md:text-3xl font-display font-black tracking-tighter hover:text-brand-orange transition-colors cursor-default select-none">{tech}</span>
               ))}
             </div>
           </div>
@@ -352,6 +352,51 @@ const Home = () => {
                 <span className="font-bold text-sm tracking-widest uppercase text-white/60 group-hover:text-white transition-colors">{tech.name}</span>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Digital Marketing - Reverse Marquee */}
+      <section className="py-12 md:py-16 bg-brand-orange/5 overflow-hidden relative border-y border-brand-orange/20 my-10 transform -skew-y-2 shadow-[0_0_50px_rgba(232,66,26,0.1)]">
+        <div className="absolute inset-y-0 left-0 w-24 md:w-32 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none transform skew-y-2"></div>
+        <div className="absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none transform skew-y-2"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full grid-bg opacity-10 transform skew-y-2"></div>
+        
+        <div className="container-custom transform skew-y-2 mb-8 relative z-20">
+          <div className="flex items-center justify-center space-x-4">
+            <div className="h-px w-12 md:w-24 bg-gradient-to-r from-transparent to-brand-orange/50"></div>
+            <h2 className="text-center text-[10px] md:text-sm font-bold text-brand-orange uppercase tracking-[0.4em] drop-shadow-lg">Digital Marketing Ecosystem</h2>
+            <div className="h-px w-12 md:w-24 bg-gradient-to-l from-transparent to-brand-orange/50"></div>
+          </div>
+        </div>
+        
+        <div className="flex marquee-container overflow-hidden w-full transform skew-y-2">
+          {/* Animation direction: reverse for opposite flow */}
+          <div className="flex animate-marquee whitespace-nowrap items-center min-w-max" style={{ animationDirection: 'reverse', animationDuration: '40s' }}>
+            {/* First Set */}
+            <div className="flex space-x-6 md:space-x-10 px-4 items-center">
+              {['SEO', 'BRANDING', 'FRAUD DETECTION', 'ORM', 'PAID ADS', 'SOCIAL MEDIA'].map((tool) => (
+                <div key={`m1-${tool}`} className="px-6 py-3 md:px-8 md:py-4 rounded-full border border-brand-orange/30 bg-brand-orange/10 text-brand-orange text-sm md:text-lg font-bold font-mono tracking-tight hover:bg-brand-orange hover:text-white hover:scale-110 hover:-rotate-3 transition-all duration-300 shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:shadow-[0_0_30px_rgba(232,66,26,0.8)] cursor-default backdrop-blur-md">
+                  {tool}
+                </div>
+              ))}
+            </div>
+            {/* Second Set */}
+            <div className="flex space-x-6 md:space-x-10 px-4 items-center">
+              {['SEO', 'BRANDING', 'FRAUD DETECTION', 'ORM', 'PAID ADS', 'SOCIAL MEDIA'].map((tool) => (
+                <div key={`m2-${tool}`} className="px-6 py-3 md:px-8 md:py-4 rounded-full border border-brand-orange/30 bg-brand-orange/10 text-brand-orange text-sm md:text-lg font-bold font-mono tracking-tight hover:bg-brand-orange hover:text-white hover:scale-110 hover:-rotate-3 transition-all duration-300 shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:shadow-[0_0_30px_rgba(232,66,26,0.8)] cursor-default backdrop-blur-md">
+                  {tool}
+                </div>
+              ))}
+            </div>
+            {/* Third Set to guarantee no jump on ultrawide monitors */}
+            <div className="flex space-x-6 md:space-x-10 px-4 items-center">
+              {['SEO', 'BRANDING', 'FRAUD DETECTION', 'ORM', 'PAID ADS', 'SOCIAL MEDIA'].map((tool) => (
+                <div key={`m3-${tool}`} className="px-6 py-3 md:px-8 md:py-4 rounded-full border border-brand-orange/30 bg-brand-orange/10 text-brand-orange text-sm md:text-lg font-bold font-mono tracking-tight hover:bg-brand-orange hover:text-white hover:scale-110 hover:-rotate-3 transition-all duration-300 shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:shadow-[0_0_30px_rgba(232,66,26,0.8)] cursor-default backdrop-blur-md">
+                  {tool}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
