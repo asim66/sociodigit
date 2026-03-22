@@ -149,6 +149,21 @@ const Services = () => {
     }
   ];
 
+  const imageMap: Record<string, string> = {
+    "devops": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
+    "software-dev": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+    "qa": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80",
+    "infrastructure": "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1200&auto=format&fit=crop",
+    "design": "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1200&auto=format&fit=crop",
+    "marketing": "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop",
+    "ux": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1200&auto=format&fit=crop",
+    "content": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200&auto=format&fit=crop",
+    "strategy": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop",
+    "transformation": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop",
+    "tech-audit": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
+    "security": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop"
+  };
+
   return (
     <div className="pt-32">
       {/* Header */}
@@ -278,9 +293,9 @@ const Services = () => {
                       <div className="absolute -inset-4 bg-gradient-to-br from-brand-orange/10 to-transparent rounded-[3rem] blur-3xl -z-10" />
                       <div className="glass p-4 rounded-[3rem] border-white/10 neon-border">
                         <img 
-                          src={`https://picsum.photos/seed/service-${service.id}/800/600`} 
+                          src={imageMap[service.id]} 
                           alt={service.title} 
-                          className="rounded-[2rem] shadow-2xl"
+                          className="rounded-[2rem] shadow-2xl w-full aspect-[4/3] object-cover"
                           referrerPolicy="no-referrer"
                         />
                       </div>
