@@ -45,6 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
             { name: 'Software Development', path: '/services/software-development' },
             { name: 'QA Automation', path: '/services/qa-automation' },
             { name: 'Infrastructure', path: '/services/infrastructure' },
+            { name: 'Custom Apps', path: '/services/custom-apps' },
           ]
         },
         {

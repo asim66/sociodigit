@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import HomeLight from './pages/HomeLight';
 import About from './pages/About';
 import Services from './pages/Services';
 import CaseStudies from './pages/CaseStudies';
@@ -21,6 +22,7 @@ import StrategyRoadmap from './pages/services/StrategyRoadmap';
 import DigitalTransformation from './pages/services/DigitalTransformation';
 import TechAudit from './pages/services/TechAudit';
 import SecurityConsulting from './pages/services/SecurityConsulting';
+import CustomApps from './pages/services/CustomApps';
 
 // Industry Pages
 import Saas from './pages/industries/Saas';
@@ -53,6 +55,7 @@ export default function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home-light" element={<HomeLight />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/case-studies" element={<CaseStudies />} />
@@ -72,6 +75,7 @@ export default function App() {
           <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
           <Route path="/services/tech-audit" element={<TechAudit />} />
           <Route path="/services/security-consulting" element={<SecurityConsulting />} />
+          <Route path="/services/custom-apps" element={<CustomApps />} />
           
           {/* Landing Pages */}
           <Route path="/seo-agency-bhubaneswar" element={<BhubaneswarSEO />} />

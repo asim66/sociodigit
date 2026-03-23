@@ -45,6 +45,7 @@ const Footer = () => {
                 { name: 'QA Automation', path: '/services/qa-automation' },
                 { name: 'Digital Marketing', path: '/services/digital-marketing' },
                 { name: 'Product Consulting', path: '/services/consulting' },
+                { name: 'Custom Apps', path: '/services/custom-apps' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link to={item.path} className="text-white/60 hover:text-brand-orange transition-colors flex items-center group">

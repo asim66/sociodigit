@@ -44,6 +44,16 @@ const Services = () => {
           process: ["Test Planning", "Scripting", "Execution", "Reporting"]
         },
         {
+          id: "custom-apps",
+          title: "Custom Apps",
+          path: "/services/custom-apps",
+          icon: <Code2 size={40} />,
+          desc: "Elevate your Shopify, Magento, or WordPress ecosystem with high-performance custom integrations.",
+          benefits: ["Seamless Scale", "Custom Features", "API Integrations", "Optimized Loading"],
+          tech: ["Shopify", "Magento", "WordPress", "Node.js"],
+          process: ["Analysis", "Architecture", "Development", "Deployment"]
+        },
+        {
           id: "infrastructure",
           title: "Infrastructure",
           path: "/services/infrastructure",
@@ -161,7 +171,8 @@ const Services = () => {
     "strategy": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop",
     "transformation": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop",
     "tech-audit": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
-    "security": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop"
+    "security": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop",
+    "custom-apps": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
   };
 
   return (
