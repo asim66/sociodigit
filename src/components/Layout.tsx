@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import ChatbotWidget from './ChatbotWidget';
 
 import { MessageCircle, ArrowUp, X, Mail, Sparkles } from 'lucide-react';
 
@@ -132,6 +133,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
         )}
       </AnimatePresence>
+
+      {/* Sociodigit Chatbot Widget */}
+      <ChatbotWidget />
     </div>
   );
 };
