@@ -104,7 +104,6 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
             { name: 'Blog', path: '/blog' },
             { name: 'Case Studies', path: '/case-studies' },
             { name: 'Whitepapers', path: '/whitepapers' },
-            { name: 'News', path: '/news' },
           ]
         },
         {
@@ -132,8 +131,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
       {/* Top Bar */}
       <div className={`border-b ${borderColorClass} py-2 hidden lg:block transition-all duration-500 ${scrolled ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100 h-auto'}`}>
         <div className={`container-custom flex justify-end space-x-6 text-[10px] font-bold uppercase tracking-widest ${topBarTextColor}`}>
-          <Link to="/investors" className={`${textHoverClass} transition-colors`}>Investors</Link>
-          <Link to="/news" className={`${textHoverClass} transition-colors`}>Newsroom</Link>
+          <Link to="/csr" className={`${textHoverClass} transition-colors`}>CSR</Link>
           <Link to="/contact" className={`${textHoverClass} transition-colors`}>Contact Us</Link>
         </div>
       </div>

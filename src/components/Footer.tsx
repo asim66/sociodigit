@@ -61,7 +61,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-display font-bold mb-6 text-white">Company</h4>
             <ul className="space-y-4">
-              {['About Us', 'Case Studies', 'Blog', 'Careers', 'Contact'].map((item) => (
+              {['About Us', 'Case Studies', 'Blog', 'Careers', 'CSR', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link to={`/${item.toLowerCase().replace(' ', '-')}`} className="text-white/60 hover:text-brand-orange transition-colors flex items-center group">
                     <ChevronRight size={14} className="mr-2 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" />

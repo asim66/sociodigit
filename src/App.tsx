@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import HomeLight from './pages/HomeLight';
 import About from './pages/About';
+import CSR from './pages/CSR';
 import Services from './pages/Services';
 import CaseStudies from './pages/CaseStudies';
 import Blog from './pages/Blog';
@@ -57,6 +58,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home-light" element={<HomeLight />} />
           <Route path="/about" element={<About />} />
+          <Route path="/csr" element={<CSR />} />
           <Route path="/services" element={<Services />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/blog" element={<Blog />} />
