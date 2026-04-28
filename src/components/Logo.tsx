@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 

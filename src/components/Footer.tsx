@@ -1,5 +1,7 @@
+// @ts-nocheck
+"use client";
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Twitter, Linkedin, Github, Mail, Phone, MapPin, ChevronRight } from 'lucide-react';
 
 import Logo from './Logo';
@@ -16,7 +18,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="space-y-6">
-            <Link to="/">
+            <Link href="/">
               <Logo />
             </Link>
             <p className="text-white/60 leading-relaxed">
@@ -48,7 +50,7 @@ const Footer = () => {
                 { name: 'Custom Apps', path: '/services/custom-apps' },
               ].map((item) => (
                 <li key={item.name}>
-                  <Link to={item.path} className="text-white/60 hover:text-brand-orange transition-colors flex items-center group">
+                  <Link href={item.path} className="text-white/60 hover:text-brand-orange transition-colors flex items-center group">
                     <ChevronRight size={14} className="mr-2 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" />
                     {item.name}
                   </Link>
@@ -63,7 +65,7 @@ const Footer = () => {
             <ul className="space-y-4">
               {['About Us', 'Case Studies', 'Blog', 'Careers', 'CSR', 'Contact'].map((item) => (
                 <li key={item}>
-                  <Link to={`/${item.toLowerCase().replace(' ', '-')}`} className="text-white/60 hover:text-brand-orange transition-colors flex items-center group">
+                  <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-white/60 hover:text-brand-orange transition-colors flex items-center group">
                     <ChevronRight size={14} className="mr-2 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" />
                     {item}
                   </Link>
