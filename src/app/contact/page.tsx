@@ -110,7 +110,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="text-sm font-bold text-white/40 uppercase tracking-widest mb-1">Call Us</div>
-                      <div className="text-lg font-bold text-white">+91 9438171771</div>
+                      <div className="text-lg font-bold text-white">+91 7008381630</div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-6 group">
@@ -156,7 +156,7 @@ const Contact = () => {
                   Need an immediate answer? Chat with our team on WhatsApp.
                 </p>
                 <a 
-                  href="https://wa.me/919438171771" 
+                  href="https://wa.me/917008381630" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn-primary w-full flex justify-center items-center space-x-2 !py-3 relative z-10"
