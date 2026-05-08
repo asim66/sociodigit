@@ -352,7 +352,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
                                 {section.links.map((subLink) => (
                                   <Link
                                     key={subLink.name}
-                                    to={subLink.path}
+                                    href={subLink.path}
                                     onClick={() => setIsOpen(false)}
                                     className="text-base text-white/60 hover:text-white transition-colors py-1 inline-flex items-center"
                                   >
