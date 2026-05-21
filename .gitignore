@@ -24,3 +24,7 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+.dev.vars
+
+# Cloudflare build output
+.open-next/
