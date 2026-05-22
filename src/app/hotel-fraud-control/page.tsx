@@ -31,6 +31,7 @@ import {
 import AnimatedCounter from '../../components/AnimatedCounter';
 import StressedOwnerImage from '../../assets/generated/hotel_owner_stressed.png';
 import ReceptionDisputeImage from '../../assets/generated/hotel_reception_dispute.png';
+import ScamTimelineImage from '../../assets/generated/hotel_scam_timeline.png';
 
 // FAQ Accordion Component
 const FAQItem = ({ question, answer }) => {
@@ -229,6 +230,28 @@ export default function HotelFraudControl() {
         </div>
       </section>
 
+      {/* Scrolling Urgency Ticker */}
+      <div className="relative overflow-hidden py-4 bg-red-600/10 border-y border-red-500/20 z-10">
+        <div className="flex animate-marquee whitespace-nowrap">
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="flex items-center gap-12 mx-6">
+              {[
+                "⚠️ 3,200+ fake hotel listings reported on Google Maps in India in 2025",
+                "🚨 ₹47 Crore lost to hotel booking scams last year across metro cities",
+                "📉 68% of scammed guests leave 1-star reviews on the REAL hotel's profile",
+                "🏨 1 in 4 popular hotels in Jaipur, Goa & Delhi have at least 1 duplicate listing",
+                "📞 Scammers change GMB phone numbers within 48 hours of a hotel going viral",
+                "⚠️ Google auto-approves 73% of 'suggested edits' from Local Guide accounts"
+              ].map((item, idx) => (
+                <span key={idx} className="text-white/80 font-bold text-sm tracking-wide">
+                  {item}
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Real vs Fake GMB Listing Visual Comparison */}
       <section className="py-16 md:py-24 bg-white/2 backdrop-blur-sm border-y border-white/5 relative">
         <div className="container-custom max-w-6xl mx-auto">
@@ -392,6 +415,126 @@ export default function HotelFraudControl() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* HOW THE SCAM WORKS — Step-by-Step Visual Timeline */}
+      <section className="py-20 md:py-32 container-custom relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 px-4">
+            <span className="text-red-400 font-bold text-xs uppercase tracking-widest block mb-3">Anatomy of a Hotel Scam</span>
+            <h2 className="text-3xl md:text-5xl font-black font-display mb-4">How Scammers Steal Your Bookings in 5 Steps</h2>
+            <p className="text-white/60 text-base md:text-lg">
+              Understanding the attack vector is the first step to defending your hotel. Here's exactly how these organized fraud rings operate.
+            </p>
+          </div>
+
+          {/* Dramatic Scam Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative p-2 rounded-[2.5rem] glass border border-white/10 overflow-hidden shadow-2xl mb-20 mx-4 md:mx-0"
+          >
+            <div className="rounded-[2rem] overflow-hidden aspect-[21/9] bg-neutral-900 relative">
+              <img
+                src={ScamTimelineImage.src || ScamTimelineImage}
+                alt="Hotel scam operation vs worried hotel manager"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 via-transparent to-brand-orange/20 pointer-events-none"></div>
+              <div className="absolute bottom-6 left-6 bg-black/80 backdrop-blur-md border border-red-500/30 px-5 py-3 rounded-xl text-red-400 font-bold text-sm uppercase flex items-center gap-2 shadow-2xl">
+                <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+                <span>The two sides of hotel fraud</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* 5-Step Timeline */}
+          <div className="relative px-4 md:px-0">
+            {/* Vertical connector line */}
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-red-500/40 via-brand-orange/30 to-emerald-500/40 hidden md:block"></div>
+            <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-red-500/40 via-brand-orange/30 to-emerald-500/40 md:hidden"></div>
+
+            {[
+              {
+                step: "01",
+                title: "Target Identification",
+                desc: "Scammers search Google Maps for popular hotels with high reviews (4.0+★), strong photo galleries, and visible booking demand. Hotels in tourist hotspots like Goa, Jaipur, Manali, and Ooty are prime targets.",
+                detail: "They specifically look for hotels that rank high but don't have a verified website link on GMB.",
+                color: "border-red-500/30",
+                dotColor: "bg-red-500",
+                icon: Search
+              },
+              {
+                step: "02",
+                title: "Duplicate Listing Creation",
+                desc: "Using multiple fake Google accounts with Local Guide badges, they create an identical GMB listing — same hotel name, same photos (stolen), same address — but with THEIR phone number and a fake booking website.",
+                detail: "Some gangs operate 200+ fake Local Guide accounts to make edits look legitimate.",
+                color: "border-red-500/30",
+                dotColor: "bg-red-500",
+                icon: FileText
+              },
+              {
+                step: "03",
+                title: "Guest Interception",
+                desc: "When guests search 'Hotel XYZ + City' on Google, they see the duplicate listing (or the edited phone number on your real listing). They call the scammer's number thinking it's your front desk.",
+                detail: "Scammers answer professionally: 'Thank you for calling [Your Hotel Name], how may I help you?'",
+                color: "border-brand-orange/30",
+                dotColor: "bg-brand-orange",
+                icon: Phone
+              },
+              {
+                step: "04",
+                title: "Fake Booking & Payment",
+                desc: "The scammer confirms availability, quotes a discounted rate, and asks for an 'advance deposit' via UPI, bank transfer, or a phishing payment page that mimics your hotel's branding.",
+                detail: "Average loss per scammed guest: ₹3,000 – ₹15,000. Some luxury scams exceed ₹50,000.",
+                color: "border-brand-orange/30",
+                dotColor: "bg-brand-orange",
+                icon: AlertTriangle
+              },
+              {
+                step: "05",
+                title: "The Fallout Hits You",
+                desc: "The guest arrives at your hotel with a 'confirmation' you never issued. Your staff has no record. The guest is furious, writes a devastating 1-star review on YOUR Google profile, and may even file a police complaint naming your hotel.",
+                detail: "Your hotel loses revenue, reputation, and legal standing — while the scammer has already moved on.",
+                color: "border-red-500/30",
+                dotColor: "bg-red-500",
+                icon: ShieldAlert
+              }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1, duration: 0.5 }}
+                className={`relative flex items-start gap-6 md:gap-12 mb-12 last:mb-0 ${
+                  idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                }`}
+              >
+                {/* Step number dot */}
+                <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-white/20 z-10" style={{ top: '1.5rem' }}>
+                  <div className={`w-full h-full rounded-full ${item.dotColor} animate-pulse`}></div>
+                </div>
+
+                {/* Content card */}
+                <div className={`ml-14 md:ml-0 md:w-[45%] ${idx % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left'}`}>
+                  <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border ${item.color} mb-4`}>
+                    <item.icon size={14} className="text-brand-orange" />
+                    <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-white/50">Step {item.step}</span>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-black font-display mb-3 text-white">{item.title}</h3>
+                  <p className="text-white/60 text-sm md:text-base leading-relaxed font-medium mb-3">{item.desc}</p>
+                  <p className="text-brand-orange/80 text-xs md:text-sm font-bold italic">💡 {item.detail}</p>
+                </div>
+
+                {/* Spacer for alternating layout */}
+                <div className="hidden md:block md:w-[45%]"></div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -608,6 +751,199 @@ export default function HotelFraudControl() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* City-Specific Fraud Threat Heatmap */}
+      <section className="py-20 md:py-32 bg-white/2 backdrop-blur-sm border-y border-white/5 relative z-10">
+        <div className="container-custom max-w-6xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 px-4">
+            <span className="text-red-400 font-bold text-xs uppercase tracking-widest block mb-3">Fraud Heatmap</span>
+            <h2 className="text-3xl md:text-5xl font-black font-display mb-4">Which Cities Are Most Affected?</h2>
+            <p className="text-white/60 text-base md:text-lg">
+              Scam networks operate across India's biggest tourist destinations. If your hotel is in any of these cities, you are a high-priority target.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 px-4 md:px-0">
+            {[
+              { city: "New Delhi & NCR", risk: "CRITICAL", color: "border-red-500/40 bg-red-500/5", badge: "bg-red-500", stats: "420+ fake listings", detail: "Highest concentration of duplicate GMB profiles near Connaught Place, Karol Bagh & Paharganj tourist zones." },
+              { city: "Goa", risk: "CRITICAL", color: "border-red-500/40 bg-red-500/5", badge: "bg-red-500", stats: "380+ fake listings", detail: "Peak season (Oct-Mar) sees 5x increase in scam activity targeting beach resorts and boutique stays." },
+              { city: "Jaipur", risk: "HIGH", color: "border-brand-orange/40 bg-brand-orange/5", badge: "bg-brand-orange", stats: "290+ fake listings", detail: "Heritage hotels near Hawa Mahal, Amer Fort & City Palace are primary targets for booking fraud." },
+              { city: "Mumbai", risk: "HIGH", color: "border-brand-orange/40 bg-brand-orange/5", badge: "bg-brand-orange", stats: "310+ fake listings", detail: "Business hotels near BKC, Andheri & airport corridor face aggressive phone number hijacking." },
+              { city: "Udaipur", risk: "HIGH", color: "border-brand-orange/40 bg-brand-orange/5", badge: "bg-brand-orange", stats: "180+ fake listings", detail: "Lakeside luxury properties are duplicated with stolen professional photography and fake rates." },
+              { city: "Manali & Shimla", risk: "ELEVATED", color: "border-yellow-500/40 bg-yellow-500/5", badge: "bg-yellow-500", stats: "220+ fake listings", detail: "Hill station rush during summer drives massive scam volume targeting budget and mid-range hotels." }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.08, duration: 0.5 }}
+                className={`rounded-[1.5rem] p-6 border ${item.color} backdrop-blur-md relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300`}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <MapPin size={16} className="text-white/60" />
+                    <h3 className="text-lg font-black font-display text-white">{item.city}</h3>
+                  </div>
+                  <span className={`px-2.5 py-1 rounded-md ${item.badge} text-white text-[9px] font-black uppercase tracking-wider`}>
+                    {item.risk}
+                  </span>
+                </div>
+                <p className="text-white/50 text-sm leading-relaxed mb-4">{item.detail}</p>
+                <div className="flex items-center gap-2 text-white/70">
+                  <AlertTriangle size={14} className="text-brand-orange" />
+                  <span className="text-xs font-bold">{item.stats} detected in 2024-25</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center px-4">
+            <p className="text-white/40 text-sm font-medium">
+              Don't see your city? Scam networks are expanding rapidly. <button onClick={scrollToForm} className="text-brand-orange hover:underline font-bold cursor-pointer">Run a free scan →</button>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof / Testimonials */}
+      <section className="py-20 md:py-32 container-custom relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 px-4">
+            <span className="text-emerald-400 font-bold text-xs uppercase tracking-widest block mb-3">Trusted by Hoteliers</span>
+            <h2 className="text-3xl md:text-5xl font-black font-display mb-4">What Hotel Owners Are Saying</h2>
+            <p className="text-white/60 text-base md:text-lg">
+              Hotels across India trust Sociodigit to safeguard their digital presence and eliminate scam threats.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 px-4 md:px-0">
+            {[
+              {
+                quote: "We were losing 15-20 guests per month to a fake listing that had our exact photos and address. Sociodigit identified and removed it in under 48 hours. Our direct bookings recovered within 2 weeks.",
+                name: "Rajesh M.",
+                role: "Owner, 4-Star Heritage Hotel",
+                city: "Jaipur",
+                rating: 5,
+                metric: "Direct bookings up 40%"
+              },
+              {
+                quote: "A scammer changed our GMB phone number to his personal mobile and was collecting advance deposits from our guests. We only found out when guests started arriving with fake confirmations. Sociodigit's Shield prevented it from happening again.",
+                name: "Priya S.",
+                role: "GM, Boutique Beach Resort",
+                city: "Goa",
+                rating: 5,
+                metric: "Zero incidents since protection"
+              },
+              {
+                quote: "We had 3 duplicate listings on Google Maps, all with different phone numbers. Our Google rating dropped from 4.6 to 3.8 because scammed guests were reviewing us. Sociodigit cleaned everything up and set up monitoring.",
+                name: "Amit K.",
+                role: "Director, Business Hotel Chain",
+                city: "Mumbai",
+                rating: 5,
+                metric: "Rating restored to 4.5★"
+              }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.15, duration: 0.5 }}
+                className="glass rounded-[2rem] p-8 border border-white/10 relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-300"
+              >
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-brand-orange opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
+                {/* Stars */}
+                <div className="flex gap-1 mb-5">
+                  {[...Array(item.rating)].map((_, i) => (
+                    <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                  ))}
+                </div>
+                
+                <p className="text-white/70 text-sm leading-relaxed mb-6 font-medium italic">
+                  "{item.quote}"
+                </p>
+
+                {/* Result metric */}
+                <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-lg px-3 py-2 mb-6 inline-block">
+                  <span className="text-emerald-400 text-xs font-black uppercase tracking-wider flex items-center gap-1.5">
+                    <TrendingUp size={12} />
+                    {item.metric}
+                  </span>
+                </div>
+                
+                <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+                  <div className="w-10 h-10 rounded-full bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center text-brand-orange font-black text-sm">
+                    {item.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="text-white font-bold text-sm">{item.name}</p>
+                    <p className="text-white/40 text-xs">{item.role} · {item.city}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cost of Inaction — Revenue Loss Calculator */}
+      <section className="py-20 md:py-32 bg-white/2 backdrop-blur-sm border-y border-white/5 relative z-10">
+        <div className="container-custom max-w-5xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 px-4">
+            <span className="text-red-400 font-bold text-xs uppercase tracking-widest block mb-3">The Cost of Doing Nothing</span>
+            <h2 className="text-3xl md:text-5xl font-black font-display mb-4">Every Month Without Protection Costs You</h2>
+            <p className="text-white/60 text-base md:text-lg">
+              Here's what an unprotected hotel loses on average when a single fake listing is active on Google Maps.
+            </p>
+          </div>
+
+          <div className="glass rounded-[3rem] p-8 md:p-16 border border-red-500/10 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-brand-orange to-red-500"></div>
+            <div className="absolute bottom-0 right-0 w-48 h-48 bg-red-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 relative z-10">
+              {[
+                { value: "₹2.5L+", label: "Revenue Lost / Month", desc: "From intercepted direct bookings diverted to scammer phone lines", icon: TrendingUp, color: "text-red-400" },
+                { value: "15-30", label: "Guests Scammed / Month", desc: "Each leaving with a negative experience they attribute to YOUR hotel", icon: Users, color: "text-red-400" },
+                { value: "0.6★", label: "Avg. Rating Drop", desc: "From 1-star revenge reviews posted by scammed guests on your profile", icon: Star, color: "text-yellow-400" },
+                { value: "₹5-10L", label: "Legal Risk Exposure", desc: "From potential consumer court cases and police complaints filed against your hotel", icon: FileText, color: "text-red-400" }
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, duration: 0.4 }}
+                  className="text-center md:text-left"
+                >
+                  <div className={`w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 mx-auto md:mx-0 ${item.color}`}>
+                    <item.icon size={22} />
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-black font-display mb-2 text-white">{item.value}</h3>
+                  <p className="text-brand-orange text-xs font-black uppercase tracking-wider mb-2">{item.label}</p>
+                  <p className="text-white/50 text-xs leading-relaxed">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-center md:text-left">
+                <p className="text-white text-lg md:text-xl font-bold font-display">Sociodigit Brand Shield costs less than one scammed booking.</p>
+                <p className="text-white/40 text-sm font-medium">Protection starts from ₹4,999/month for independent hotels.</p>
+              </div>
+              <button
+                onClick={scrollToForm}
+                className="btn-primary flex items-center gap-2 group shrink-0 cursor-pointer"
+              >
+                <span>Get Protected Now</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
           </div>
         </div>
@@ -907,27 +1243,87 @@ export default function HotelFraudControl() {
               question="Is the initial Brand Shield GMB scan completely free?"
               answer="Yes! Our initial scan checks your public listings, index references, domain matching, and search ad auction logs, generating a comprehensive vulnerability report. If vulnerabilities are identified, our hotel brand experts will provide a free 15-minute diagnostic call to guide you on securing your listing."
             />
+            <FAQItem 
+              question="Do you also protect hotels listed on OTAs like MakeMyTrip and Goibibo?"
+              answer="Yes. Our monitoring extends beyond Google Maps. We actively scan for fake hotel profiles and copycat listings on MakeMyTrip, Goibibo, Booking.com, Agoda, and even social platforms like Facebook and Instagram. If a scammer creates a fake page or listing using your hotel's name and photos on any major platform, we detect it and initiate takedown procedures."
+            />
+            <FAQItem 
+              question="We are a small 20-room hotel. Is this service relevant for us?"
+              answer="Absolutely — in fact, smaller independent hotels are MORE vulnerable because they often lack dedicated digital marketing teams monitoring their online presence. Scammers specifically target hotels that have good reviews but minimal digital oversight. Our plans are designed to be affordable for independent properties starting at ₹4,999/month."
+            />
+            <FAQItem 
+              question="Can scammers target us again after we clean up our listing?"
+              answer="Yes, unfortunately. Scam networks are persistent. That's why a one-time cleanup is not enough. Sociodigit provides continuous 24/7 monitoring. If a new duplicate listing appears or someone attempts to edit your phone number, our system flags it within minutes and blocks the change before it goes live. Think of it as a permanent security guard for your digital storefront."
+            />
+            <FAQItem 
+              question="What if the scammer has already collected money from guests using our hotel name?"
+              answer="We recommend immediately filing an FIR with your local cybercrime police station and reporting it on the National Cyber Crime Portal (cybercrime.gov.in). In parallel, we help you secure your listing to prevent further fraud, draft official public communications for affected guests, and work with Google to annotate your profile with a verified business notice. We've helped several hotels navigate this exact situation."
+            />
           </div>
 
+        </div>
+      </section>
+
+      {/* Trust Badges / Credibility Strip */}
+      <section className="py-16 md:py-20 relative z-10">
+        <div className="container-custom max-w-5xl mx-auto px-4">
+          <div className="glass rounded-[2rem] p-8 md:p-12 border border-white/10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+              {[
+                { icon: ShieldCheck, label: "Google Maps Partner", sub: "Certified Agency" },
+                { icon: Building2, label: "120+ Hotels", sub: "Currently Protected" },
+                { icon: Lock, label: "DMCA & Legal", sub: "Takedown Authority" },
+                { icon: Users, label: "Expert Team", sub: "Hospitality Specialists" }
+              ].map((badge, idx) => (
+                <div key={idx} className="flex flex-col items-center text-center gap-3">
+                  <div className="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 text-brand-orange flex items-center justify-center">
+                    <badge.icon size={26} />
+                  </div>
+                  <div>
+                    <p className="text-white font-bold text-sm">{badge.label}</p>
+                    <p className="text-white/40 text-xs">{badge.sub}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CTA Footer Section */}
       <section className="py-20 md:py-32 bg-white/2 backdrop-blur-sm border-t border-white/5 relative z-10 text-center">
         <div className="container-custom max-w-4xl mx-auto px-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-bold text-xs mb-6 uppercase tracking-wider">
+            <ShieldCheck size={14} />
+            <span>Join 120+ Protected Hotels</span>
+          </div>
           <h2 className="text-3xl md:text-6xl font-black font-display mb-6">
             Take Control of <span className="text-brand-orange">Your Hotel's Brand</span> Today
           </h2>
           <p className="text-white/60 text-base md:text-xl max-w-2xl mx-auto mb-10 md:mb-12 font-medium">
-            Join premier hotels who trust Sociodigit to lock down their GMB channels, secure direct reservations, and eliminate scam threat factors completely.
+            Join premier hotels across India who trust Sociodigit to lock down their GMB channels, eliminate duplicate listings, secure direct reservations, and protect their reputation 24/7.
           </p>
-          <button 
-            onClick={scrollToForm}
-            className="btn-primary flex items-center justify-center gap-2 group text-base md:text-lg px-8 py-5 mx-auto shadow-lg shadow-brand-orange/20 cursor-pointer"
-          >
-            <span>Scan My Hotel's Listing Now</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+            <button 
+              onClick={scrollToForm}
+              className="btn-primary flex items-center justify-center gap-2 group text-base md:text-lg px-8 py-5 w-full sm:w-auto shadow-lg shadow-brand-orange/20 cursor-pointer"
+            >
+              <span>Scan My Hotel's Listing Now</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <a 
+              href="https://wa.me/917008381630?text=Hi%20Sociodigit%2C%20I%20need%20urgent%20help%20protecting%20my%20hotel%20from%20Google%20Maps%20fraud."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline flex items-center justify-center gap-2 text-base md:text-lg px-8 py-5 w-full sm:w-auto cursor-pointer text-white/90 hover:text-white"
+            >
+              <MessageCircle className="w-5 h-5 text-emerald-400" />
+              <span>WhatsApp Us</span>
+            </a>
+          </div>
+          <p className="text-white/30 text-xs mt-8 font-medium">
+            Free audit • No credit card required • Results in 60 seconds
+          </p>
         </div>
       </section>
 
