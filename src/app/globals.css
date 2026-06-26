@@ -181,3 +181,69 @@
   display: flex;
   overflow: hidden;
 }
+
+/* ============================================
+   Scroll-driven & Smooth Scroll Enhancements
+   ============================================ */
+
+/* Smooth page transitions */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll-linked section fade-up via CSS (fallback/complement to JS) */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-fade-up {
+  animation: fadeSlideUp 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98) both;
+  animation-play-state: paused;
+  animation-timeline: view();
+  animation-range: entry 0% entry 30%;
+}
+
+/* Parallax depth hint for hero sections */
+@keyframes subtleParallax {
+  from { background-position: 50% 0%; }
+  to   { background-position: 50% 20%; }
+}
+
+/* Section reveal keyframe for CSS-only fallback */
+@keyframes revealFromBottom {
+  0%   { clip-path: inset(100% 0 0 0); transform: translateY(20px); opacity: 0; }
+  100% { clip-path: inset(0% 0 0 0);   transform: translateY(0);    opacity: 1; }
+}
+
+/* Cursor glow enhancement on interactive elements */
+.btn-primary,
+.btn-outline,
+.glass-card {
+  will-change: transform;
+}
+
+/* Horizontal rule with gradient */
+.gradient-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+  border: none;
+  margin: 0;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -7,6 +7,8 @@ import { usePathname } from 'next/navigation';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ChatbotWidget from './ChatbotWidget';
+import SmoothScrollProvider from './SmoothScrollProvider';
+import ScrollProgressBar from './ScrollProgressBar';
 
 import { MessageCircle, ArrowUp, X, Mail, Sparkles } from 'lucide-react';
 
@@ -49,6 +51,8 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   return (
+    <SmoothScrollProvider>
+      <ScrollProgressBar />
     <div className="relative min-h-screen flex flex-col bg-deep-space-blue text-white">
       <Navbar />
       
@@ -141,6 +145,7 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
       {/* Sociodigit Chatbot Widget */}
       <ChatbotWidget />
     </div>
+    </SmoothScrollProvider>
   );
 };
 
