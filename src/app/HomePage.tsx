@@ -12,6 +12,7 @@ import Link from 'next/link';
 import HomeHeroImage from '../assets/generated/home_hero_tech_render_1773750696589.png';
 import AnimatedCounter from '../components/AnimatedCounter';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '../components/ScrollReveal';
+import BionicOperationsHub from '../components/BionicOperationsHub';
 
 const Home = () => {
   const services = [
@@ -281,6 +282,8 @@ const Home = () => {
          </div>
       </section>
 
+      <BionicOperationsHub />
+
       {/* Services Overview */}
       <section className="section-padding relative">
         <div className="container-custom">
@@ -296,8 +299,9 @@ const Home = () => {
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.1}>
             {services.map((service, index) => (
               <StaggerItem key={index} direction="up">
-                <div
-                  className="group glass-card p-10 neon-border overflow-hidden relative h-full"
+                <Link
+                  href={service.path}
+                  className="group glass-card p-10 neon-border overflow-hidden relative h-full flex flex-col"
                 >
                   {/* Bionic Glow Effect on Hover */}
                   <div className="absolute inset-0 bg-gradient-to-b from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
@@ -312,17 +316,17 @@ const Home = () => {
                   </p>
                   
                   <div className="flex items-center justify-between mt-auto">
-                    <Link href={service.path} className="inline-flex items-center font-bold text-brand-orange group-hover:translate-x-2 transition-transform relative z-10">
+                    <div className="inline-flex items-center font-bold text-brand-orange group-hover:translate-x-2 transition-transform relative z-10">
                       <span>Learn More</span>
                       <ChevronRight size={20} className="ml-2" />
-                    </Link>
+                    </div>
                     
                     {/* Bionic Hover Metric Badge */}
                     <div className="absolute bottom-6 right-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100 bg-white text-space-blue font-bold text-[10px] uppercase tracking-widest py-2 px-4 rounded-full shadow-2xl z-20">
                       {service.metric}
                     </div>
                   </div>
-                </div>
+                </Link>
               </StaggerItem>
             ))}
           </StaggerContainer>
