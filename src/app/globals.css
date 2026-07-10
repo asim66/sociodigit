@@ -66,15 +66,15 @@
   .neon-border::after {
     content: '';
     @apply absolute -inset-[1px] rounded-[inherit] -z-10 opacity-0 transition-opacity duration-500;
-    background: linear-gradient(45deg, var(--color-brand-orange), var(--color-brand-amber));
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .neon-border:hover::after {
-    @apply opacity-100;
+    @apply opacity-0;
   }
 
   .neon-glow {
-    box-shadow: 0 0 20px rgba(0, 85, 255, 0.3);
+    box-shadow: none;
   }
 
   .gradient-text {

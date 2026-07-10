@@ -9,10 +9,11 @@ import {
   ChevronRight, Terminal, Database, Cloud, Activity
 } from 'lucide-react';
 import Link from 'next/link';
-import HomeHeroImage from '../assets/generated/home_hero_tech_render_1773750696589.png';
 import AnimatedCounter from '../components/AnimatedCounter';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '../components/ScrollReveal';
 import BionicOperationsHub from '../components/BionicOperationsHub';
+import InteractiveHeroDashboard from '../components/InteractiveHeroDashboard';
+import AiSeoSection from '../components/AiSeoSection';
 
 const Home = () => {
   const services = [
@@ -125,72 +126,12 @@ const Home = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="relative"
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative w-full"
             >
-              {/* Abstract AI/Network Illustration Placeholder */}
-              <div className="relative z-10 glass p-2 md:p-4 rounded-[3rem] shadow-[0_0_50px_rgba(0,85,255,0.1)] border-white/10 group">
-                <div className="relative overflow-hidden rounded-[2.5rem] aspect-square lg:aspect-video bg-dark-indigo flex items-center justify-center">
-                  <div className="absolute inset-0 grid-bg opacity-30"></div>
-                  <motion.img 
-                    src={(HomeHeroImage as any).src || HomeHeroImage}
-                    alt="Sociodigit - Engineering the Future"
-                    initial={{ scale: 1.2, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-                  />
-                  {/* Subtle Overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-indigo via-transparent to-transparent opacity-60"></div>
-                  <div className="absolute inset-0 bg-brand-orange/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700"></div>
-                </div>
-
-                {/* Floating UI Cards - Redesigned as interactive badges */}
-                <motion.div 
-                  animate={{ y: [0, -15, 0], rotateZ: [-2, 2, -2] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-4 md:-bottom-8 -left-4 md:-left-12 glass p-3 md:p-4 rounded-3xl shadow-2xl border-white/10 flex items-center space-x-2 md:space-x-4 backdrop-blur-xl group hover:scale-105 md:hover:scale-110 transition-transform cursor-pointer"
-                >
-                  <div className="w-8 h-8 md:w-12 md:h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-                    <Activity size={20} className="md:w-6 md:h-6" />
-                  </div>
-                  <div>
-                    <div className="text-xl md:text-2xl font-bold font-display tracking-tight text-white flex items-center">
-                      <AnimatedCounter value="250" />
-                      <span className="text-emerald-400 ml-1">+</span>
-                    </div>
-                    <div className="text-[8px] md:text-[10px] text-white/50 uppercase font-bold tracking-widest hidden sm:block">Projects Shipped</div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  animate={{ y: [0, 20, 0], rotateZ: [2, -2, 2] }}
-                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -top-6 md:-top-12 -right-4 md:-right-8 glass p-3 md:p-4 rounded-3xl shadow-2xl border-white/10 flex items-center space-x-2 md:space-x-4 backdrop-blur-xl group hover:scale-105 md:hover:scale-110 transition-transform cursor-pointer"
-                >
-                  <div className="w-8 h-8 md:w-12 md:h-12 bg-brand-orange/10 text-brand-orange rounded-xl flex items-center justify-center group-hover:bg-brand-orange group-hover:text-white transition-colors">
-                    <Zap size={20} className="md:w-6 md:h-6" />
-                  </div>
-                  <div>
-                    <div className="text-xl md:text-2xl font-bold font-display tracking-tight text-white flex items-center">
-                      <AnimatedCounter value="99.9" />
-                      <span className="text-brand-orange ml-1">%</span>
-                    </div>
-                    <div className="text-[8px] md:text-[10px] text-white/50 uppercase font-bold tracking-widest hidden sm:block">Uptime Delivered</div>
-                  </div>
-                </motion.div>
-                
-                <motion.div 
-                  animate={{ y: [0, -10, 0], x: [0, 10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                  className="absolute border border-white/10 bottom-24 right-[-20px] md:right-[-40px] glass px-4 md:px-6 py-2 md:py-3 rounded-full shadow-2xl hidden sm:flex items-center space-x-2 md:space-x-3 backdrop-blur-xl group hover:bg-white/10 transition-colors cursor-pointer"
-                >
-                  <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
-                  <span className="font-mono text-[10px] md:text-xs font-bold text-white/80">LATENCY &lt; 50ms</span>
-                </motion.div>
-              </div>
+              <InteractiveHeroDashboard />
             </motion.div>
           </div>
         </div>
@@ -221,7 +162,10 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
+      {/* AI SEO Section */}
+      <AiSeoSection />
+
       {/* Global Impact Data Section - Parallax/Scroll Triggers */}
       <section className="py-20 md:py-32 relative overflow-hidden bg-black/40 border-b border-white/5">
          <div className="absolute top-0 left-0 w-full h-full grid-bg opacity-5 z-0"></div>
@@ -364,26 +308,23 @@ const Home = () => {
       </section>
 
       {/* Digital Marketing - Reverse Marquee */}
-      <section className="py-12 md:py-16 bg-brand-orange/5 overflow-hidden relative border-y border-brand-orange/20 my-10 transform -skew-y-2 shadow-[0_0_50px_rgba(232,66,26,0.1)]">
-        <div className="absolute inset-y-0 left-0 w-24 md:w-32 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none transform skew-y-2"></div>
-        <div className="absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none transform skew-y-2"></div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full grid-bg opacity-10 transform skew-y-2"></div>
+      <section className="py-12 md:py-16 overflow-hidden relative border-y border-white/5 my-10 bg-transparent">
+        <div className="absolute inset-y-0 left-0 w-24 md:w-32 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div>
         
-        <div className="container-custom transform skew-y-2 mb-8 relative z-20">
+        <div className="container-custom mb-8 relative z-20">
           <div className="flex items-center justify-center space-x-4">
-            <div className="h-px w-12 md:w-24 bg-gradient-to-r from-transparent to-brand-orange/50"></div>
-            <h2 className="text-center text-[10px] md:text-sm font-bold text-brand-orange uppercase tracking-[0.4em] drop-shadow-lg">Digital Marketing Ecosystem</h2>
-            <div className="h-px w-12 md:w-24 bg-gradient-to-l from-transparent to-brand-orange/50"></div>
+            <h2 className="text-center text-[10px] md:text-sm font-bold text-white/40 uppercase tracking-[0.4em]">Digital Marketing Ecosystem</h2>
           </div>
         </div>
         
-        <div className="flex marquee-container overflow-hidden w-full transform skew-y-2">
+        <div className="flex marquee-container overflow-hidden w-full">
           {/* Animation direction: reverse for opposite flow */}
           <div className="flex animate-marquee whitespace-nowrap items-center min-w-max" style={{ animationDirection: 'reverse', animationDuration: '40s' }}>
             {/* First Set */}
             <div className="flex space-x-6 md:space-x-10 px-4 items-center">
               {['SEO', 'BRANDING', 'FRAUD DETECTION', 'ORM', 'PAID ADS', 'SOCIAL MEDIA'].map((tool) => (
-                <div key={`m1-${tool}`} className="px-6 py-3 md:px-8 md:py-4 rounded-full border border-brand-orange/30 bg-brand-orange/10 text-brand-orange text-sm md:text-lg font-bold font-mono tracking-tight hover:bg-brand-orange hover:text-white hover:scale-110 hover:-rotate-3 transition-all duration-300 shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:shadow-[0_0_30px_rgba(232,66,26,0.8)] cursor-default backdrop-blur-md">
+                <div key={`m1-${tool}`} className="px-4 py-2.5 rounded-xl border border-white/5 bg-white/[0.01] text-white/50 text-xs font-semibold tracking-wide hover:text-white hover:border-white/20 transition-all duration-300 cursor-default font-sans">
                   {tool}
                 </div>
               ))}
@@ -391,7 +332,7 @@ const Home = () => {
             {/* Second Set */}
             <div className="flex space-x-6 md:space-x-10 px-4 items-center">
               {['SEO', 'BRANDING', 'FRAUD DETECTION', 'ORM', 'PAID ADS', 'SOCIAL MEDIA'].map((tool) => (
-                <div key={`m2-${tool}`} className="px-6 py-3 md:px-8 md:py-4 rounded-full border border-brand-orange/30 bg-brand-orange/10 text-brand-orange text-sm md:text-lg font-bold font-mono tracking-tight hover:bg-brand-orange hover:text-white hover:scale-110 hover:-rotate-3 transition-all duration-300 shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:shadow-[0_0_30px_rgba(232,66,26,0.8)] cursor-default backdrop-blur-md">
+                <div key={`m2-${tool}`} className="px-4 py-2.5 rounded-xl border border-white/5 bg-white/[0.01] text-white/50 text-xs font-semibold tracking-wide hover:text-white hover:border-white/20 transition-all duration-300 cursor-default font-sans">
                   {tool}
                 </div>
               ))}
@@ -399,7 +340,7 @@ const Home = () => {
             {/* Third Set to guarantee no jump on ultrawide monitors */}
             <div className="flex space-x-6 md:space-x-10 px-4 items-center">
               {['SEO', 'BRANDING', 'FRAUD DETECTION', 'ORM', 'PAID ADS', 'SOCIAL MEDIA'].map((tool) => (
-                <div key={`m3-${tool}`} className="px-6 py-3 md:px-8 md:py-4 rounded-full border border-brand-orange/30 bg-brand-orange/10 text-brand-orange text-sm md:text-lg font-bold font-mono tracking-tight hover:bg-brand-orange hover:text-white hover:scale-110 hover:-rotate-3 transition-all duration-300 shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:shadow-[0_0_30px_rgba(232,66,26,0.8)] cursor-default backdrop-blur-md">
+                <div key={`m3-${tool}`} className="px-4 py-2.5 rounded-xl border border-white/5 bg-white/[0.01] text-white/50 text-xs font-semibold tracking-wide hover:text-white hover:border-white/20 transition-all duration-300 cursor-default font-sans">
                   {tool}
                 </div>
               ))}
@@ -412,33 +353,26 @@ const Home = () => {
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="code-block neon-glow overflow-x-auto">
-
-                <div className="flex space-x-2 mb-6">
-                  <div className="w-3 h-3 rounded-full bg-rose-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+            <div className="order-2 lg:order-1 space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="glass-card p-6 border border-white/5 bg-white/[0.01] hover:bg-white/[0.02] cursor-default transition-all duration-300">
+                  <span className="text-[10px] uppercase tracking-wider text-brand-orange font-bold font-mono">Performance Core</span>
+                  <div className="text-3xl font-bold font-display text-white mt-2">&lt; 100ms</div>
+                  <p className="text-xs text-white/50 mt-1">Average server response times.</p>
                 </div>
-                <pre className="text-brand-orange/80">
-                  <code>{`class Sociodigit {
-  constructor() {
-    this.standards = "Enterprise-Grade";
-    this.methodology = "Agile & Transparent";
-    this.focus = "Full-Stack Growth";
-  }
-
-  async buildProduct(vision) {
-    const excellence = await this.engineer(vision);
-    return this.scale(excellence);
-  }
-
-  engineer(vision) {
-    // Implementing high-performance logic
-    return { ...vision, quality: 1.0 };
-  }
-}`}</code>
-                </pre>
+                <div className="glass-card p-6 border border-white/5 bg-white/[0.01] hover:bg-white/[0.02] cursor-default transition-all duration-300">
+                  <span className="text-[10px] uppercase tracking-wider text-brand-orange font-bold font-mono">SLA Guarantee</span>
+                  <div className="text-3xl font-bold font-display text-white mt-2">99.99%</div>
+                  <p className="text-xs text-white/50 mt-1">Guaranteed cloud application uptime.</p>
+                </div>
+              </div>
+              <div className="glass-card p-6 border border-white/5 bg-white/[0.01] hover:bg-white/[0.02] cursor-default transition-all duration-300">
+                <span className="text-[10px] uppercase tracking-wider text-brand-orange font-bold font-mono">Security Benchmark</span>
+                <div className="flex items-center justify-between mt-2">
+                  <div className="text-xl font-bold text-white font-display">SOC2 & ISO Ready</div>
+                  <span className="px-2.5 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[9px] font-bold uppercase rounded-md font-sans">Compliant</span>
+                </div>
+                <p className="text-xs text-white/50 mt-1.5">Penetration tested, cryptographically secured microservices.</p>
               </div>
             </div>
 
