@@ -6,6 +6,7 @@ import Script from 'next/script';
 import ClientLayout from '../components/ClientLayout';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sociodigit.in'),
   title: 'Sociodigit',
   description: 'Premium Technology & Design Agency',
   icons: {
