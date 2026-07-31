@@ -28,7 +28,6 @@ export default function RootLayout({
 }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   const gscId = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
-  const reb2bId = process.env.NEXT_PUBLIC_REB2B_ID || 'EN4M0HJKVLOM';
 
   return (
     <html lang="en">
@@ -56,13 +55,6 @@ export default function RootLayout({
               `}
             </Script>
           </>
-        )}
-        {reb2bId && (
-          <Script id="reb2b-script" strategy="afterInteractive">
-            {`
-              !function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("${reb2bId}");
-            `}
-          </Script>
         )}
         <ClientLayout>
           {children}
