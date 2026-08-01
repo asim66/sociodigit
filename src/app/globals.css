@@ -112,7 +112,7 @@
   }
 
   .code-block {
-    @apply font-mono text-sm bg-black/40 p-6 rounded-2xl border border-glass-border overflow-hidden relative;
+    @apply font-mono text-sm bg-black/40 text-white p-6 rounded-2xl border border-glass-border overflow-hidden relative;
   }
 
   .code-block::before {
