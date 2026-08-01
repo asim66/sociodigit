@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "next build && wrangler pages deploy out --project-name sociodigit",
+    "deploy": "echo 'Deployments are managed automatically via GitHub pushes to Cloudflare Pages'",
     "start": "next start",
     "lint": "next lint"
   },
