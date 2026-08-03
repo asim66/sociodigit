@@ -107,14 +107,6 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
           links: [
             { name: 'Blog', path: '/blog' },
             { name: 'Case Studies', path: '/case-studies' },
-            { name: 'Whitepapers', path: '/whitepapers' },
-          ]
-        },
-        {
-          title: 'Resources',
-          links: [
-            { name: 'Podcasts', path: '/podcasts' },
-            { name: 'Events', path: '/events' },
           ]
         }
       ]
