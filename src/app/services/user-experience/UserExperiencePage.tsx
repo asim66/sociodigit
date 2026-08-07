@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React from 'react';
 import { motion } from 'motion/react';
 import { Users, Eye, MousePointer, Brain, BarChart2, Heart, ArrowRight, Compass } from 'lucide-react';

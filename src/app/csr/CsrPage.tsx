@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Globe2, BookOpen, Leaf, Users, ShieldCheck, ArrowRight } from 'lucide-react';

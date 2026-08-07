@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, MessageCircle, Send, CheckCircle2, Globe, Twitter, Linkedin, Github, ExternalLink } from 'lucide-react';

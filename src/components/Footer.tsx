@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
 import { Twitter, Linkedin, Github, Mail, Phone, MapPin, ChevronRight } from 'lucide-react';

@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { Code2, Terminal, Database, Globe, GitBranch, ArrowRight, CheckCircle2, Cpu, Layers, Zap } from 'lucide-react';

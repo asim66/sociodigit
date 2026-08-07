@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React from 'react';
 import { motion } from 'motion/react';
 import { Shield, CheckCircle2, Bug, Zap, AlertTriangle, ArrowRight, FlaskConical } from 'lucide-react';

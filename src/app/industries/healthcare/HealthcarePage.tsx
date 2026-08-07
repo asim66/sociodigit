@@ -40,7 +40,7 @@ const Healthcare = () => {
             className="lg:w-1/2 w-full"
           >
             <img 
-              src={(HealthcareImage as any).src || HealthcareImage} 
+              src={(HealthcareImage as any).src || (null as any) || HealthcareImage} 
               alt="Sociodigit Healthcare Solutions Portal" 
               className="rounded-[2rem] md:rounded-[3rem] shadow-2xl object-cover w-full h-[350px] md:h-[500px]"
             />

@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView, useMotionValue, useSpring } from "motion/react";
 import {
@@ -303,12 +303,12 @@ const marqueeItems = [
   "BERT Optimization", "AI Visibility", "Log File Analysis", "SERP Domination",
 ];
 
-const containerVariants = {
+const containerVariants: any = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12 } },
 };
 
-const cardVariants = {
+const cardVariants: any = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,

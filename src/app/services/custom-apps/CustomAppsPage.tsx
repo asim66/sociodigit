@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React from 'react';
 import { motion } from 'motion/react';
 import { ShoppingBag, ShoppingCart, Code2, Blocks, Globe, Zap, ArrowRight, ChevronRight, ShieldCheck, Cpu } from 'lucide-react';

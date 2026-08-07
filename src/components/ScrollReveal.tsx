@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 
 import React, { useRef } from "react";
 import { motion, useInView, Variant } from "motion/react";
@@ -17,7 +17,7 @@ interface ScrollRevealProps {
   scale?: boolean;
   fade?: boolean;
   stagger?: boolean;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }
 
 const directionMap: Record<Direction, { x?: number; y?: number }> = {
