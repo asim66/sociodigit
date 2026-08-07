@@ -439,7 +439,7 @@ export default function HotelFraudControl() {
           >
             <div className="rounded-[2rem] overflow-hidden aspect-[21/9] bg-neutral-900 relative">
               <img
-                src={ScamTimelineImage.src || ScamTimelineImage}
+                src={ScamTimelineImage.src || (null as any) || ScamTimelineImage}
                 alt="Hotel scam operation vs worried hotel manager"
                 className="w-full h-full object-cover"
               />
@@ -592,9 +592,9 @@ export default function HotelFraudControl() {
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-2xl"></div>
               <div className="rounded-[2rem] overflow-hidden aspect-[4/3] bg-neutral-900 relative">
-                <img
-                  src={StressedOwnerImage.src || StressedOwnerImage}
-                  alt="Stressed Hotel Owner discovering booking scam"
+                <img 
+                  src={StressedOwnerImage.src || (null as any) || StressedOwnerImage} 
+                  alt="Stressed Hotel Owner discovering booking scam" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-red-500/10 mix-blend-multiply pointer-events-none"></div>
@@ -617,9 +617,9 @@ export default function HotelFraudControl() {
             >
               <div className="absolute top-0 left-0 w-32 h-32 bg-brand-orange/10 rounded-full blur-2xl"></div>
               <div className="rounded-[2rem] overflow-hidden aspect-[4/3] bg-neutral-900 relative">
-                <img
-                  src={ReceptionDisputeImage.src || ReceptionDisputeImage}
-                  alt="Guest dispute at front desk reception"
+                <img 
+                  src={ReceptionDisputeImage.src || (null as any) || ReceptionDisputeImage} 
+                  alt="Guest dispute at front desk reception" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md border border-brand-orange/30 px-4 py-2 rounded-xl text-brand-orange font-bold text-xs uppercase flex items-center gap-1.5 shadow-2xl">

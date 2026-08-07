@@ -17,7 +17,7 @@ interface ScrollRevealProps {
   scale?: boolean;
   fade?: boolean;
   stagger?: boolean;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }
 
 const directionMap: Record<Direction, { x?: number; y?: number }> = {
