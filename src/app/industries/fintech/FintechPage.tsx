@@ -53,7 +53,7 @@ const Fintech = () => {
             <div className="relative group overflow-hidden rounded-[2rem] border border-emerald-500/20 shadow-[0_0_50px_rgba(16,185,129,0.1)]">
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent z-10"></div>
               <img 
-                src={(FintechImage as any).src || FintechImage} 
+                src={(FintechImage as any).src || (null as any) || FintechImage} 
                 alt="Sociodigit - Secure Financial Systems Visualization" 
                 className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-1000"
               />

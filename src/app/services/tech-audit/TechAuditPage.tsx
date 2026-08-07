@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React from 'react';
 import { motion } from 'motion/react';
 import { Search, Code2, Server, Shield, BarChart2, FileText, ArrowRight, AlertTriangle } from 'lucide-react';

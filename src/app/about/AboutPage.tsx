@@ -126,7 +126,7 @@ const About = () => {
                     </div>
                     <div className="relative overflow-hidden rounded-2xl mb-6 border border-white/10 group">
                       <img 
-                        src={(OriginStoryImage as any).src || OriginStoryImage} 
+                        src={(OriginStoryImage as any).src || (null as any) || OriginStoryImage} 
                         alt="The Dorm Room Vision" 
                         className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700" 
                       />

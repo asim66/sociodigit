@@ -19,7 +19,7 @@ const Blog = () => {
       category: "AI",
       author: "Alex Rivers",
       date: "Mar 18, 2026",
-      image: (AiSeoImage as any).src || AiSeoImage,
+      image: (AiSeoImage as any).src || (null as any) || AiSeoImage,
       excerpt: "Discover how generative AI is shifting the search landscape and how you can leverage it to outrank the competition in the era of SGE."
     },
     {
@@ -27,7 +27,7 @@ const Blog = () => {
       category: "SEO",
       author: "Michael Doe",
       date: "Mar 16, 2026",
-      image: (IsSeoDeadImage as any).src || IsSeoDeadImage,
+      image: (IsSeoDeadImage as any).src || (null as any) || IsSeoDeadImage,
       excerpt: "Search is evolving faster than ever. We explore why SEO isn't dying—it's just becoming more sophisticated and human-centric."
     },
     {
@@ -35,7 +35,7 @@ const Blog = () => {
       category: "Strategy",
       author: "Emma Watson",
       date: "Mar 15, 2026",
-      image: (TooMuchAiImage as any).src || TooMuchAiImage,
+      image: (TooMuchAiImage as any).src || (null as any) || TooMuchAiImage,
       excerpt: "Why over-automating your customer experience and core content can lead to brand erosion and decreased user trust."
     },
     {

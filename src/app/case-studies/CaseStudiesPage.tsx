@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, BarChart3, Zap, Globe, Shield, ExternalLink } from 'lucide-react';

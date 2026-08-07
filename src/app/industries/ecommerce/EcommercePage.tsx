@@ -77,7 +77,7 @@ const Ecommerce = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
             <div className="lg:col-span-2 bg-neutral-900 text-white rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-10 flex flex-col justify-end min-h-[300px] md:min-h-[400px] relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
-              <img src={(EcommerceImage as any).src || EcommerceImage} alt="Sociodigit - Modern E-commerce Intelligence Dashboard" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src={(EcommerceImage as any).src || (null as any) || EcommerceImage} alt="Sociodigit - Modern E-commerce Intelligence Dashboard" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="relative z-20">
                 <span className="bg-orange-500 text-white text-[10px] md:text-xs font-black px-2 md:px-3 py-1 rounded-full uppercase tracking-wide mb-3 md:mb-4 inline-block">Headless Commerce</span>
                 <h3 className="text-2xl md:text-3xl font-black mb-2 font-display">Decoupled Frontends</h3>

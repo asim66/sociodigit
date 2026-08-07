@@ -14,7 +14,7 @@ const NonProfits = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-stone-900/60 mix-blend-multiply z-10"></div>
           <img 
-            src={(NonProfitImage as any).src || NonProfitImage} 
+            src={(NonProfitImage as any).src || (null as any) || NonProfitImage} 
             alt="Sociodigit - Empowering Global Social Impact" 
             className="w-full h-full object-cover"
           />

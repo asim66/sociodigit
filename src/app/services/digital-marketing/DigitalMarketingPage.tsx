@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 

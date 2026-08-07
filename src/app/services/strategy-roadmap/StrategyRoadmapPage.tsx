@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React from 'react';
 import { motion } from 'motion/react';
 import { Map, Target, TrendingUp, BarChart2, Lightbulb, GitBranch, ArrowRight, Compass } from 'lucide-react';

@@ -1,5 +1,5 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 import React from 'react';
 import { motion } from 'motion/react';
 import { Server, Cloud, Activity, Shield, Zap, Terminal, GitBranch, ArrowRight, RefreshCw } from 'lucide-react';
