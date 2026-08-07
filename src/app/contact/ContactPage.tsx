@@ -1,7 +1,6 @@
 // @ts-nocheck
 "use client";
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, MessageCircle, Send, CheckCircle2, Globe, Twitter, Linkedin, Github, ExternalLink } from 'lucide-react';
 
@@ -19,37 +18,34 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError('');
     
     try {
-      // NOTE: Replace these with your actual details from emailjs.com
-      // Ideally move them to a .env file (e.g. import.meta.env.VITE_EMAILJS_SERVICE_ID)
-      const env = (import.meta as any).env;
-      const serviceId = env?.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
-      const templateId = env?.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
-      const publicKey = env?.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+      const formData = new FormData(e.currentTarget);
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '2b47a16d-1bbf-4e17-8ac1-50289978b8ad';
+      formData.append("access_key", accessKey);
+      formData.append("subject", `New Contact Inquiry from ${formState.name || 'Website Visitor'} | Sociodigit`);
+      formData.append("from_name", "Sociodigit Website");
 
-      const templateParams = {
-        from_name: formState.name,
-        from_email: formState.email,
-        company: formState.company || 'N/A',
-        phone: formState.phone,
-        project_type: formState.projectType || 'Not selected',
-        budget: formState.budget || 'Not selected',
-        message: formState.message,
-        reply_to: formState.email,
-      };
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
 
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      setSubmitted(true);
-      // Optional: Clear form on success
-      setFormState({ name: '', email: '', company: '', phone: '', projectType: '', budget: '', message: '' });
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setFormState({ name: '', email: '', company: '', phone: '', projectType: '', budget: '', message: '' });
+      } else {
+        setError(data.message || 'Something went wrong. Please try again.');
+      }
     } catch (err: any) {
-      console.error('EmailJS Error:', err);
-      setError('Failed to send message. Please ensure your EmailJS configuration is correct.');
+      console.error('Web3Forms Error:', err);
+      setError('Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -202,6 +198,7 @@ const Contact = () => {
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Full Name</label>
                       <input 
                         type="text" 
+                        name="name"
                         required
                         placeholder="John Doe"
                         className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/40"
@@ -215,6 +212,7 @@ const Contact = () => {
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Work Email</label>
                       <input 
                         type="email" 
+                        name="email"
                         required
                         placeholder="john@company.com"
                         className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/20"
@@ -227,6 +225,7 @@ const Contact = () => {
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Company</label>
                       <input 
                         type="text" 
+                        name="company"
                         placeholder="Sociodigit Inc."
                         className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/20"
                         value={formState.company}
@@ -238,6 +237,7 @@ const Contact = () => {
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Phone Number</label>
                       <input 
                         type="tel" 
+                        name="phone"
                         placeholder="+1 (555) 000-0000"
                         className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/20"
                         value={formState.phone}
@@ -248,6 +248,7 @@ const Contact = () => {
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Project Type</label>
                       <select 
+                        name="project_type"
                         className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all appearance-none text-white text-white/60"
                         value={formState.projectType}
                         onChange={(e) => setFormState({...formState, projectType: e.target.value})}
@@ -264,6 +265,7 @@ const Contact = () => {
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Budget Range</label>
                       <select 
+                        name="budget"
                         className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all appearance-none text-white text-white/60"
                         value={formState.budget}
                         onChange={(e) => setFormState({...formState, budget: e.target.value})}
@@ -279,6 +281,7 @@ const Contact = () => {
                     <div className="md:col-span-2 space-y-2">
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Message</label>
                       <textarea 
+                        name="message"
                         rows={4}
                         placeholder="Tell us about your project goals and challenges..."
                         className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all resize-none text-white placeholder:text-white/40"
