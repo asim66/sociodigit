@@ -110,8 +110,8 @@ function AiTerminal() {
             <div
               key={i}
               className={`transition-all duration-300 ${visibleLines.includes(i)
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-1"
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-1"
                 } ${line.color}`}
             >
               {line.text}
@@ -303,12 +303,12 @@ const marqueeItems = [
   "BERT Optimization", "AI Visibility", "Log File Analysis", "SERP Domination",
 ];
 
-const containerVariants: any = {
+const containerVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12 } },
 };
 
-const cardVariants: any = {
+const cardVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,

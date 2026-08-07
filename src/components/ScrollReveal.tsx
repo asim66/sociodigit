@@ -17,15 +17,15 @@ interface ScrollRevealProps {
   scale?: boolean;
   fade?: boolean;
   stagger?: boolean;
-  as?: keyof React.JSX.IntrinsicElements;
+  as?: keyof JSX.IntrinsicElements;
 }
 
 const directionMap: Record<Direction, { x?: number; y?: number }> = {
-  up:    { y: 40 },
-  down:  { y: -40 },
-  left:  { x: 50 },
+  up: { y: 40 },
+  down: { y: -40 },
+  left: { x: 50 },
   right: { x: -50 },
-  none:  {},
+  none: {},
 };
 
 export default function ScrollReveal({

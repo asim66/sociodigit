@@ -1,27 +1,27 @@
-// @ts-nocheck
 "use client";
+// @ts-nocheck
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  ShieldAlert, 
-  ShieldCheck, 
-  AlertTriangle, 
-  Building2, 
-  MapPin, 
-  Phone, 
-  ArrowRight, 
-  Lock, 
-  CheckCircle2, 
-  Users, 
-  Check, 
-  X, 
-  ChevronRight, 
-  Star, 
-  FileText, 
-  Sparkles, 
-  Globe, 
-  RefreshCw, 
+import {
+  ShieldAlert,
+  ShieldCheck,
+  AlertTriangle,
+  Building2,
+  MapPin,
+  Phone,
+  ArrowRight,
+  Lock,
+  CheckCircle2,
+  Users,
+  Check,
+  X,
+  ChevronRight,
+  Star,
+  FileText,
+  Sparkles,
+  Globe,
+  RefreshCw,
   Search,
   MessageCircle,
   HelpCircle,
@@ -38,12 +38,12 @@ const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="border-b border-white/10 py-5">
-      <button 
-        onClick={() => setIsOpen(!isOpen)} 
+      <button
+        onClick={() => setIsOpen(!isOpen)}
         className="w-full flex justify-between items-center text-left text-lg md:text-xl font-bold py-2 focus:outline-none hover:text-brand-orange transition-colors"
       >
         <span className="pr-4">{question}</span>
-        <motion.span 
+        <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           className="text-brand-orange shrink-0"
         >
@@ -78,11 +78,11 @@ export default function HotelFraudControl() {
   const [ownerName, setOwnerName] = useState('');
   const [whatsappNumber, setWhatsappNumber] = useState('');
   const [selectedIssues, setSelectedIssues] = useState<string[]>([]);
-  
+
   // Scanner animation states
   const [scanProgress, setScanProgress] = useState(0);
   const [scanLogs, setScanLogs] = useState<string[]>([]);
-  
+
   const formRef = useRef<HTMLDivElement>(null);
 
   const toggleIssue = (issue: string) => {
@@ -99,7 +99,7 @@ export default function HotelFraudControl() {
       alert("Please fill out all required fields.");
       return;
     }
-    
+
     // Move to scanning step
     setFormStep(2);
     setScanProgress(0);
@@ -155,10 +155,10 @@ export default function HotelFraudControl() {
 
   return (
     <div className="min-h-screen bg-space-blue text-white overflow-hidden relative">
-      
+
       {/* Dynamic Background */}
       <div className="absolute top-0 left-0 w-full h-full grid-bg opacity-15 pointer-events-none -z-10"></div>
-      
+
       {/* Decorative radial glows */}
       <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-brand-orange/10 rounded-full blur-[150px] pointer-events-none -z-10 animate-pulse-slow"></div>
       <div className="absolute top-[40%] left-[-20%] w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-[180px] pointer-events-none -z-10"></div>
@@ -167,7 +167,7 @@ export default function HotelFraudControl() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 md:pt-40 md:pb-28 container-custom relative z-10">
         <div className="max-w-5xl mx-auto text-center px-4 md:px-0">
-          
+
           {/* Tag */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -180,7 +180,7 @@ export default function HotelFraudControl() {
           </motion.div>
 
           {/* Headline */}
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -209,14 +209,14 @@ export default function HotelFraudControl() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md md:max-w-2xl mx-auto"
           >
-            <button 
+            <button
               onClick={scrollToForm}
               className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2 group text-base md:text-lg px-8 py-5 shadow-lg shadow-brand-orange/20 cursor-pointer"
             >
               <span>Scan Your Hotel Now</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <a 
+            <a
               href="https://wa.me/917008381630?text=Hi%20Sociodigit%2C%20I%20want%20to%20know%20how%20to%20protect%20my%20hotel%20from%20Google%20Map%20scammers%20and%20fake%20listings."
               target="_blank"
               rel="noopener noreferrer"
@@ -255,7 +255,7 @@ export default function HotelFraudControl() {
       {/* Real vs Fake GMB Listing Visual Comparison */}
       <section className="py-16 md:py-24 bg-white/2 backdrop-blur-sm border-y border-white/5 relative">
         <div className="container-custom max-w-6xl mx-auto">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 px-4">
             <span className="text-brand-orange font-bold text-xs uppercase tracking-widest block mb-3">Live Threat Analysis</span>
             <h2 className="text-3xl md:text-5xl font-black font-display mb-4">Official Listing vs. Scammer Listing</h2>
@@ -265,15 +265,15 @@ export default function HotelFraudControl() {
           </div>
 
           <div className="grid md:grid-cols-11 gap-8 items-center px-4 md:px-0">
-            
+
             {/* OFFICIAL LISTING CARD */}
-            <motion.div 
+            <motion.div
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
               className="md:col-span-5 bg-white/5 backdrop-blur-md rounded-[2rem] border border-emerald-500/20 shadow-[0_15px_40px_rgba(16,185,129,0.05)] overflow-hidden relative group"
             >
               <div className="absolute top-0 left-0 w-full h-[6px] bg-emerald-500"></div>
-              
+
               {/* Header Badge */}
               <div className="flex justify-between items-center px-6 pt-6 pb-4">
                 <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-bold text-xs uppercase tracking-wide border border-emerald-500/20">
@@ -341,13 +341,13 @@ export default function HotelFraudControl() {
             </div>
 
             {/* FAKE / HIJACKED LISTING CARD */}
-            <motion.div 
+            <motion.div
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
               className="md:col-span-5 bg-white/5 backdrop-blur-md rounded-[2rem] border border-red-500/20 shadow-[0_15px_40px_rgba(239,68,68,0.05)] overflow-hidden relative group"
             >
               <div className="absolute top-0 left-0 w-full h-[6px] bg-red-500"></div>
-              
+
               {/* Header Badge */}
               <div className="flex justify-between items-center px-6 pt-6 pb-4">
                 <span className="px-3 py-1 rounded-full bg-red-500/10 text-red-400 font-bold text-xs uppercase tracking-wide border border-red-500/20">
@@ -439,7 +439,7 @@ export default function HotelFraudControl() {
           >
             <div className="rounded-[2rem] overflow-hidden aspect-[21/9] bg-neutral-900 relative">
               <img
-                src={ScamTimelineImage.src || (null as any) || ScamTimelineImage}
+                src={ScamTimelineImage.src || ScamTimelineImage}
                 alt="Hotel scam operation vs worried hotel manager"
                 className="w-full h-full object-cover"
               />
@@ -510,9 +510,8 @@ export default function HotelFraudControl() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.5 }}
-                className={`relative flex items-start gap-6 md:gap-12 mb-12 last:mb-0 ${
-                  idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className={`relative flex items-start gap-6 md:gap-12 mb-12 last:mb-0 ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
                 {/* Step number dot */}
                 <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-white/20 z-10" style={{ top: '1.5rem' }}>
@@ -541,7 +540,7 @@ export default function HotelFraudControl() {
       {/* The Threat Landscape / Stressed Hotelier Stories */}
       <section className="py-20 md:py-32 container-custom relative z-10">
         <div className="max-w-6xl mx-auto">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24 px-4">
             <span className="text-brand-orange font-bold text-xs uppercase tracking-widest block mb-3">Industry Alert</span>
             <h2 className="text-3xl md:text-5xl font-black font-display mb-4">The Real-World Threat Impact</h2>
@@ -551,7 +550,7 @@ export default function HotelFraudControl() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-24 px-4 md:px-0">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -584,7 +583,7 @@ export default function HotelFraudControl() {
             </motion.div>
 
             {/* GORGEOUS GENERATED PHOTO 1 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -593,9 +592,9 @@ export default function HotelFraudControl() {
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-2xl"></div>
               <div className="rounded-[2rem] overflow-hidden aspect-[4/3] bg-neutral-900 relative">
-                <img 
-                  src={StressedOwnerImage.src || (null as any) || StressedOwnerImage} 
-                  alt="Stressed Hotel Owner discovering booking scam" 
+                <img
+                  src={StressedOwnerImage.src || StressedOwnerImage}
+                  alt="Stressed Hotel Owner discovering booking scam"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-red-500/10 mix-blend-multiply pointer-events-none"></div>
@@ -609,7 +608,7 @@ export default function HotelFraudControl() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center px-4 md:px-0">
             {/* GORGEOUS GENERATED PHOTO 2 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -618,9 +617,9 @@ export default function HotelFraudControl() {
             >
               <div className="absolute top-0 left-0 w-32 h-32 bg-brand-orange/10 rounded-full blur-2xl"></div>
               <div className="rounded-[2rem] overflow-hidden aspect-[4/3] bg-neutral-900 relative">
-                <img 
-                  src={ReceptionDisputeImage.src || (null as any) || ReceptionDisputeImage} 
-                  alt="Guest dispute at front desk reception" 
+                <img
+                  src={ReceptionDisputeImage.src || ReceptionDisputeImage}
+                  alt="Guest dispute at front desk reception"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md border border-brand-orange/30 px-4 py-2 rounded-xl text-brand-orange font-bold text-xs uppercase flex items-center gap-1.5 shadow-2xl">
@@ -630,7 +629,7 @@ export default function HotelFraudControl() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -669,7 +668,7 @@ export default function HotelFraudControl() {
       {/* Solutions Section */}
       <section className="py-20 md:py-32 bg-white/2 backdrop-blur-sm border-y border-white/5 relative z-10">
         <div className="container-custom max-w-6xl mx-auto">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24 px-4">
             <span className="text-brand-orange font-bold text-xs uppercase tracking-widest block mb-3">Our Solution Stack</span>
             <h2 className="text-3xl md:text-5xl font-black font-display mb-4">How Sociodigit Protects Your Hotel</h2>
@@ -705,7 +704,7 @@ export default function HotelFraudControl() {
                 color: "group-hover:border-emerald-500/50"
               }
             ].map((sol, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 whileHover={{ y: -8 }}
                 className="bg-white/5 backdrop-blur-md rounded-[2rem] p-8 border border-white/5 transition-all duration-300 group hover:bg-white/10 hover:border-brand-orange/40"
@@ -731,7 +730,7 @@ export default function HotelFraudControl() {
         <div className="container-custom max-w-5xl mx-auto">
           <div className="glass rounded-[3rem] p-8 md:p-16 border border-white/10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/15 rounded-full blur-3xl pointer-events-none"></div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 relative z-10">
               {[
                 { value: "340+", suffix: " Listings", label: "Fake Listings Removed", desc: "Across Google, Facebook & Booking.com" },
@@ -857,14 +856,14 @@ export default function HotelFraudControl() {
                 className="glass rounded-[2rem] p-8 border border-white/10 relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-300"
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-brand-orange opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
+
                 {/* Stars */}
                 <div className="flex gap-1 mb-5">
                   {[...Array(item.rating)].map((_, i) => (
                     <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
-                
+
                 <p className="text-white/70 text-sm leading-relaxed mb-6 font-medium italic">
                   "{item.quote}"
                 </p>
@@ -876,7 +875,7 @@ export default function HotelFraudControl() {
                     {item.metric}
                   </span>
                 </div>
-                
+
                 <div className="flex items-center gap-3 pt-4 border-t border-white/5">
                   <div className="w-10 h-10 rounded-full bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center text-brand-orange font-black text-sm">
                     {item.name.charAt(0)}
@@ -952,7 +951,7 @@ export default function HotelFraudControl() {
       {/* INTERACTIVE SHIELD AUDIT FORM (LEAD CAPTURE FOR ADS) */}
       <section ref={formRef} className="py-20 md:py-32 bg-white/2 backdrop-blur-sm border-t border-white/5 relative z-10">
         <div className="container-custom max-w-4xl mx-auto px-4 md:px-0">
-          
+
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-black uppercase tracking-wider mb-4">
               <Sparkles size={12} />
@@ -966,9 +965,9 @@ export default function HotelFraudControl() {
 
           <div className="glass rounded-[3rem] p-8 md:p-12 border border-white/10 relative overflow-hidden shadow-2xl">
             <div className="absolute top-0 left-0 w-full h-full grid-bg opacity-5 -z-10"></div>
-            
+
             <AnimatePresence mode="wait">
-              
+
               {/* STEP 1: FILL FORM */}
               {formStep === 1 && (
                 <motion.div
@@ -979,15 +978,15 @@ export default function HotelFraudControl() {
                   transition={{ duration: 0.4 }}
                 >
                   <form onSubmit={handleStartScan} className="space-y-6 md:space-y-8">
-                    
+
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-xs md:text-sm font-black uppercase tracking-wider text-white/70 flex items-center gap-1.5">
                           <Building2 size={14} className="text-brand-orange" />
                           <span>Hotel Name *</span>
                         </label>
-                        <input 
-                          type="text" 
+                        <input
+                          type="text"
                           required
                           value={hotelName}
                           onChange={(e) => setHotelName(e.target.value)}
@@ -1000,8 +999,8 @@ export default function HotelFraudControl() {
                           <MapPin size={14} className="text-brand-orange" />
                           <span>Hotel City *</span>
                         </label>
-                        <input 
-                          type="text" 
+                        <input
+                          type="text"
                           required
                           value={hotelCity}
                           onChange={(e) => setHotelCity(e.target.value)}
@@ -1017,8 +1016,8 @@ export default function HotelFraudControl() {
                           <Globe size={14} className="text-brand-orange" />
                           <span>Official Website / GMB Link (Optional)</span>
                         </label>
-                        <input 
-                          type="url" 
+                        <input
+                          type="url"
                           value={hotelWebsite}
                           onChange={(e) => setHotelWebsite(e.target.value)}
                           placeholder="e.g. www.grandpalace.com"
@@ -1030,8 +1029,8 @@ export default function HotelFraudControl() {
                           <Phone size={14} className="text-brand-orange" />
                           <span>WhatsApp Contact Number *</span>
                         </label>
-                        <input 
-                          type="tel" 
+                        <input
+                          type="tel"
                           required
                           value={whatsappNumber}
                           onChange={(e) => setWhatsappNumber(e.target.value)}
@@ -1060,15 +1059,13 @@ export default function HotelFraudControl() {
                               key={idx}
                               type="button"
                               onClick={() => toggleIssue(issue)}
-                              className={`p-4 rounded-xl border text-left text-xs md:text-sm font-bold transition-all flex items-center gap-3 ${
-                                isSelected 
-                                  ? 'bg-brand-orange/10 border-brand-orange text-white' 
+                              className={`p-4 rounded-xl border text-left text-xs md:text-sm font-bold transition-all flex items-center gap-3 ${isSelected
+                                  ? 'bg-brand-orange/10 border-brand-orange text-white'
                                   : 'bg-white/5 border-white/10 text-white/60 hover:border-white/20'
-                              }`}
+                                }`}
                             >
-                              <div className={`w-4 h-4 rounded flex items-center justify-center shrink-0 border ${
-                                isSelected ? 'bg-brand-orange border-brand-orange text-white' : 'border-white/20'
-                              }`}>
+                              <div className={`w-4 h-4 rounded flex items-center justify-center shrink-0 border ${isSelected ? 'bg-brand-orange border-brand-orange text-white' : 'border-white/20'
+                                }`}>
                                 {isSelected && <Check size={10} strokeWidth={3} />}
                               </div>
                               <span>{issue}</span>
@@ -1080,7 +1077,7 @@ export default function HotelFraudControl() {
 
                     {/* Submit */}
                     <div className="pt-4">
-                      <button 
+                      <button
                         type="submit"
                         className="btn-primary w-full flex items-center justify-center gap-2 group text-base md:text-lg py-5 shadow-lg shadow-brand-orange/20 cursor-pointer"
                       >
@@ -1110,7 +1107,7 @@ export default function HotelFraudControl() {
 
                   {/* Progress bar */}
                   <div className="w-full bg-white/5 h-3 rounded-full overflow-hidden border border-white/10">
-                    <motion.div 
+                    <motion.div
                       className="bg-brand-orange h-full rounded-full"
                       initial={{ width: 0 }}
                       animate={{ width: `${scanProgress}%` }}
@@ -1128,7 +1125,7 @@ export default function HotelFraudControl() {
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-ping"></span>
                       <span>Shield Scanner Engine v4.2</span>
                     </div>
-                    
+
                     <div className="space-y-2 overflow-y-auto max-h-full">
                       {scanLogs.map((log, index) => {
                         let colorClass = "text-brand-orange";
@@ -1158,7 +1155,7 @@ export default function HotelFraudControl() {
                   <div className="w-20 h-20 rounded-3xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto shadow-2xl shadow-emerald-500/10 animate-bounce">
                     <ShieldCheck size={40} />
                   </div>
-                  
+
                   <div className="space-y-3 max-w-md mx-auto">
                     <h3 className="text-3xl font-black font-display text-white">Vulnerability Scan Completed!</h3>
                     <p className="text-white/60 text-base font-medium">
@@ -1185,7 +1182,7 @@ export default function HotelFraudControl() {
 
                   <div className="space-y-4 max-w-sm mx-auto">
                     <p className="text-xs text-white/40 uppercase tracking-widest font-black">Get Your Complete Report Instantly</p>
-                    <a 
+                    <a
                       href={getWhatsAppLink()}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -1194,9 +1191,9 @@ export default function HotelFraudControl() {
                       <MessageCircle className="w-6 h-6 shrink-0" />
                       <span>Get Audit Report on WhatsApp</span>
                     </a>
-                    
-                    <button 
-                      onClick={() => setFormStep(1)} 
+
+                    <button
+                      onClick={() => setFormStep(1)}
                       className="text-white/40 hover:text-white text-xs font-bold underline focus:outline-none py-1 block mx-auto transition-colors"
                     >
                       Restart Checker
@@ -1216,46 +1213,46 @@ export default function HotelFraudControl() {
       {/* FAQ Section */}
       <section className="py-20 md:py-32 container-custom relative z-10">
         <div className="max-w-4xl mx-auto px-4 md:px-0">
-          
+
           <div className="text-center mb-16">
             <span className="text-brand-orange font-bold text-xs uppercase tracking-widest block mb-3">FAQ</span>
             <h2 className="text-3xl md:text-5xl font-black font-display">Common Questions About Hotel Brand Fraud</h2>
           </div>
 
           <div className="glass rounded-[3rem] p-8 md:p-12 border border-white/10 space-y-2">
-            <FAQItem 
+            <FAQItem
               question="How do scammers change the phone number on our official GMB listing?"
               answer="Scammers use the 'Suggest an edit' feature on Google Maps from multiple trusted Google Local Guide accounts simultaneously. If GMB owners are not actively monitoring their profiles or fail to decline unauthorized changes within a short time frame, Google's algorithm auto-approves the edit, replacing your desk phone number with the scammer's mobile line."
             />
-            <FAQItem 
+            <FAQItem
               question="What is the GMB Profile Shield and how does it prevent this?"
               answer="Our GMB Profile Shield works through Google API connections. It acts as an automated 24/7 sentinel. The moment an edit request is initiated for key attributes (phone number, booking links, address, or photos) from outside your organization, our system immediately flag-declines the request and alerts your team via WhatsApp or email, making unauthorized edits impossible."
             />
-            <FAQItem 
+            <FAQItem
               question="How long does it take to remove duplicate/fake hotel listings?"
               answer="Through standard Google support, removing spam listings can take weeks or even months. Sociodigit is a certified digital brand protection agency. We submit high-priority, legal cease-and-desist reports, copyright DMCA filings for stolen photos, and leverage Google Maps partner channels to get duplicate spam listings successfully deleted in 36 to 72 hours."
             />
-            <FAQItem 
+            <FAQItem
               question="Can we recoup revenues lost to these booking scammers?"
               answer="Direct recovery of funds from fraudulent UPI/bank transfer numbers is difficult since scammers withdraw funds immediately. However, our protection saves you thousands of rupees in future bookings, avoids costly litigation or chargebacks, and saves your valuable online brand ratings (TripAdvisor, GMB, Booking.com) from crashing due to negative reviews from scammed guests."
             />
-            <FAQItem 
+            <FAQItem
               question="Is the initial Brand Shield GMB scan completely free?"
               answer="Yes! Our initial scan checks your public listings, index references, domain matching, and search ad auction logs, generating a comprehensive vulnerability report. If vulnerabilities are identified, our hotel brand experts will provide a free 15-minute diagnostic call to guide you on securing your listing."
             />
-            <FAQItem 
+            <FAQItem
               question="Do you also protect hotels listed on OTAs like MakeMyTrip and Goibibo?"
               answer="Yes. Our monitoring extends beyond Google Maps. We actively scan for fake hotel profiles and copycat listings on MakeMyTrip, Goibibo, Booking.com, Agoda, and even social platforms like Facebook and Instagram. If a scammer creates a fake page or listing using your hotel's name and photos on any major platform, we detect it and initiate takedown procedures."
             />
-            <FAQItem 
+            <FAQItem
               question="We are a small 20-room hotel. Is this service relevant for us?"
               answer="Absolutely — in fact, smaller independent hotels are MORE vulnerable because they often lack dedicated digital marketing teams monitoring their online presence. Scammers specifically target hotels that have good reviews but minimal digital oversight. Our plans are designed to be affordable for independent properties starting at ₹4,999/month."
             />
-            <FAQItem 
+            <FAQItem
               question="Can scammers target us again after we clean up our listing?"
               answer="Yes, unfortunately. Scam networks are persistent. That's why a one-time cleanup is not enough. Sociodigit provides continuous 24/7 monitoring. If a new duplicate listing appears or someone attempts to edit your phone number, our system flags it within minutes and blocks the change before it goes live. Think of it as a permanent security guard for your digital storefront."
             />
-            <FAQItem 
+            <FAQItem
               question="What if the scammer has already collected money from guests using our hotel name?"
               answer="We recommend immediately filing an FIR with your local cybercrime police station and reporting it on the National Cyber Crime Portal (cybercrime.gov.in). In parallel, we help you secure your listing to prevent further fraud, draft official public communications for affected guests, and work with Google to annotate your profile with a verified business notice. We've helped several hotels navigate this exact situation."
             />
@@ -1304,14 +1301,14 @@ export default function HotelFraudControl() {
             Join premier hotels across India who trust Sociodigit to lock down their GMB channels, eliminate duplicate listings, secure direct reservations, and protect their reputation 24/7.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
-            <button 
+            <button
               onClick={scrollToForm}
               className="btn-primary flex items-center justify-center gap-2 group text-base md:text-lg px-8 py-5 w-full sm:w-auto shadow-lg shadow-brand-orange/20 cursor-pointer"
             >
               <span>Scan My Hotel's Listing Now</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <a 
+            <a
               href="https://wa.me/917008381630?text=Hi%20Sociodigit%2C%20I%20need%20urgent%20help%20protecting%20my%20hotel%20from%20Google%20Maps%20fraud."
               target="_blank"
               rel="noopener noreferrer"
