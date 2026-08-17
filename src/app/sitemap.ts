@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/services/security-consulting', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/services/content-strategy', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/services/digital-marketing', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/seo-agency-bhubaneswar', priority: 0.9, changeFrequency: 'weekly' as const },
     { url: '/services/digital-transformation', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/services/user-experience', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/services/qa-automation', priority: 0.8, changeFrequency: 'monthly' as const },

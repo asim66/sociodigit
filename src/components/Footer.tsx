@@ -46,6 +46,7 @@ const Footer = () => {
                 { name: 'Cloud & DevOps', path: '/services/devops' },
                 { name: 'QA Automation', path: '/services/qa-automation' },
                 { name: 'Digital Marketing', path: '/services/digital-marketing' },
+                { name: 'SEO Agency Bhubaneswar', path: '/seo-agency-bhubaneswar' },
                 { name: 'Product Consulting', path: '/services/consulting' },
                 { name: 'Custom Apps', path: '/services/custom-apps' },
               ].map((item) => (
