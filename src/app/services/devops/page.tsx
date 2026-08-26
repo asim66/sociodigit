@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import DevOpsPage from './DevOpsPage';
 
 export const metadata: Metadata = {
-  title: 'Cloud & DevOps Engineering — AWS, GCP, Kubernetes, CI/CD | Sociodigit',
-  description: "Automate your infrastructure and achieve 99.99% uptime with Sociodigit's DevOps experts. We build CI/CD pipelines, Kubernetes clusters, and multi-cloud architectures that scale without friction.",
+  title: 'Cloud & DevOps Engineering Services | AWS, GCP | Sociodigit',
+  description: 'Scale resilient cloud infrastructure with expert DevOps engineering. We build automated CI/CD pipelines, Kubernetes clusters, and multi-cloud systems.',
   alternates: {
     canonical: 'https://sociodigit.in/services/devops',
     languages: {
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/services/devops',
-    title: 'Cloud & DevOps Engineering — AWS, GCP, Kubernetes, CI/CD | Sociodigit',
-    description: "Automate your infrastructure and achieve 99.99% uptime with Sociodigit's DevOps experts. We build CI/CD pipelines, Kubernetes clusters, and multi-cloud architectures that scale without friction.",
+    title: 'Cloud & DevOps Engineering Services | AWS, GCP | Sociodigit',
+    description: 'Scale resilient cloud infrastructure with expert DevOps engineering. We build automated CI/CD pipelines, Kubernetes clusters, and multi-cloud systems.',
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Cloud & DevOps Engineering — AWS, GCP, Kubernetes, CI/CD | Sociodigit',
-    description: "Automate your infrastructure and achieve 99.99% uptime with Sociodigit's DevOps experts. We build CI/CD pipelines, Kubernetes clusters, and multi-cloud architectures that scale without friction.",
+    title: 'Cloud & DevOps Engineering Services | AWS, GCP | Sociodigit',
+    description: 'Scale resilient cloud infrastructure with expert DevOps engineering. We build automated CI/CD pipelines, Kubernetes clusters, and multi-cloud systems.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };

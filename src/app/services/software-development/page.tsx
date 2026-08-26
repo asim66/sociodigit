@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import SoftwareDevelopmentPage from './SoftwareDevelopmentPage';
 
 export const metadata: Metadata = {
-  title: 'Custom Software & Web App Development | React, Node.js, Python | Sociodigit',
-  description: 'We build high-performance SaaS platforms, enterprise web apps, microservices, and APIs using React, Next.js, Node.js, and Python. 200+ projects shipped. 99.9% uptime SLA. Built to last.',
+  title: 'Custom Software & SaaS Development Services | Sociodigit',
+  description: 'We engineer high-performance SaaS platforms, enterprise web applications, microservices, and APIs with React, Next.js, Node.js, and Python.',
   alternates: {
     canonical: 'https://sociodigit.in/services/software-development',
     languages: {
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/services/software-development',
-    title: 'Custom Software & Web App Development | React, Node.js, Python | Sociodigit',
-    description: 'We build high-performance SaaS platforms, enterprise web apps, microservices, and APIs using React, Next.js, Node.js, and Python. 200+ projects shipped. 99.9% uptime SLA. Built to last.',
+    title: 'Custom Software & SaaS Development Services | Sociodigit',
+    description: 'We engineer high-performance SaaS platforms, enterprise web applications, microservices, and APIs with React, Next.js, Node.js, and Python.',
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Custom Software & Web App Development | React, Node.js, Python | Sociodigit',
-    description: 'We build high-performance SaaS platforms, enterprise web apps, microservices, and APIs using React, Next.js, Node.js, and Python. 200+ projects shipped. 99.9% uptime SLA. Built to last.',
+    title: 'Custom Software & SaaS Development Services | Sociodigit',
+    description: 'We engineer high-performance SaaS platforms, enterprise web applications, microservices, and APIs with React, Next.js, Node.js, and Python.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };

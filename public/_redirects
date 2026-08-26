@@ -1,3 +1,5 @@
-/events /blog 301
-/podcasts /blog 301
-/whitepapers /blog 301
+# Canonical redirect: www to apex domain
+https://www.sociodigit.in/* https://sociodigit.in/:splat 301!
+
+# Legacy route redirects
+/about-us /about 301

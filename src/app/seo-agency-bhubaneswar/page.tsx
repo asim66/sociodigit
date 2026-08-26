@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import SeoAgencyBhubaneswarPage from './SeoAgencyBhubaneswarPage';
 
 export const metadata: Metadata = {
-  title: 'Best SEO Agency in Bhubaneswar, Odisha | AI-Powered Search & GEO | Sociodigit',
-  description: 'Sociodigit is the #1 AI-powered SEO agency in Bhubaneswar, Odisha. We deliver technical SEO, local search ranking, E-E-A-T authority, and Generative Engine Optimization (GEO) for ChatGPT & Google AI Overviews.',
+  title: 'Best SEO Agency in Bhubaneswar, Odisha | Sociodigit',
+  description: 'Top SEO agency in Bhubaneswar, Odisha. We deliver Google Map 3-Pack rankings, technical Core Web Vitals, E-E-A-T authority, and Generative Engine Optimization.',
   alternates: {
     canonical: 'https://sociodigit.in/seo-agency-bhubaneswar',
     languages: {
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/seo-agency-bhubaneswar',
-    title: 'Best SEO Agency in Bhubaneswar, Odisha | AI-Powered Search & GEO | Sociodigit',
-    description: 'Sociodigit is the #1 AI-powered SEO agency in Bhubaneswar, Odisha. We deliver technical SEO, local search ranking, E-E-A-T authority, and Generative Engine Optimization (GEO) for ChatGPT & Google AI Overviews.',
+    title: 'Best SEO Agency in Bhubaneswar, Odisha | Sociodigit',
+    description: 'Top SEO agency in Bhubaneswar, Odisha. We deliver Google Map 3-Pack rankings, technical Core Web Vitals, E-E-A-T authority, and Generative Engine Optimization.',
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Best SEO Agency in Bhubaneswar, Odisha | AI-Powered Search & GEO | Sociodigit',
-    description: 'Sociodigit is the #1 AI-powered SEO agency in Bhubaneswar, Odisha. We deliver technical SEO, local search ranking, E-E-A-T authority, and Generative Engine Optimization (GEO) for ChatGPT & Google AI Overviews.',
+    title: 'Best SEO Agency in Bhubaneswar, Odisha | Sociodigit',
+    description: 'Top SEO agency in Bhubaneswar, Odisha. We deliver Google Map 3-Pack rankings, technical Core Web Vitals, E-E-A-T authority, and Generative Engine Optimization.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };

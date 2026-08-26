@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import HomePage from './HomePage';
 
 export const metadata: Metadata = {
-  title: 'Sociodigit — AI-Powered IT & Consulting Agency | Software, Cloud & Growth',
-  description: 'Sociodigit is an AI-powered IT & consulting agency engineering scalable software, cloud infrastructure, QA automation, and data-driven digital marketing. Trusted by 200+ companies globally.',
+  title: 'Sociodigit | AI Software, Cloud & Digital Marketing Agency',
+  description: 'Sociodigit is an AI-driven agency engineering scalable software, cloud DevOps, QA automation, and performance digital marketing for global brands.',
   verification: {
     google: 'google6ad649de0cf7f95a',
   },
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/',
-    title: 'Sociodigit — AI-Powered IT & Consulting Agency | Software, Cloud & Growth',
-    description: 'Sociodigit is an AI-powered IT & consulting agency engineering scalable software, cloud infrastructure, QA automation, and data-driven digital marketing. Trusted by 200+ companies globally.',
+    title: 'Sociodigit | AI Software, Cloud & Digital Marketing Agency',
+    description: 'Sociodigit is an AI-driven agency engineering scalable software, cloud DevOps, QA automation, and performance digital marketing for global brands.',
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Sociodigit — AI-Powered IT & Consulting Agency | Software, Cloud & Growth',
-    description: 'Sociodigit is an AI-powered IT & consulting agency engineering scalable software, cloud infrastructure, QA automation, and data-driven digital marketing. Trusted by 200+ companies globally.',
+    title: 'Sociodigit | AI Software, Cloud & Digital Marketing Agency',
+    description: 'Sociodigit is an AI-driven agency engineering scalable software, cloud DevOps, QA automation, and performance digital marketing for global brands.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };

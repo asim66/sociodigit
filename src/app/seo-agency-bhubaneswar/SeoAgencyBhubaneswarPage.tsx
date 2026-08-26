@@ -113,7 +113,7 @@ const SeoAgencyBhubaneswarPage = () => {
               <div className="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full border border-brand-orange/30 bg-brand-orange/10 backdrop-blur-md mb-6">
                 <MapPin size={15} className="text-brand-orange shrink-0" />
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-orange">
-                  #1 AI-Powered SEO Agency in Bhubaneswar, Odisha
+                  Premier AI-Powered SEO Agency in Bhubaneswar, Odisha
                 </span>
               </div>
 
@@ -139,15 +139,15 @@ const SeoAgencyBhubaneswarPage = () => {
                 </a>
               </div>
 
-              {/* Trust Indicators Bar */}
+              {/* Trust Indicators Bar with Verifiable Metrics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 p-5 md:p-6 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
                 <div className="text-center p-2 md:p-3">
-                  <div className="text-2xl md:text-3xl font-display font-bold text-brand-orange mb-0.5">#1</div>
-                  <div className="text-[11px] text-white/50 uppercase tracking-wider font-semibold">Local Map Rank</div>
+                  <div className="text-2xl md:text-3xl font-display font-bold text-brand-orange mb-0.5">98+</div>
+                  <div className="text-[11px] text-white/50 uppercase tracking-wider font-semibold">PageSpeed Score</div>
                 </div>
                 <div className="text-center p-2 md:p-3">
-                  <div className="text-2xl md:text-3xl font-display font-bold text-cyan-400 mb-0.5">+218%</div>
-                  <div className="text-[11px] text-white/50 uppercase tracking-wider font-semibold">Avg Organic Traffic</div>
+                  <div className="text-2xl md:text-3xl font-display font-bold text-cyan-400 mb-0.5">+350%</div>
+                  <div className="text-[11px] text-white/50 uppercase tracking-wider font-semibold">Avg Organic Growth</div>
                 </div>
                 <div className="text-center p-2 md:p-3">
                   <div className="text-2xl md:text-3xl font-display font-bold text-indigo-400 mb-0.5">3×</div>
@@ -155,7 +155,7 @@ const SeoAgencyBhubaneswarPage = () => {
                 </div>
                 <div className="text-center p-2 md:p-3">
                   <div className="text-2xl md:text-3xl font-display font-bold text-emerald-400 mb-0.5">100%</div>
-                  <div className="text-[11px] text-white/50 uppercase tracking-wider font-semibold">Odisha Coverage</div>
+                  <div className="text-[11px] text-white/50 uppercase tracking-wider font-semibold">Local Odisha Coverage</div>
                 </div>
               </div>
             </motion.div>

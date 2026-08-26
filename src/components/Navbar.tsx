@@ -69,6 +69,14 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
             { name: 'Tech Audit', path: '/services/tech-audit' },
             { name: 'Security Consulting', path: '/services/security-consulting' },
           ]
+        },
+        {
+          title: 'Odisha Hubs',
+          links: [
+            { name: 'SEO Agency Bhubaneswar', path: '/seo-agency-bhubaneswar' },
+            { name: 'Digital Marketing Bhubaneswar', path: '/digital-marketing-agency-bhubaneswar' },
+            { name: 'Software Company Bhubaneswar', path: '/software-development-company-bhubaneswar' },
+          ]
         }
       ]
     },

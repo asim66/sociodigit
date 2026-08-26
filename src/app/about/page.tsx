@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import AboutPage from './AboutPage';
 
 export const metadata: Metadata = {
-  title: 'About Sociodigit — From a Dorm Room Vision to a Global IT Consulting Firm',
-  description: "Born in Bhubaneswar. Built with obsession. Sociodigit's story — from a dorm room in 2014 to a full-scale global software consultancy — is one of velocity, integrity, and engineering excellence.",
+  title: 'About Sociodigit | Global Software & IT Consulting',
+  description: 'Learn how Sociodigit engineers custom software, cloud DevOps, QA automation, and performance digital marketing with relentless technical excellence.',
   alternates: {
     canonical: 'https://sociodigit.in/about',
     languages: {
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/about',
-    title: 'About Sociodigit — From a Dorm Room Vision to a Global IT Consulting Firm',
-    description: "Born in Bhubaneswar. Built with obsession. Sociodigit's story — from a dorm room in 2014 to a full-scale global software consultancy — is one of velocity, integrity, and engineering excellence.",
+    title: 'About Sociodigit | Global Software & IT Consulting',
+    description: 'Learn how Sociodigit engineers custom software, cloud DevOps, QA automation, and performance digital marketing with relentless technical excellence.',
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'About Sociodigit — From a Dorm Room Vision to a Global IT Consulting Firm',
-    description: "Born in Bhubaneswar. Built with obsession. Sociodigit's story — from a dorm room in 2014 to a full-scale global software consultancy — is one of velocity, integrity, and engineering excellence.",
+    title: 'About Sociodigit | Global Software & IT Consulting',
+    description: 'Learn how Sociodigit engineers custom software, cloud DevOps, QA automation, and performance digital marketing with relentless technical excellence.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };
