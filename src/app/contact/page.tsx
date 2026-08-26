@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import ContactPage from './ContactPage';
 
 export const metadata: Metadata = {
-  title: 'Get in Touch — Start Your Project with Sociodigit | Free Consultation',
-  description: "Ready to build something extraordinary? Contact Sociodigit's engineering and strategy team for a free 30-minute consultation. Bhubaneswar-based, globally delivered.",
+  title: 'Contact Sociodigit | Free 30-Min Project Consultation',
+  description: "Contact Sociodigit's engineering team for a free 30-minute consultation. High-impact software development, cloud, and digital marketing.",
   alternates: {
     canonical: 'https://sociodigit.in/contact',
     languages: {
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/contact',
-    title: 'Get in Touch — Start Your Project with Sociodigit | Free Consultation',
-    description: "Ready to build something extraordinary? Contact Sociodigit's engineering and strategy team for a free 30-minute consultation. Bhubaneswar-based, globally delivered.",
+    title: 'Contact Sociodigit | Free 30-Min Project Consultation',
+    description: "Contact Sociodigit's engineering team for a free 30-minute consultation. High-impact software development, cloud, and digital marketing.",
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Get in Touch — Start Your Project with Sociodigit | Free Consultation',
-    description: "Ready to build something extraordinary? Contact Sociodigit's engineering and strategy team for a free 30-minute consultation. Bhubaneswar-based, globally delivered.",
+    title: 'Contact Sociodigit | Free 30-Min Project Consultation',
+    description: "Contact Sociodigit's engineering team for a free 30-minute consultation. High-impact software development, cloud, and digital marketing.",
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };

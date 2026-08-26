@@ -2,95 +2,18 @@
 "use client";
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Search, Calendar, User, ArrowRight, ChevronRight, Mail } from 'lucide-react';
+import { Calendar, User, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import AiSeoImage from '../../assets/generated/ai_in_seo_blog_bg_1773808946553.png';
-import IsSeoDeadImage from '../../assets/generated/is_seo_dead_blog_bg_1773808964236.png';
-import TooMuchAiImage from '../../assets/generated/too_much_ai_risk_blog_bg_1773808981399.png';
+import { BLOG_POSTS } from '../../data/blogPosts';
 
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const categories = ['All', 'AI', 'SEO', 'SaaS', 'DevOps', 'QA Automation', 'Cloud', 'Strategy'];
 
-  const posts = [
-    {
-      title: "AI in SEO: The New Frontier of Organic Growth",
-      category: "AI",
-      author: "Alex Rivers",
-      date: "Mar 18, 2026",
-      image: (AiSeoImage as any).src || (null as any) || AiSeoImage,
-      excerpt: "Discover how generative AI is shifting the search landscape and how you can leverage it to outrank the competition in the era of SGE."
-    },
-    {
-      title: "Is SEO Dead? Debunking the Myths in the Age of AI",
-      category: "SEO",
-      author: "Michael Doe",
-      date: "Mar 16, 2026",
-      image: (IsSeoDeadImage as any).src || (null as any) || IsSeoDeadImage,
-      excerpt: "Search is evolving faster than ever. We explore why SEO isn't dying—it's just becoming more sophisticated and human-centric."
-    },
-    {
-      title: "Too Much AI Can Ruin Your Business: The Human Balance",
-      category: "Strategy",
-      author: "Emma Watson",
-      date: "Mar 15, 2026",
-      image: (TooMuchAiImage as any).src || (null as any) || TooMuchAiImage,
-      excerpt: "Why over-automating your customer experience and core content can lead to brand erosion and decreased user trust."
-    },
-    {
-      title: "DevOps Best Practices for Scaling Startups in 2026",
-      category: "DevOps",
-      author: "Alex Rivers",
-      date: "Mar 12, 2026",
-      image: "https://picsum.photos/seed/blog-1/600/400",
-      excerpt: "Learn how to build a resilient infrastructure that grows with your user base without breaking the bank."
-    },
-    {
-      title: "Why Playwright is the Future of Automation Testing",
-      category: "QA Automation",
-      author: "Sarah Chen",
-      date: "Mar 10, 2026",
-      image: "https://picsum.photos/seed/blog-2/600/400",
-      excerpt: "A deep dive into why modern engineering teams are switching to Playwright for their end-to-end testing."
-    },
-    {
-      title: "How Startups Build Scalable SaaS Platforms from Day One",
-      category: "SaaS",
-      author: "Michael Doe",
-      date: "Mar 08, 2026",
-      image: "https://picsum.photos/seed/blog-3/600/400",
-      excerpt: "Architecture patterns and technology choices that ensure your SaaS can handle the first million users."
-    },
-    {
-      title: "SEO Strategies for Startups: Beyond Keywords",
-      category: "SEO",
-      author: "Emma Watson",
-      date: "Mar 05, 2026",
-      image: "https://picsum.photos/seed/blog-4/600/400",
-      excerpt: "How to build organic authority and drive high-intent traffic without a massive advertising budget."
-    },
-    {
-      title: "Cloud Architecture Guide: AWS vs GCP vs Azure",
-      category: "Cloud",
-      author: "David Smith",
-      date: "Mar 02, 2026",
-      image: "https://picsum.photos/seed/blog-5/600/400",
-      excerpt: "A comprehensive comparison of the top cloud providers to help you choose the right one for your product."
-    },
-    {
-      title: "The Role of AI in Modern Software Engineering",
-      category: "SaaS",
-      author: "Alex Rivers",
-      date: "Feb 28, 2026",
-      image: "https://picsum.photos/seed/blog-6/600/400",
-      excerpt: "How AI tools are changing the way we write, test, and deploy code in 2026."
-    }
-  ];
-
   const filteredPosts = activeCategory === 'All' 
-    ? posts 
-    : posts.filter(post => post.category === activeCategory);
+    ? BLOG_POSTS 
+    : BLOG_POSTS.filter(post => post.category === activeCategory);
 
   return (
     <div className="pt-32">
@@ -128,44 +51,48 @@ const Blog = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {filteredPosts.map((post, i) => (
               <motion.article
-                key={post.title}
+                key={post.slug}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group cursor-pointer"
+                className="group"
               >
-                <div className="relative overflow-hidden rounded-[2.5rem] mb-8 aspect-[16/10]">
-                  <img 
-                    src={post.image} 
-                    alt={post.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute top-6 left-6 px-4 py-2 glass rounded-full text-xs font-bold uppercase tracking-widest">
-                    {post.category}
+                <Link href={`/blog/${post.slug}`} className="block h-full">
+                  <div className="relative overflow-hidden rounded-[2.5rem] mb-8 aspect-[16/10] bg-surface border border-primary/5">
+                    <img 
+                      src={post.image} 
+                      alt={post.title} 
+                      width="600"
+                      height="400"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute top-6 left-6 px-4 py-2 glass rounded-full text-xs font-bold uppercase tracking-widest text-secondary">
+                      {post.category}
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center space-x-4 text-sm text-primary/40 font-bold mb-4">
-                  <div className="flex items-center">
-                    <Calendar size={14} className="mr-2" />
-                    {post.date}
+                  <div className="flex items-center space-x-4 text-sm text-primary/40 font-bold mb-4">
+                    <div className="flex items-center">
+                      <Calendar size={14} className="mr-2 text-secondary" />
+                      {post.date}
+                    </div>
+                    <div className="flex items-center">
+                      <User size={14} className="mr-2 text-secondary" />
+                      {post.author.name}
+                    </div>
                   </div>
-                  <div className="flex items-center">
-                    <User size={14} className="mr-2" />
-                    {post.author}
+                  <h2 className="text-2xl font-display font-bold mb-4 group-hover:text-secondary transition-colors">
+                    {post.title}
+                  </h2>
+                  <p className="text-primary/60 mb-8 line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                  <div className="inline-flex items-center font-bold text-secondary">
+                    <span>Read Article</span>
+                    <ChevronRight size={20} className="ml-1 group-hover:translate-x-2 transition-transform" />
                   </div>
-                </div>
-                <h3 className="text-2xl font-display font-bold mb-4 group-hover:text-secondary transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-primary/60 mb-8 line-clamp-2">
-                  {post.excerpt}
-                </p>
-                <div className="inline-flex items-center font-bold text-secondary">
-                  <span>Read Article</span>
-                  <ChevronRight size={20} className="ml-1 group-hover:translate-x-2 transition-transform" />
-                </div>
+                </Link>
               </motion.article>
             ))}
           </div>

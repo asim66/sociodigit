@@ -4,7 +4,7 @@ import BlogPage from './BlogPage';
 
 export const metadata: Metadata = {
   title: 'Tech Insights & Digital Growth Strategies | Sociodigit Blog',
-  description: "Expert perspectives on AI, SEO, SaaS architecture, DevOps, cloud, and QA automation. Stay ahead of the curve with actionable engineering and growth strategies from Sociodigit's team.",
+  description: "Expert insights on AI, SEO, SaaS architecture, DevOps, and cloud engineering. Stay ahead with actionable strategies from Sociodigit's team.",
   alternates: {
     canonical: 'https://sociodigit.in/blog',
     languages: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://sociodigit.in/blog',
     title: 'Tech Insights & Digital Growth Strategies | Sociodigit Blog',
-    description: "Expert perspectives on AI, SEO, SaaS architecture, DevOps, cloud, and QA automation. Stay ahead of the curve with actionable engineering and growth strategies from Sociodigit's team.",
+    description: "Expert insights on AI, SEO, SaaS architecture, DevOps, and cloud engineering. Stay ahead with actionable strategies from Sociodigit's team.",
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -34,11 +34,31 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@sociodigit',
     title: 'Tech Insights & Digital Growth Strategies | Sociodigit Blog',
-    description: "Expert perspectives on AI, SEO, SaaS architecture, DevOps, cloud, and QA automation. Stay ahead of the curve with actionable engineering and growth strategies from Sociodigit's team.",
+    description: "Expert insights on AI, SEO, SaaS architecture, DevOps, and cloud engineering. Stay ahead with actionable strategies from Sociodigit's team.",
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://sociodigit.in/blog#blog",
+  "url": "https://sociodigit.in/blog",
+  "name": "Sociodigit Engineering & Growth Insights",
+  "description": "Expert perspectives on AI, SEO, SaaS architecture, DevOps, and cloud engineering.",
+  "publisher": {
+    "@id": "https://sociodigit.in/#organization"
+  }
+};
+
 export default function Page() {
-  return <BlogPage />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BlogPage />
+    </>
+  );
 }

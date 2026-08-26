@@ -36,10 +36,10 @@ const cases = [
   },
   {
     title: "High-Concurrency FinTech SaaS Platform",
-    client: "GlobalPay Solutions",
+    client: "GlobalPay Solutions [Anonymized Case Study]",
     category: "Software Development",
     timeline: "6 Months Development",
-    badge: "Enterprise SaaS",
+    badge: "Enterprise SaaS (Anonymized)",
     problem: "The client faced database contention and slow UI latency handling 2M+ transaction queries on a legacy monolithic architecture.",
     strategy: "Architected a distributed microservices platform using Next.js, Go (Golang), and PostgreSQL with Redis caching deployed on AWS EKS (Kubernetes).",
     execution: [
@@ -58,10 +58,10 @@ const cases = [
   },
   {
     title: "Infrastructure as Code & Serverless Migration",
-    client: "StreamLine Cloud Systems",
+    client: "StreamLine Cloud Systems [Anonymized Case Study]",
     category: "Cloud & DevOps",
     timeline: "3 Months Execution",
-    badge: "Cloud Engineering",
+    badge: "Cloud Engineering (Anonymized)",
     problem: "Skyrocketing cloud infrastructure costs and manual, error-prone deployment cycles causing frequent downtime during release windows.",
     strategy: "Implemented automated Infrastructure as Code (IaC) using Terraform and migrated workloads to containerized Google Cloud Run and Kubernetes with automated GitHub Actions CI/CD pipelines.",
     execution: [
@@ -80,10 +80,10 @@ const cases = [
   },
   {
     title: "End-to-End QA Automation & Performance Hardening",
-    client: "ShopMax E-Commerce Retailer",
+    client: "ShopMax E-Commerce Retailer [Anonymized Case Study]",
     category: "QA Automation",
     timeline: "3 Months Implementation",
-    badge: "Quality Engineering",
+    badge: "Quality Engineering (Anonymized)",
     problem: "Manual QA bottlenecks delayed product feature releases by weeks and critical checkout regressions slipped into production.",
     strategy: "Designed an automated testing framework using Playwright, TypeScript, and Jest integrated directly into pre-merge GitHub Actions pull request checks.",
     execution: [
@@ -102,10 +102,10 @@ const cases = [
   },
   {
     title: "Local SEO & High-Intent Patient Lead Generation",
-    client: "Apex Healthcare & Specialty Clinic, Bhubaneswar",
+    client: "Apex Healthcare & Specialty Clinic [Anonymized Case Study]",
     category: "Digital Marketing & SEO",
     timeline: "5 Months Campaign",
-    badge: "Healthcare Local SEO",
+    badge: "Healthcare Local SEO (Anonymized)",
     problem: "Low local search visibility for specialized treatments across Bhubaneswar, Saheed Nagar, and Patia with high acquisition cost from paid search.",
     strategy: "Restructured website architecture with high-intent localized treatment pages, schema markup, Google Business Profile ranking signals, and E-E-A-T medical content optimization.",
     execution: [

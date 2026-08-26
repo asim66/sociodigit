@@ -94,7 +94,7 @@ const Services = () => {
         {
           id: "ux",
           title: "User Experience",
-          path: "/services/product-design",
+          path: "/services/user-experience",
           icon: <Globe size={40} />,
           desc: "End-to-end UX strategy and research to ensure your product delights users at every touchpoint.",
           benefits: ["Higher Retention", "Lower Bounce Rate", "Accessibility", "Intuitive Flows"],
@@ -104,7 +104,7 @@ const Services = () => {
         {
           id: "content",
           title: "Content Strategy",
-          path: "/services/digital-marketing",
+          path: "/services/content-strategy",
           icon: <Pen size={40} />,
           desc: "Strategic content planning and creation that builds authority, attracts audiences, and drives conversions.",
           benefits: ["Brand Voice", "SEO Content", "Lead Nurturing", "Audience Growth"],
@@ -120,7 +120,7 @@ const Services = () => {
         {
           id: "strategy",
           title: "Strategy & Roadmap",
-          path: "/services/consulting",
+          path: "/services/strategy-roadmap",
           icon: <Map size={40} />,
           desc: "We work with your leadership team to craft a clear, actionable technology roadmap aligned with your business goals.",
           benefits: ["Clear Vision", "Prioritized Goals", "Resource Alignment", "Milestone Tracking"],
@@ -130,7 +130,7 @@ const Services = () => {
         {
           id: "transformation",
           title: "Digital Transformation",
-          path: "/services/consulting",
+          path: "/services/digital-transformation",
           icon: <RefreshCw size={40} />,
           desc: "End-to-end digital transformation programs to modernize legacy systems and build future-ready organizations.",
           benefits: ["Modernized Stack", "Operational Efficiency", "Competitive Edge", "Scalability"],
@@ -140,7 +140,7 @@ const Services = () => {
         {
           id: "tech-audit",
           title: "Tech Audit",
-          path: "/services/consulting",
+          path: "/services/tech-audit",
           icon: <FileSearch size={40} />,
           desc: "A thorough review of your existing technology stack to identify risks, bottlenecks, and opportunities for improvement.",
           benefits: ["Risk Identification", "Performance Gains", "Cost Reduction", "Security Review"],
@@ -150,7 +150,7 @@ const Services = () => {
         {
           id: "security",
           title: "Security Consulting",
-          path: "/services/consulting",
+          path: "/services/security-consulting",
           icon: <Lock size={40} />,
           desc: "Protect your business with enterprise-grade security strategies, penetration testing, and compliance consulting.",
           benefits: ["Threat Mitigation", "Compliance", "Data Protection", "Incident Response"],
@@ -308,6 +308,8 @@ const Services = () => {
                         <img 
                           src={imageMap[service.id]} 
                           alt={service.title} 
+                          width="1200"
+                          height="900"
                           className="rounded-[2rem] shadow-2xl w-full aspect-[4/3] object-cover"
                           referrerPolicy="no-referrer"
                         />

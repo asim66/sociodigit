@@ -1,9 +1,17 @@
 import { MetadataRoute } from 'next';
+import { BLOG_POSTS } from '../data/blogPosts';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://sociodigit.in';
+
+  const blogRoutes = BLOG_POSTS.map((post) => ({
+    url: `/blog/${post.slug}`,
+    priority: 0.75,
+    changeFrequency: 'monthly' as const,
+    lastModified: post.isoDate.split('T')[0],
+  }));
 
   const routes = [
     // Core Pages
@@ -11,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/about', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: '2026-08-25' },
     { url: '/contact', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: '2026-08-24' },
     { url: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-08-23' },
+    ...blogRoutes,
     { url: '/careers', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: '2026-08-15' },
     { url: '/case-studies', priority: 0.85, changeFrequency: 'weekly' as const, lastModified: '2026-08-26' },
     { url: '/csr', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: '2026-08-10' },

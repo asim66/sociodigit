@@ -87,7 +87,7 @@ const jsonLd = [
     "name": "Software Development Services Bhubaneswar",
     "serviceType": "Custom Software Engineering, SaaS Architecture & Cloud DevOps",
     "provider": {
-      "@id": "https://sociodigit.in/software-development-company-bhubaneswar#localbusiness"
+      "@id": "https://sociodigit.in/#organization"
     },
     "areaServed": {
       "@type": "City",

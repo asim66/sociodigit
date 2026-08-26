@@ -125,8 +125,8 @@ export default function DigitalMarketingAgencyBhubaneswarPage() {
 
               {/* H1 Title */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight mb-6 leading-[1.08]">
-                Drive Predictable Revenue with <br className="hidden sm:block" />
-                <span className="gradient-text">Performance Digital Marketing</span>
+                Digital Marketing Agency in Bhubaneswar <br className="hidden sm:block" />
+                <span className="gradient-text">for Predictable Revenue Growth</span>
               </h1>
 
               {/* Subtitle */}

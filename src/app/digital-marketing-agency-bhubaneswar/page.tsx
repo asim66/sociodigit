@@ -87,7 +87,7 @@ const jsonLd = [
     "name": "Digital Marketing Agency Services Bhubaneswar",
     "serviceType": "Digital Marketing, SEO, PPC & Performance Media",
     "provider": {
-      "@id": "https://sociodigit.in/digital-marketing-agency-bhubaneswar#localbusiness"
+      "@id": "https://sociodigit.in/#organization"
     },
     "areaServed": {
       "@type": "City",

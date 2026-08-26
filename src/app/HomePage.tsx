@@ -95,11 +95,7 @@ const Home = () => {
 
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="space-y-4">
               <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass border-brand-orange/20 text-brand-orange text-sm font-bold mb-8">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
@@ -124,7 +120,7 @@ const Home = () => {
                   <ArrowRight size={20} />
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, x: 40 }}

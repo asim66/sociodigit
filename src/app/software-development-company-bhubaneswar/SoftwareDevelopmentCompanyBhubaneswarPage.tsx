@@ -125,8 +125,8 @@ export default function SoftwareDevelopmentCompanyBhubaneswarPage() {
 
               {/* H1 Title */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight mb-6 leading-[1.08]">
-                Engineering Scalable <br className="hidden sm:block" />
-                <span className="gradient-text">Custom Software & Cloud Apps</span>
+                Software Development Company in Bhubaneswar <br className="hidden sm:block" />
+                <span className="gradient-text">for Scalable Cloud Products</span>
               </h1>
 
               {/* Subtitle */}

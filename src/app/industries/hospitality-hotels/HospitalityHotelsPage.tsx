@@ -166,9 +166,12 @@ const HospitalityHotels = () => {
               We provide end-to-end digital excellence for the hotel sector, from premium branding to advanced fraud protection and direct booking growth.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="w-full sm:w-auto justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-transform hover:scale-105 shadow-xl shadow-blue-500/30 flex items-center">
-                Check My Hotel's Digital Health <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              <a href="/hotel-fraud-control" className="w-full sm:w-auto justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-transform hover:scale-105 shadow-xl shadow-blue-500/30 flex items-center">
+                Explore Hotel Fraud Control Platform <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a href="/services/security-consulting" className="w-full sm:w-auto justify-center bg-neutral-900 hover:bg-neutral-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-transform hover:scale-105 flex items-center">
+                Security Consulting Services
+              </a>
             </div>
           </motion.div>
         </div>

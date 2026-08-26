@@ -148,6 +148,37 @@ export default function IndustriesPage() {
               </motion.div>
             ))}
           </div>
+
+          {/* Specialized Security & Operations Feature */}
+          <div className="mt-20 glass p-10 lg:p-12 rounded-[2.5rem] border border-brand-orange/20 relative overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-widest text-brand-orange block mb-2">Specialized Industry Security</span>
+                <h3 className="text-2xl lg:text-3xl font-display font-bold mb-4">Hotel Fraud Control & Revenue Protection</h3>
+                <p className="text-white/70 leading-relaxed mb-6">
+                  Dedicated anti-fraud, booking integrity, and revenue security solutions engineered specifically for hospitality chains and luxury hotels.
+                </p>
+                <Link href="/hotel-fraud-control" className="btn-primary inline-flex items-center space-x-2">
+                  <span>Learn About Hotel Fraud Control</span>
+                  <ArrowRight size={18} />
+                </Link>
+              </div>
+              <div className="glass p-6 rounded-2xl border-white/10 space-y-3 text-sm text-white/80">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 rounded-full bg-brand-orange" />
+                  <span>OTA Fraud & Chargeback Prevention</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 rounded-full bg-brand-orange" />
+                  <span>Direct Booking Engine Security Audits</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 rounded-full bg-brand-orange" />
+                  <span>Verified Hospitality Case Studies (Hotel Holiday Resort)</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

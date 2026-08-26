@@ -23,8 +23,9 @@ const Footer = () => {
     { name: 'Cloud & DevOps', path: '/services/devops' },
     { name: 'QA Automation', path: '/services/qa-automation' },
     { name: 'Digital Marketing', path: '/services/digital-marketing' },
-    { name: 'Product Consulting', path: '/services/consulting' },
-    { name: 'Custom Apps', path: '/services/custom-apps' },
+    { name: 'Security Consulting', path: '/services/security-consulting' },
+    { name: 'Tech Audit & Strategy', path: '/services/tech-audit' },
+    { name: 'Hotel Fraud Control', path: '/hotel-fraud-control' },
   ];
 
   const localHubLinks = [

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import CustomAppsPage from './CustomAppsPage';
 
 export const metadata: Metadata = {
-  title: 'Custom App Development Services | React, Flutter, Node.js | Sociodigit',
+  title: 'Custom App & Platform Development Services | Sociodigit',
   description: 'Tailor-made web & mobile applications engineered for high performance, reliability, and seamless user experiences.',
   alternates: {
     canonical: 'https://sociodigit.in/services/custom-apps',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/services/custom-apps',
-    title: 'Custom App Development Services | React, Flutter, Node.js | Sociodigit',
+    title: 'Custom App & Platform Development Services | Sociodigit',
     description: 'Tailor-made web & mobile applications engineered for high performance, reliability, and seamless user experiences.',
     siteName: 'Sociodigit',
     images: [{
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Custom App Development Services | React, Flutter, Node.js | Sociodigit',
+    title: 'Custom App & Platform Development Services | Sociodigit',
     description: 'Tailor-made web & mobile applications engineered for high performance, reliability, and seamless user experiences.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
@@ -58,15 +58,15 @@ const jsonLd = [
     "itemListElement": [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://sociodigit.in/"
+        position: 1,
+        name: "Home",
+        item: "https://sociodigit.in/"
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": "Custom App Development",
-        "item": "https://sociodigit.in/services/custom-apps"
+        position: 2,
+        name: "Custom App Development",
+        item: "https://sociodigit.in/services/custom-apps"
       }
     ]
   }

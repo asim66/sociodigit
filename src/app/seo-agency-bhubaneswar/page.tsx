@@ -87,7 +87,7 @@ const jsonLd = [
     "name": "SEO Agency Services in Bhubaneswar",
     "serviceType": "Search Engine Optimization & Generative Engine Optimization",
     "provider": {
-      "@id": "https://sociodigit.in/seo-agency-bhubaneswar#localbusiness"
+      "@id": "https://sociodigit.in/#organization"
     },
     "areaServed": {
       "@type": "City",
