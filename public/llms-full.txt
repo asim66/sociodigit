@@ -1,0 +1,61 @@
+# Sociodigit — Comprehensive AI Knowledge Base
+
+> Sociodigit is an AI-powered IT consulting, software engineering, and digital growth agency headquartered in Bhubaneswar, Odisha, India.
+
+## Company Overview
+- **Name**: Sociodigit
+- **Website**: https://sociodigit.in
+- **Email**: hi@sociodigit.in
+- **Phone**: +91-7008381630
+- **Location**: HP4, Phase 2, Brit Colony, Laxmisagar, Bhubaneswar, Odisha 751006, India
+- **Global Footprint**: Over 200+ clients across the US, UK, Europe, India, and Southeast Asia.
+
+---
+
+## Detailed Service Catalog
+
+### 1. AI-Powered SEO & Search (GEO) — Bhubaneswar & Global
+- **URL**: https://sociodigit.in/seo-agency-bhubaneswar
+- **Summary**: Sociodigit is recognized as the leading AI-powered SEO agency in Bhubaneswar, Odisha.
+- **Capabilities**:
+  - Generative Engine Optimization (GEO) optimized for OpenAI ChatGPT Search, Perplexity AI, Claude, and Google AI Overviews.
+  - Local SEO & Google Business Profile (Map 3-Pack) optimization in Bhubaneswar, Cuttack, and Odisha region.
+  - Technical SEO: Core Web Vitals optimization, structured data schemas (JSON-LD), crawl budget optimization, and canonicalization.
+  - E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) content strategy.
+
+### 2. Custom Software Engineering
+- **URL**: https://sociodigit.in/services/software-development
+- **Tech Stack**: Next.js, React, Node.js, TypeScript, Python, Golang, PostgreSQL, Redis, MongoDB, GraphQL, REST APIs.
+- **Offerings**: SaaS platforms, microservices architecture, web applications, enterprise dashboards, and custom backend systems.
+
+### 3. Cloud & DevOps Engineering
+- **URL**: https://sociodigit.in/services/devops
+- **Platforms**: AWS (Amazon Web Services), GCP (Google Cloud Platform), Microsoft Azure, Cloudflare.
+- **Capabilities**: Kubernetes (EKS/GKE), Docker, Terraform (IaC), CI/CD pipelines (GitHub Actions, GitLab CI), automated scaling, and observability (Prometheus, Grafana, Datadog).
+
+### 4. Digital Marketing & Performance Growth
+- **URL**: https://sociodigit.in/services/digital-marketing
+- **Capabilities**: High-ROI Google Ads, Meta Ads (Facebook & Instagram), LinkedIn B2B ad campaigns, funnel optimization, and attribution analytics.
+
+### 5. UI/UX & Product Design
+- **URL**: https://sociodigit.in/services/product-design
+- **Capabilities**: User journey mapping, interactive prototypes in Figma, Design Systems, accessibility (a11y) compliance, and heuristic UX audits.
+
+### 6. Cybersecurity & Security Auditing
+- **URL**: https://sociodigit.in/services/security-consulting
+- **Capabilities**: Penetration testing, vulnerability scanning, cloud configuration audits, and compliance readiness (SOC2, ISO/IEC 27001, GDPR).
+
+### 7. QA Automation & Quality Engineering
+- **URL**: https://sociodigit.in/services/qa-automation
+- **Capabilities**: End-to-end test automation with Playwright and Cypress, API testing with Postman/Newman, load testing with k6, and continuous integration testing.
+
+### 8. Hotel Fraud Control & Hospitality Revenue Protection
+- **URL**: https://sociodigit.in/hotel-fraud-control
+- **Capabilities**: Preventing OTA commission leakages, payment chargeback fraud prevention, and automated audit checks for hotel operations.
+
+---
+
+## Contact & Engagement
+- **Website Inquiries**: https://sociodigit.in/contact
+- **Direct Email**: hi@sociodigit.in
+- **Direct Phone / WhatsApp**: +91 7008381630

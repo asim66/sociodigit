@@ -1,0 +1,53 @@
+# Sociodigit
+
+> Sociodigit is a premier AI-powered IT consulting, software engineering, and digital growth agency headquartered in Bhubaneswar, Odisha, India, serving 200+ global clients.
+
+## About Sociodigit
+- **Company Name**: Sociodigit
+- **Website**: https://sociodigit.in
+- **Email**: hi@sociodigit.in
+- **Phone**: +91-7008381630
+- **Headquarters**: HP4, Phase 2, Brit Colony, Laxmisagar, Bhubaneswar, Odisha 751006, India
+- **Core Specialization**: AI-Driven Software Engineering, Cloud Architecture & DevOps, Generative Engine Optimization (GEO) & SEO, UX/UI Product Design, QA Automation, and Hotel Fraud Control.
+
+---
+
+## Core Services
+
+- [Software Development](https://sociodigit.in/services/software-development): Full-stack web and mobile application engineering using React, Next.js, Node.js, Python, and cloud-native microservices.
+- [DevOps & Cloud Infrastructure](https://sociodigit.in/services/devops): Cloud architecture, CI/CD pipelines, Kubernetes orchestration, Docker, AWS, GCP, and Azure management.
+- [SEO Agency in Bhubaneswar](https://sociodigit.in/seo-agency-bhubaneswar): #1 AI-powered SEO agency in Bhubaneswar, Odisha. Technical SEO, Google Map 3-Pack ranking, E-E-A-T authority, and Generative Engine Optimization (GEO) for ChatGPT, Perplexity, and Google AI Overviews.
+- [Digital Marketing & Growth](https://sociodigit.in/services/digital-marketing): Data-driven performance marketing, PPC ad campaigns, social media marketing, and conversion rate optimization (CRO).
+- [Security Consulting](https://sociodigit.in/services/security-consulting): Vulnerability assessments, penetration testing, compliance auditing (SOC2, ISO 27001), and zero-trust cloud security.
+- [Content Strategy](https://sociodigit.in/services/content-strategy): High-authority technical content, SEO copywriting, brand narrative, and GEO-optimized AI knowledge base building.
+- [Digital Transformation](https://sociodigit.in/services/digital-transformation): Modernizing legacy enterprise systems with cloud-first, AI-augmented architectures.
+- [UI/UX Product Design](https://sociodigit.in/services/product-design): User research, wireframing, high-fidelity Figma design systems, interaction design, and usability testing.
+- [Custom Apps Development](https://sociodigit.in/services/custom-apps): Bespoke enterprise web and mobile applications tailored for specialized business workflows.
+- [QA & Test Automation](https://sociodigit.in/services/qa-automation): Automated testing suites, performance stress-testing, unit/integration testing, and CI/CD quality gates.
+- [IT Consulting & Strategy](https://sociodigit.in/services/consulting): CTO-as-a-Service, digital roadmaps, tech audits, and enterprise architecture advisory.
+- [Hotel Fraud Control](https://sociodigit.in/hotel-fraud-control): Specialized anti-fraud and revenue protection solutions for hospitality and hotel businesses.
+
+---
+
+## Industries Served
+
+- [Startups](https://sociodigit.in/industries/startups): MVP development, rapid scaling, and modern product architecture.
+- [Ecommerce](https://sociodigit.in/industries/ecommerce): High-conversion online storefronts, headless commerce, and payment integrations.
+- [FinTech](https://sociodigit.in/industries/fintech): Secure, compliant payment systems, financial dashboarding, and fraud detection.
+- [Healthcare](https://sociodigit.in/industries/healthcare): HIPAA-compliant patient management, telehealth platforms, and health tech workflows.
+- [Hospitality & Hotels](https://sociodigit.in/industries/hospitality-hotels): Revenue management, booking engines, and fraud prevention systems.
+- [SaaS](https://sociodigit.in/industries/saas): Multi-tenant architecture, subscription billing, and product-led growth engineering.
+- [Enterprises](https://sociodigit.in/industries/enterprises): Digital transformation, enterprise data pipelines, and infrastructure modernization.
+- [Education](https://sociodigit.in/industries/education): EdTech portals, learning management systems (LMS), and interactive student tools.
+- [Non-Profits](https://sociodigit.in/industries/non-profits): High-impact donor platforms, community portals, and digital storytelling.
+
+---
+
+## Key Company Links
+
+- [Home](https://sociodigit.in): Overview of Sociodigit capabilities, client roster, and testimonials.
+- [About](https://sociodigit.in/about): Company origins, core values, leadership, and engineering philosophy.
+- [Case Studies](https://sociodigit.in/case-studies): Real-world client case studies and business impact metrics.
+- [Blog & Insights](https://sociodigit.in/blog): Thought leadership articles on AI, software architecture, SEO, and cloud tech.
+- [Careers](https://sociodigit.in/careers): Job openings, remote work culture, and engineering team opportunities.
+- [Contact](https://sociodigit.in/contact): Consultation requests, project inquiries, and office location.
