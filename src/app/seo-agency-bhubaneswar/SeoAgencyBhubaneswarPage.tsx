@@ -224,26 +224,7 @@ const industries = [
   { name: "E-Commerce & Retail", emoji: "Retail", location: "Pan-Odisha", keywords: ["buy online odisha", "local delivery bhubaneswar", "odisha handicrafts online"], colorFrom: "from-cyan-500/10" }
 ];
 
-const testimonials = [
-  {
-    quote: "Sociodigit ranked us #1 on Google Maps for 'hotels in Puri' within 90 days. Our direct bookings increased 350% and we barely need OTAs now. Incredible results.",
-    name: "Hemanta Patnaik",
-    role: "General Manager, Puri Beach Resort",
-    location: "Puri, Odisha"
-  },
-  {
-    quote: "We were invisible on Google before Sociodigit. They fixed our Core Web Vitals, deployed schema graphs, and got us 47 keywords in the top 10. Our enterprise lead pipeline is transformed.",
-    name: "Sushant Mishra",
-    role: "CEO, TechAxis Solutions, Infocity",
-    location: "Bhubaneswar"
-  },
-  {
-    quote: "I was skeptical about AI SEO but Sociodigit got our clinic cited in ChatGPT responses when people ask about specialists in Bhubaneswar. Completely new patient channel.",
-    name: "Dr. Archana Rao",
-    role: "Director, HealthCare Clinic, Saheed Nagar",
-    location: "Bhubaneswar"
-  }
-];
+
 
 /* ─── ANIMATED COUNTER ─────────────────────────────────────────────────── */
 function AnimCounter({ to, suffix = "" }: { to: number; suffix?: string }) {
@@ -683,51 +664,6 @@ const SeoAgencyBhubaneswarPage = () => {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="py-20 md:py-28">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center space-x-2 text-brand-orange text-xs font-bold uppercase tracking-widest mb-3">
-              <Star size={15} />
-              <span>Client Voices</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-              What Odisha Businesses <span className="gradient-text">Say About Us</span>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -4 }}
-                className="glass p-7 rounded-[2rem] border border-white/10 hover:border-brand-orange/30 transition-all duration-300 flex flex-col"
-              >
-                <div className="flex space-x-1 mb-5">
-                  {[...Array(5)].map((_, s) => (
-                    <Star key={s} size={14} className="text-brand-orange fill-brand-orange" />
-                  ))}
-                </div>
-                <blockquote className="text-white/80 leading-relaxed flex-1 mb-6 text-sm md:text-base">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <div className="flex items-center justify-between pt-5 border-t border-white/5">
-                  <div>
-                    <p className="font-bold text-white text-sm">{t.name}</p>
-                    <p className="text-xs text-white/50">{t.role}</p>
-                  </div>
-                  <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange flex items-center gap-1">
-                    <MapPin size={9} />{t.location}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section className="py-20 md:py-24 bg-white/[0.015]">
