@@ -151,19 +151,25 @@ export default function CaseStudiesPage() {
 
           {/* Category Filter Pills */}
           <div className="flex flex-wrap gap-3 mt-10">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-5 py-2.5 rounded-xl text-sm font-bold transition-all ${
-                  selectedCategory === category
-                    ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/25'
-                    : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-white/5'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+            {categories.map((category) => {
+              const count = category === "All" ? cases.length : cases.filter(c => c.category === category).length;
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-5 py-2.5 rounded-xl text-sm font-bold transition-all flex items-center gap-2 ${
+                    selectedCategory === category
+                      ? 'bg-brand-orange text-white shadow-lg shadow-brand-orange/25'
+                      : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-white/5'
+                  }`}
+                >
+                  {category}
+                  <span className={`text-[10px] font-black px-1.5 py-0.5 rounded-full ${
+                    selectedCategory === category ? 'bg-white/20' : 'bg-white/10'
+                  }`}>{count}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -282,7 +288,7 @@ export default function CaseStudiesPage() {
             <Link href="/contact" className="btn-primary px-8 py-4 text-base font-bold">
               Start Your Project
             </Link>
-            <Link href="/services" className="btn-secondary px-8 py-4 text-base font-semibold">
+            <Link href="/services" className="btn-outline px-8 py-4 text-base font-semibold">
               Explore All Services
             </Link>
           </div>

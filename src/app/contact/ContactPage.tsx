@@ -129,11 +129,33 @@ const Contact = () => {
               >
                 <h3 className="text-2xl font-display font-bold mb-8">Follow Us</h3>
                 <div className="flex space-x-4">
-                  {[Twitter, Linkedin, Github].map((Icon, i) => (
-                    <a key={i} href="#" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all duration-300">
-                      <Icon size={24} />
-                    </a>
-                  ))}
+                  <a
+                    href="https://twitter.com/sociodigit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow Sociodigit on Twitter"
+                    className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all duration-300"
+                  >
+                    <Twitter size={24} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/sociodigit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow Sociodigit on LinkedIn"
+                    className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all duration-300"
+                  >
+                    <Linkedin size={24} />
+                  </a>
+                  <a
+                    href="https://github.com/sociodigit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow Sociodigit on GitHub"
+                    className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all duration-300"
+                  >
+                    <Github size={24} />
+                  </a>
                 </div>
               </motion.div>
 
@@ -201,7 +223,7 @@ const Contact = () => {
                         name="name"
                         required
                         placeholder="John Doe"
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/40"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all duration-200 text-white placeholder:text-white/40 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange/40"
                         value={formState.name}
                         onChange={(e) => setFormState({...formState, name: e.target.value})}
                       />
@@ -215,7 +237,7 @@ const Contact = () => {
                         name="email"
                         required
                         placeholder="john@company.com"
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/20"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all duration-200 text-white placeholder:text-white/20 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange/40"
                         value={formState.email}
                         onChange={(e) => setFormState({...formState, email: e.target.value})}
                       />
@@ -227,7 +249,7 @@ const Contact = () => {
                         type="text" 
                         name="company"
                         placeholder="Sociodigit Inc."
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/20"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all duration-200 text-white placeholder:text-white/20 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange/40"
                         value={formState.company}
                         onChange={(e) => setFormState({...formState, company: e.target.value})}
                       />
@@ -238,8 +260,8 @@ const Contact = () => {
                       <input 
                         type="tel" 
                         name="phone"
-                        placeholder="+1 (555) 000-0000"
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all text-white placeholder:text-white/20"
+                        placeholder="+91 7008381630"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all duration-200 text-white placeholder:text-white/20 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange/40"
                         value={formState.phone}
                         onChange={(e) => setFormState({...formState, phone: e.target.value})}
                       />
@@ -249,7 +271,7 @@ const Contact = () => {
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Project Type</label>
                       <select 
                         name="project_type"
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all appearance-none text-white text-white/60"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all duration-200 appearance-none text-white/70 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange/40"
                         value={formState.projectType}
                         onChange={(e) => setFormState({...formState, projectType: e.target.value})}
                       >
@@ -266,7 +288,7 @@ const Contact = () => {
                       <label className="text-sm font-bold text-white/40 uppercase tracking-widest ml-4">Budget Range</label>
                       <select 
                         name="budget"
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all appearance-none text-white text-white/60"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all duration-200 appearance-none text-white/70 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange/40"
                         value={formState.budget}
                         onChange={(e) => setFormState({...formState, budget: e.target.value})}
                       >
@@ -284,7 +306,7 @@ const Contact = () => {
                         name="message"
                         rows={4}
                         placeholder="Tell us about your project goals and challenges..."
-                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all resize-none text-white placeholder:text-white/40"
+                        className="w-full px-8 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none transition-all duration-200 resize-none text-white placeholder:text-white/40 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange/40"
                         value={formState.message}
                         onChange={(e) => setFormState({...formState, message: e.target.value})}
                       />
@@ -314,19 +336,26 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="h-[500px] w-full bg-white/2 relative overflow-hidden">
-        <div className="absolute inset-0 grid-bg opacity-10"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center relative z-10">
-            <div className="relative mb-8">
-              <Globe size={80} className="text-brand-orange mx-auto animate-spin-slow" />
-              <div className="absolute inset-0 bg-brand-orange/20 blur-2xl rounded-full -z-10" />
+      {/* Google Maps Embed */}
+      <section className="h-[450px] w-full relative overflow-hidden border-t border-white/5">
+        <iframe
+          src="https://maps.google.com/maps?q=HP4+Phase+2+Brit+Colony+Laxmisagar+Bhubaneswar+Odisha+751006&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          className="w-full h-full border-0 grayscale contrast-125 opacity-80"
+          allowFullScreen
+          loading="lazy"
+          title="Sociodigit Office Location — Bhubaneswar, Odisha"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+        {/* Overlay Pin Card */}
+        <div className="absolute top-6 left-6 md:left-12 glass px-6 py-4 rounded-2xl border-white/10 shadow-2xl">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-brand-orange rounded-xl flex items-center justify-center shrink-0">
+              <MapPin size={20} className="text-white" />
             </div>
-            <p className="text-white/40 font-bold uppercase tracking-[0.3em]">Interactive Global Network</p>
-            <div className="mt-4 flex items-center justify-center space-x-2 text-brand-orange">
-              <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
-              <span className="text-xs font-mono">LIVE NODES: 24/7 ACTIVE</span>
+            <div>
+              <p className="text-xs font-bold text-brand-orange uppercase tracking-widest">Our Office</p>
+              <p className="text-sm text-white font-semibold leading-tight">Laxmisagar, Bhubaneswar</p>
+              <p className="text-xs text-white/50">Odisha, India — 751006</p>
             </div>
           </div>
         </div>

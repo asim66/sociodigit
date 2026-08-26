@@ -175,11 +175,9 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
             <button 
               onClick={() => setSearchOpen(!searchOpen)}
               className={`${textHoverClass} transition-colors`}
+              aria-label="Search"
             >
               <Search size={20} />
-            </button>
-            <button className={`${textHoverClass} transition-colors`}>
-              <Globe size={20} />
             </button>
           </div>
           
@@ -372,23 +370,13 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
             </div>
             
             <div className="container-custom pb-12 pt-4">
-              <div className="flex bg-white/5 rounded-2xl p-6 flex-col space-y-6">
-                <div className="flex items-center justify-between text-white/60">
-                  <span className="font-bold text-sm uppercase tracking-widest">Region</span>
-                  <div className="flex items-center space-x-2 text-white">
-                    <Globe size={18} />
-                    <span className="font-medium">Global (EN)</span>
-                  </div>
-                </div>
-                
-                <Link href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="btn-primary w-full flex justify-center items-center space-x-2 py-4"
-                >
-                  <span>Get in Touch</span>
-                  <ArrowRight size={18} />
-                </Link>
-              </div>
+              <Link href="/contact"
+                onClick={() => setIsOpen(false)}
+                className="btn-primary w-full flex justify-center items-center space-x-2 py-4"
+              >
+                <span>Get in Touch</span>
+                <ArrowRight size={18} />
+              </Link>
             </div>
           </motion.div>
         )}

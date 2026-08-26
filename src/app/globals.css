@@ -70,7 +70,7 @@
   }
 
   .neon-border:hover::after {
-    @apply opacity-0;
+    @apply opacity-100;
   }
 
   .neon-glow {
@@ -88,7 +88,7 @@
   .btn-primary::before {
     content: '';
     @apply absolute inset-0 opacity-0 transition-opacity duration-300;
-    background: linear-gradient(45deg, var(--color-brand-orange), #00aaff);
+    background: linear-gradient(45deg, var(--color-brand-crimson), var(--color-brand-amber));
   }
 
   .btn-primary:hover::before {
@@ -108,7 +108,7 @@
   }
   
   .tech-card:hover {
-    box-shadow: 0 0 20px rgba(0, 85, 255, 0.3);
+    box-shadow: 0 0 24px rgba(232, 66, 26, 0.25);
   }
 
   .code-block {

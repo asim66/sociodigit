@@ -305,6 +305,38 @@ const About = () => {
           </div>
         </div>
       </section>
+      {/* CTA */}
+      <section className="section-padding relative overflow-hidden">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative glass p-12 lg:p-20 rounded-[3rem] overflow-hidden text-center border-white/10 neon-border"
+          >
+            <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-10 grid-bg" />
+            <div className="glow-bg top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-orange/10 blur-[150px]" />
+            <div className="max-w-2xl mx-auto relative z-10">
+              <h2 className="text-sm font-bold text-brand-orange uppercase tracking-[0.3em] mb-4">Work With Us</h2>
+              <h3 className="text-3xl md:text-5xl font-display font-bold mb-6">
+                Ready to Build Something <span className="gradient-text">Extraordinary?</span>
+              </h3>
+              <p className="text-lg text-white/60 mb-10 leading-relaxed">
+                Our team of engineers, designers, and strategists is ready to help you turn your vision into a world-class digital product. Let's start the conversation.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/contact" className="btn-primary flex items-center justify-center space-x-2">
+                  <span>Book Free Consultation</span>
+                  <ChevronRight size={20} />
+                </a>
+                <a href="/case-studies" className="btn-outline flex items-center justify-center space-x-2">
+                  <span>View Our Work</span>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };

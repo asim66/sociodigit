@@ -20,14 +20,17 @@ const Footer = () => {
 
   const serviceLinks = [
     { name: 'Software Development', path: '/services/software-development' },
-    { name: 'Software Company Bhubaneswar', path: '/software-development-company-bhubaneswar' },
     { name: 'Cloud & DevOps', path: '/services/devops' },
     { name: 'QA Automation', path: '/services/qa-automation' },
     { name: 'Digital Marketing', path: '/services/digital-marketing' },
-    { name: 'Digital Marketing Bhubaneswar', path: '/digital-marketing-agency-bhubaneswar' },
-    { name: 'SEO Agency Bhubaneswar', path: '/seo-agency-bhubaneswar' },
     { name: 'Product Consulting', path: '/services/consulting' },
     { name: 'Custom Apps', path: '/services/custom-apps' },
+  ];
+
+  const localHubLinks = [
+    { name: 'Software Company Bhubaneswar', path: '/software-development-company-bhubaneswar' },
+    { name: 'Digital Marketing Bhubaneswar', path: '/digital-marketing-agency-bhubaneswar' },
+    { name: 'SEO Agency Bhubaneswar', path: '/seo-agency-bhubaneswar' },
   ];
 
   return (
@@ -89,6 +92,19 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+            <div className="mt-6 pt-5 border-t border-white/5">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-orange/60 mb-3">Odisha Hubs</p>
+              <ul className="space-y-3">
+                {localHubLinks.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.path} className="text-white/50 hover:text-brand-orange transition-colors flex items-center group text-sm">
+                      <ChevronRight size={14} className="mr-2 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" />
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Company */}
