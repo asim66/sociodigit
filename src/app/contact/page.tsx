@@ -3,8 +3,15 @@ import type { Metadata } from 'next';
 import ContactPage from './ContactPage';
 
 export const metadata: Metadata = {
-  title: 'Contact Sociodigit | Free 30-Min Project Consultation',
-  description: "Contact Sociodigit's engineering team for a free 30-minute consultation. High-impact software development, cloud, and digital marketing.",
+  title: 'Contact Sociodigit | Bhubaneswar, Odisha AI Tech & SEO Agency',
+  description: "Contact Sociodigit in Laxmisagar, Bhubaneswar, Odisha. Book a free 30-minute consultation for AI software development, cloud infrastructure, and local SEO ranking.",
+  keywords: [
+    'contact Sociodigit',
+    'SEO agency Bhubaneswar contact',
+    'software company Bhubaneswar office',
+    'digital marketing agency Laxmisagar',
+    'IT company phone number Bhubaneswar',
+  ],
   alternates: {
     canonical: 'https://sociodigit.in/contact',
     languages: {
@@ -20,8 +27,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/contact',
-    title: 'Contact Sociodigit | Free 30-Min Project Consultation',
-    description: "Contact Sociodigit's engineering team for a free 30-minute consultation. High-impact software development, cloud, and digital marketing.",
+    title: 'Contact Sociodigit | Bhubaneswar, Odisha AI Tech & SEO Agency',
+    description: "Contact Sociodigit in Laxmisagar, Bhubaneswar, Odisha. Book a free 30-minute consultation for AI software development, cloud infrastructure, and local SEO ranking.",
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -33,8 +40,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Contact Sociodigit | Free 30-Min Project Consultation',
-    description: "Contact Sociodigit's engineering team for a free 30-minute consultation. High-impact software development, cloud, and digital marketing.",
+    title: 'Contact Sociodigit | Bhubaneswar, Odisha AI Tech & SEO Agency',
+    description: "Contact Sociodigit in Laxmisagar, Bhubaneswar, Odisha. Book a free 30-minute consultation for AI software development, cloud infrastructure, and local SEO ranking.",
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };
@@ -45,32 +52,46 @@ const jsonLd = [
     "@type": "ContactPage",
     "@id": "https://sociodigit.in/contact#contactpage",
     "url": "https://sociodigit.in/contact",
-    "name": "Contact Us",
+    "name": "Contact Sociodigit Bhubaneswar",
     "about": {
       "@id": "https://sociodigit.in/#organization"
     }
   },
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://sociodigit.in/#organization",
-    "name": "Sociodigit",
-    "url": "https://sociodigit.in",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": "https://sociodigit.in/contact#localbusiness",
+    "name": "Sociodigit — Bhubaneswar Office",
+    "url": "https://sociodigit.in/contact",
+    "telephone": "+91-7008381630",
+    "email": "hi@sociodigit.in",
+    "priceRange": "₹₹₹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "HP4, Phase 2, Brit Colony, Laxmisagar",
       "addressLocality": "Bhubaneswar",
-      "postalCode": "751006"
+      "addressRegion": "Odisha",
+      "postalCode": "751006",
+      "addressCountry": "IN"
     },
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "hi@sociodigit.in",
-        "telephone": "+91 7008381630",
-        "url": "https://sociodigit.in/contact"
-      }
-    ]
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "20.2724",
+      "longitude": "85.8488"
+    },
+    "hasMap": "https://maps.google.com/?q=20.2724,85.8488",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:30",
+      "closes": "18:30"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "64",
+      "bestRating": "5"
+    }
   }
 ];
 

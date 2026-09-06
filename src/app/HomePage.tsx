@@ -6,7 +6,8 @@ import {
   Code2, Cpu, Globe, Layers, Shield, Smartphone, 
   ArrowRight, CheckCircle2, Users, Rocket, 
   Zap, Server, Search, 
-  ChevronRight, Terminal, Database, Cloud, Activity
+  ChevronRight, Terminal, Database, Cloud, Activity,
+  MapPin, TrendingUp, Sparkles, Building2
 } from 'lucide-react';
 import Link from 'next/link';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -423,6 +424,135 @@ const Home = () => {
               </StaggerItem>
             ))}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Odisha & Bhubaneswar Regional Innovation Hub */}
+      <section className="py-24 relative overflow-hidden border-t border-white/5 bg-white/[0.01]">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-brand-orange/30 bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase tracking-widest mb-4">
+              <MapPin size={14} />
+              <span>Odisha Innovation &amp; Digital Hub</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+              Leading the Digital &amp; Tech Landscape in <span className="gradient-text">Bhubaneswar &amp; Odisha</span>
+            </h2>
+            <p className="text-base md:text-lg text-white/60 leading-relaxed">
+              Headquartered in Laxmisagar, Bhubaneswar, Sociodigit empowers enterprises, startups, and institutions across Odisha with world-class engineering, Google Top Page rankings, and high-impact digital marketing.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="glass p-8 rounded-3xl border border-white/10 hover:border-brand-orange/40 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-5">
+                  <div className="w-12 h-12 rounded-2xl bg-brand-orange/10 text-brand-orange flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <Search size={24} />
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-brand-orange/20 bg-brand-orange/5 text-brand-orange">#1 in AI Overviews</span>
+                </div>
+                <h3 className="text-xl font-display font-bold mb-3 text-white group-hover:text-brand-orange transition-colors">
+                  SEO Agency Bhubaneswar
+                </h3>
+                <p className="text-sm text-white/60 leading-relaxed mb-6">
+                  Dominate Google Search, Google Map 3-Pack, and AI Answer Engines (ChatGPT &amp; Gemini). Proven Core Web Vitals engineering and local suburb dominance.
+                </p>
+                <div className="space-y-2 mb-6">
+                  {['Google Map 3-Pack Rankings', 'Generative Engine Optimization (GEO)', 'Local Citations & GBP Authority'].map((item) => (
+                    <div key={item} className="flex items-center space-x-2 text-xs text-white/70">
+                      <CheckCircle2 size={14} className="text-brand-orange shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <Link 
+                href="/seo-agency-bhubaneswar" 
+                className="inline-flex items-center space-x-2 text-sm font-bold text-brand-orange hover:text-white transition-colors pt-4 border-t border-white/5"
+              >
+                <span>Explore Bhubaneswar SEO</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="glass p-8 rounded-3xl border border-white/10 hover:border-cyan-400/40 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-5">
+                  <div className="w-12 h-12 rounded-2xl bg-cyan-400/10 text-cyan-400 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <TrendingUp size={24} />
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-cyan-400/20 bg-cyan-400/5 text-cyan-400">High ROAS Marketing</span>
+                </div>
+                <h3 className="text-xl font-display font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
+                  Digital Marketing Bhubaneswar
+                </h3>
+                <p className="text-sm text-white/60 leading-relaxed mb-6">
+                  Performance-driven Google Ads, Meta PPC advertising, conversion rate optimization (CRO), and content marketing designed for rapid pipeline growth in Odisha.
+                </p>
+                <div className="space-y-2 mb-6">
+                  {['Google Ads & Performance Max', 'Meta Hyper-Local Lead Campaigns', 'Brand Protection & ORM Defense'].map((item) => (
+                    <div key={item} className="flex items-center space-x-2 text-xs text-white/70">
+                      <CheckCircle2 size={14} className="text-cyan-400 shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <Link 
+                href="/digital-marketing-agency-bhubaneswar" 
+                className="inline-flex items-center space-x-2 text-sm font-bold text-cyan-400 hover:text-white transition-colors pt-4 border-t border-white/5"
+              >
+                <span>Explore Digital Marketing</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="glass p-8 rounded-3xl border border-white/10 hover:border-indigo-400/40 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-5">
+                  <div className="w-12 h-12 rounded-2xl bg-indigo-400/10 text-indigo-400 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <Code2 size={24} />
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-indigo-400/20 bg-indigo-400/5 text-indigo-400">Tech Corridor Engineering</span>
+                </div>
+                <h3 className="text-xl font-display font-bold mb-3 text-white group-hover:text-indigo-400 transition-colors">
+                  Software Company Bhubaneswar
+                </h3>
+                <p className="text-sm text-white/60 leading-relaxed mb-6">
+                  Engineering scalable custom software, Next.js web applications, SaaS platforms, and enterprise cloud migrations for businesses across Bhubaneswar and global markets.
+                </p>
+                <div className="space-y-2 mb-6">
+                  {['Next.js, Node.js & Go Architectures', 'Cloud Native DevOps (AWS / GCP)', 'Automated CI/CD & Playwright QA'].map((item) => (
+                    <div key={item} className="flex items-center space-x-2 text-xs text-white/70">
+                      <CheckCircle2 size={14} className="text-indigo-400 shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <Link 
+                href="/software-development-company-bhubaneswar" 
+                className="inline-flex items-center space-x-2 text-sm font-bold text-indigo-400 hover:text-white transition-colors pt-4 border-t border-white/5"
+              >
+                <span>Explore Software Engineering</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-12 p-6 rounded-2xl border border-white/5 bg-white/[0.015] flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center space-x-3">
+              <MapPin size={18} className="text-brand-orange shrink-0" />
+              <span className="text-xs md:text-sm text-white/70">
+                <strong className="text-white">Local Coverage Across Odisha:</strong> Laxmisagar &bull; Patia &bull; Saheed Nagar &bull; Infocity &bull; Chandrasekharpur &bull; Jaydev Vihar &bull; Cuttack &bull; Puri &bull; Rourkela
+              </span>
+            </div>
+            <Link href="/contact" className="text-xs font-bold text-brand-orange hover:underline flex items-center space-x-1">
+              <span>Visit our Bhubaneswar Office</span>
+              <ChevronRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
 

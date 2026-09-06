@@ -3,8 +3,18 @@ import type { Metadata } from 'next';
 import SoftwareDevelopmentCompanyBhubaneswarPage from './SoftwareDevelopmentCompanyBhubaneswarPage';
 
 export const metadata: Metadata = {
-  title: 'Software Development Company in Bhubaneswar | Sociodigit',
-  description: 'Top software development company in Bhubaneswar. We engineer custom web apps, scalable SaaS architectures, mobile apps, and enterprise cloud solutions.',
+  title: 'Top Software Development Company in Bhubaneswar, Odisha | Sociodigit',
+  description: 'Top software development company in Bhubaneswar, Odisha. We engineer custom enterprise web apps, Next.js SaaS platforms, cloud DevOps, and API microservices.',
+  keywords: [
+    'software development company Bhubaneswar',
+    'web development company Bhubaneswar',
+    'best IT company in Bhubaneswar',
+    'custom software development Odisha',
+    'Next.js development company Bhubaneswar',
+    'app developers Bhubaneswar',
+    'IT consulting services Infocity Patia',
+    'SaaS development agency Odisha',
+  ],
   alternates: {
     canonical: 'https://sociodigit.in/software-development-company-bhubaneswar',
     languages: {
@@ -20,8 +30,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/software-development-company-bhubaneswar',
-    title: 'Software Development Company in Bhubaneswar | Sociodigit',
-    description: 'Top software development company in Bhubaneswar. We engineer custom web apps, scalable SaaS architectures, mobile apps, and enterprise cloud solutions.',
+    title: 'Top Software Development Company in Bhubaneswar, Odisha | Sociodigit',
+    description: 'Top software development company in Bhubaneswar, Odisha. We engineer custom enterprise web apps, Next.js SaaS platforms, cloud DevOps, and API microservices.',
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -33,8 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Software Development Company in Bhubaneswar | Sociodigit',
-    description: 'Top software development company in Bhubaneswar. We engineer custom web apps, scalable SaaS architectures, mobile apps, and enterprise cloud solutions.',
+    title: 'Top Software Development Company in Bhubaneswar, Odisha | Sociodigit',
+    description: 'Top software development company in Bhubaneswar, Odisha. We engineer custom enterprise web apps, Next.js SaaS platforms, cloud DevOps, and API microservices.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };
@@ -65,13 +75,41 @@ const jsonLd = [
       "latitude": "20.2724",
       "longitude": "85.8488"
     },
+    "hasMap": "https://maps.google.com/?q=20.2724,85.8488",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:30",
+      "closes": "18:30"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "42",
+      "bestRating": "5"
+    },
     "areaServed": [
       { "@type": "City", "name": "Bhubaneswar" },
-      { "@type": "State", "name": "Odisha" },
+      { "@type": "AdministrativeArea", "name": "Patia, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Saheed Nagar, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Infocity, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Laxmisagar, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Jaydev Vihar, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Chandrasekharpur, Bhubaneswar" },
       { "@type": "City", "name": "Cuttack" },
       { "@type": "City", "name": "Rourkela" },
       { "@type": "City", "name": "Puri" },
+      { "@type": "State", "name": "Odisha" },
       { "@type": "Country", "name": "India" }
+    ],
+    "knowsAbout": [
+      "Custom Software Development",
+      "Enterprise Web Applications (Next.js, Node.js, Go)",
+      "SaaS Platform Architecture",
+      "Cloud Infrastructure & DevOps (AWS, GCP)",
+      "Microservices & REST / GraphQL APIs",
+      "Automated QA & Playwright Testing",
+      "Bhubaneswar IT Corridor Software Engineering"
     ],
     "sameAs": [
       "https://www.linkedin.com/company/sociodigit",

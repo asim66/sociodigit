@@ -15,9 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     // Core Pages
-    { url: '', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: '2026-08-26' },
+    { url: '', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: '2026-09-06' },
     { url: '/about', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: '2026-08-25' },
-    { url: '/contact', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: '2026-08-24' },
+    { url: '/contact', priority: 0.9, changeFrequency: 'weekly' as const, lastModified: '2026-09-06' },
     { url: '/blog', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: '2026-08-23' },
     ...blogRoutes,
     { url: '/careers', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: '2026-08-15' },
@@ -26,9 +26,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/hotel-fraud-control', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-18' },
     
     // Bhubaneswar Hubs (High Intent)
-    { url: '/seo-agency-bhubaneswar', priority: 0.95, changeFrequency: 'weekly' as const, lastModified: '2026-08-26' },
-    { url: '/digital-marketing-agency-bhubaneswar', priority: 0.95, changeFrequency: 'weekly' as const, lastModified: '2026-08-26' },
-    { url: '/software-development-company-bhubaneswar', priority: 0.95, changeFrequency: 'weekly' as const, lastModified: '2026-08-26' },
+    { url: '/seo-agency-bhubaneswar', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: '2026-09-06' },
+    { url: '/digital-marketing-agency-bhubaneswar', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: '2026-09-06' },
+    { url: '/software-development-company-bhubaneswar', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: '2026-09-06' },
 
     // Services
     { url: '/services', priority: 0.9, changeFrequency: 'weekly' as const, lastModified: '2026-08-22' },

@@ -7,8 +7,11 @@ import ClientLayout from '../components/ClientLayout';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sociodigit.in'),
-  title: 'Sociodigit',
-  description: 'Premium Technology & Design Agency',
+  title: {
+    default: 'Sociodigit | AI Software, Cloud & Digital Marketing Agency',
+    template: '%s | Sociodigit Bhubaneswar',
+  },
+  description: 'Sociodigit is an AI-driven agency in Bhubaneswar, Odisha engineering scalable software, cloud DevOps, QA automation, and performance digital marketing.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -46,6 +49,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Geo-Targeting for Bhubaneswar & Odisha Local Search */}
+        <meta name="geo.region" content="IN-OR" />
+        <meta name="geo.placename" content="Bhubaneswar, Odisha, India" />
+        <meta name="geo.position" content="20.2724;85.8488" />
+        <meta name="ICBM" content="20.2724, 85.8488" />
         {gscId && <meta name="google-site-verification" content={gscId} />}
       </head>
       <body>

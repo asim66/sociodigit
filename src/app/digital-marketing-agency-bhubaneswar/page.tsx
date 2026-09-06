@@ -3,8 +3,18 @@ import type { Metadata } from 'next';
 import DigitalMarketingAgencyBhubaneswarPage from './DigitalMarketingAgencyBhubaneswarPage';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Bhubaneswar | Sociodigit',
-  description: 'Premier digital marketing agency in Bhubaneswar, Odisha. We deliver performance SEO, ROI-focused Google & Meta Ads, content strategy, and AI-driven growth.',
+  title: 'Best Digital Marketing Agency in Bhubaneswar, Odisha | Sociodigit',
+  description: 'Top digital marketing agency in Bhubaneswar, Odisha. We deliver performance SEO, ROI-focused Google & Meta Ads, content strategy, and AI-driven growth across Odisha.',
+  keywords: [
+    'digital marketing agency Bhubaneswar',
+    'best digital marketing company in Bhubaneswar',
+    'digital marketing services Odisha',
+    'Google Ads agency Bhubaneswar',
+    'social media marketing agency Bhubaneswar',
+    'PPC agency Bhubaneswar',
+    'performance marketing Odisha',
+    'best advertising agency Bhubaneswar',
+  ],
   alternates: {
     canonical: 'https://sociodigit.in/digital-marketing-agency-bhubaneswar',
     languages: {
@@ -20,8 +30,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/digital-marketing-agency-bhubaneswar',
-    title: 'Digital Marketing Agency in Bhubaneswar | Sociodigit',
-    description: 'Premier digital marketing agency in Bhubaneswar, Odisha. We deliver performance SEO, ROI-focused Google & Meta Ads, content strategy, and AI-driven growth.',
+    title: 'Best Digital Marketing Agency in Bhubaneswar, Odisha | Sociodigit',
+    description: 'Top digital marketing agency in Bhubaneswar, Odisha. We deliver performance SEO, ROI-focused Google & Meta Ads, content strategy, and AI-driven growth across Odisha.',
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -33,8 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Digital Marketing Agency in Bhubaneswar | Sociodigit',
-    description: 'Premier digital marketing agency in Bhubaneswar, Odisha. We deliver performance SEO, ROI-focused Google & Meta Ads, content strategy, and AI-driven growth.',
+    title: 'Best Digital Marketing Agency in Bhubaneswar, Odisha | Sociodigit',
+    description: 'Top digital marketing agency in Bhubaneswar, Odisha. We deliver performance SEO, ROI-focused Google & Meta Ads, content strategy, and AI-driven growth across Odisha.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };
@@ -65,13 +75,42 @@ const jsonLd = [
       "latitude": "20.2724",
       "longitude": "85.8488"
     },
+    "hasMap": "https://maps.google.com/?q=20.2724,85.8488",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:30",
+      "closes": "18:30"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "56",
+      "bestRating": "5"
+    },
     "areaServed": [
       { "@type": "City", "name": "Bhubaneswar" },
-      { "@type": "State", "name": "Odisha" },
+      { "@type": "AdministrativeArea", "name": "Patia, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Saheed Nagar, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Infocity, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Laxmisagar, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Jaydev Vihar, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Chandrasekharpur, Bhubaneswar" },
       { "@type": "City", "name": "Cuttack" },
       { "@type": "City", "name": "Puri" },
       { "@type": "City", "name": "Rourkela" },
+      { "@type": "State", "name": "Odisha" },
       { "@type": "Country", "name": "India" }
+    ],
+    "knowsAbout": [
+      "Digital Marketing Strategy",
+      "Google Ads PPC Management",
+      "Meta Ads & Instagram Marketing",
+      "Performance Marketing & ROAS",
+      "Search Engine Optimization",
+      "Conversion Rate Optimization (CRO)",
+      "Online Reputation Management (ORM)",
+      "Bhubaneswar Digital Lead Generation"
     ],
     "sameAs": [
       "https://www.linkedin.com/company/sociodigit",

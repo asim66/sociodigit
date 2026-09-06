@@ -114,8 +114,18 @@ const Contact = () => {
                       <MapPin size={24} />
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-white/40 uppercase tracking-widest mb-1">Visit Us</div>
-                      <div className="text-lg font-bold text-white leading-tight">HP4, Phase 2, Brit Colony,<br/>Laxmisagar, Bhubaneswar,<br/>751006</div>
+                      <div className="text-sm font-bold text-white/40 uppercase tracking-widest mb-1">Visit Bhubaneswar Office</div>
+                      <div className="text-lg font-bold text-white leading-tight">HP4, Phase 2, Brit Colony,<br/>Laxmisagar, Bhubaneswar,<br/>Odisha 751006</div>
+                      <div className="text-xs text-white/50 mt-1">Mon–Fri: 9:30 AM – 6:30 PM IST</div>
+                      <a 
+                        href="https://maps.google.com/?q=20.2724,85.8488" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-orange hover:text-white transition-colors mt-2"
+                      >
+                        <span>Get Directions on Google Maps</span>
+                        <ExternalLink size={12} />
+                      </a>
                     </div>
                   </div>
                 </div>

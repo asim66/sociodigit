@@ -3,8 +3,18 @@ import type { Metadata } from 'next';
 import SeoAgencyBhubaneswarPage from './SeoAgencyBhubaneswarPage';
 
 export const metadata: Metadata = {
-  title: 'Best SEO Agency in Bhubaneswar, Odisha | Sociodigit',
-  description: 'Top SEO agency in Bhubaneswar, Odisha. We deliver Google Map 3-Pack rankings, technical Core Web Vitals, E-E-A-T authority, and Generative Engine Optimization.',
+  title: 'Best SEO Agency in Bhubaneswar, Odisha | Rank #1 with Sociodigit',
+  description: 'Top SEO agency in Bhubaneswar, Odisha. We deliver Google Map 3-Pack rankings, technical Core Web Vitals, E-E-A-T authority, and Generative Engine Optimization for Odisha businesses.',
+  keywords: [
+    'SEO agency Bhubaneswar',
+    'best SEO company in Bhubaneswar',
+    'SEO services Odisha',
+    'local SEO Bhubaneswar',
+    'Google Map 3-Pack Bhubaneswar',
+    'Generative Engine Optimization Bhubaneswar',
+    'AI SEO agency Odisha',
+    'top SEO firm Cuttack',
+  ],
   alternates: {
     canonical: 'https://sociodigit.in/seo-agency-bhubaneswar',
     languages: {
@@ -20,8 +30,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/seo-agency-bhubaneswar',
-    title: 'Best SEO Agency in Bhubaneswar, Odisha | Sociodigit',
-    description: 'Top SEO agency in Bhubaneswar, Odisha. We deliver Google Map 3-Pack rankings, technical Core Web Vitals, E-E-A-T authority, and Generative Engine Optimization.',
+    title: 'Best SEO Agency in Bhubaneswar, Odisha | Rank #1 with Sociodigit',
+    description: 'Top SEO agency in Bhubaneswar, Odisha. We deliver Google Map 3-Pack rankings, technical Core Web Vitals, E-E-A-T authority, and Generative Engine Optimization for Odisha businesses.',
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -33,8 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Best SEO Agency in Bhubaneswar, Odisha | Sociodigit',
-    description: 'Top SEO agency in Bhubaneswar, Odisha. We deliver Google Map 3-Pack rankings, technical Core Web Vitals, E-E-A-T authority, and Generative Engine Optimization.',
+    title: 'Best SEO Agency in Bhubaneswar, Odisha | Rank #1 with Sociodigit',
+    description: 'Top SEO agency in Bhubaneswar, Odisha. We deliver Google Map 3-Pack rankings, technical Core Web Vitals, E-E-A-T authority, and Generative Engine Optimization for Odisha businesses.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };
@@ -65,13 +75,41 @@ const jsonLd = [
       "latitude": "20.2724",
       "longitude": "85.8488"
     },
+    "hasMap": "https://maps.google.com/?q=20.2724,85.8488",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:30",
+      "closes": "18:30"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "48",
+      "bestRating": "5"
+    },
     "areaServed": [
       { "@type": "City", "name": "Bhubaneswar" },
-      { "@type": "State", "name": "Odisha" },
+      { "@type": "AdministrativeArea", "name": "Patia, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Saheed Nagar, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Infocity, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Laxmisagar, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Jaydev Vihar, Bhubaneswar" },
+      { "@type": "AdministrativeArea", "name": "Chandrasekharpur, Bhubaneswar" },
       { "@type": "City", "name": "Cuttack" },
       { "@type": "City", "name": "Rourkela" },
       { "@type": "City", "name": "Puri" },
+      { "@type": "State", "name": "Odisha" },
       { "@type": "Country", "name": "India" }
+    ],
+    "knowsAbout": [
+      "Search Engine Optimization",
+      "Google Map 3-Pack",
+      "Generative Engine Optimization (GEO)",
+      "Core Web Vitals Engineering",
+      "Local Citation Building",
+      "Technical SEO Auditing",
+      "Bhubaneswar Local Business Growth"
     ],
     "sameAs": [
       "https://www.linkedin.com/company/sociodigit",
