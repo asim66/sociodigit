@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import SoftwareDevelopmentCompanyBhubaneswarPage from './SoftwareDevelopmentCompanyBhubaneswarPage';
 
 export const metadata: Metadata = {
-  title: 'Top Software Development Company in Bhubaneswar, Odisha | Sociodigit',
-  description: 'Top software development company in Bhubaneswar, Odisha. We engineer custom enterprise web apps, Next.js SaaS platforms, cloud DevOps, and API microservices.',
+  title: 'Custom Software Development Company in Bhubaneswar, Odisha | Sociodigit',
+  description: 'Custom software development company in Bhubaneswar, Odisha. We build enterprise web apps, SaaS platforms, cloud DevOps solutions & API microservices for startups and enterprises across Odisha.',
   keywords: [
     'software development company Bhubaneswar',
     'web development company Bhubaneswar',
@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     'app developers Bhubaneswar',
     'IT consulting services Infocity Patia',
     'SaaS development agency Odisha',
+    'startup software development Bhubaneswar',
+    'web app development company Bhubaneswar',
+    'software company near Infocity Patia',
+    'custom software development Bhubaneswar',
   ],
   alternates: {
     canonical: 'https://sociodigit.in/software-development-company-bhubaneswar',
@@ -30,8 +34,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sociodigit.in/software-development-company-bhubaneswar',
-    title: 'Top Software Development Company in Bhubaneswar, Odisha | Sociodigit',
-    description: 'Top software development company in Bhubaneswar, Odisha. We engineer custom enterprise web apps, Next.js SaaS platforms, cloud DevOps, and API microservices.',
+    title: 'Custom Software Development Company in Bhubaneswar, Odisha | Sociodigit',
+    description: 'Custom software development company in Bhubaneswar, Odisha. We build enterprise web apps, SaaS platforms, cloud DevOps solutions & API microservices for startups and enterprises across Odisha.',
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -43,8 +47,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@sociodigit',
-    title: 'Top Software Development Company in Bhubaneswar, Odisha | Sociodigit',
-    description: 'Top software development company in Bhubaneswar, Odisha. We engineer custom enterprise web apps, Next.js SaaS platforms, cloud DevOps, and API microservices.',
+    title: 'Custom Software Development Company in Bhubaneswar, Odisha | Sociodigit',
+    description: 'Custom software development company in Bhubaneswar, Odisha. We build enterprise web apps, SaaS platforms, cloud DevOps solutions & API microservices for startups and enterprises across Odisha.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };
@@ -194,6 +198,30 @@ const jsonLd = [
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes, we specialize in refactoring monolithic legacy codebases into scalable microservices or serverless architectures with automated testing and zero business downtime."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does custom software development cost in Bhubaneswar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Custom software development costs in Bhubaneswar typically range from ₹3–15 lakhs for MVPs and ₹15–80 lakhs for full enterprise platforms, depending on complexity, integrations, and timeline. Sociodigit provides transparent fixed-price quotes after a free technical discovery workshop."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with startups and early-stage companies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We partner with early-stage startups to build production-ready MVPs, SaaS platforms, and mobile apps using lean engineering sprints. Our startup engagements include architecture design, rapid prototyping, and cloud deployment optimized for cost efficiency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries do you serve from your Bhubaneswar office?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve FinTech, healthcare, e-commerce, SaaS, education, and hospitality industries from our Bhubaneswar office. Our engineering team has delivered platforms handling millions of transactions, patient management systems, and multi-tenant SaaS products."
         }
       }
     ]

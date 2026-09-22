@@ -5,7 +5,8 @@ import {
   Code2, Cpu, Server, ShieldCheck, Database, Layers,
   ArrowRight, Phone, Mail, Sparkles, BrainCircuit, Globe, 
   Award, Zap, ChevronRight, HelpCircle, CheckCircle2, GitBranch,
-  Terminal, Monitor, Laptop, Cloud
+  Terminal, Monitor, Laptop, Cloud, Briefcase, Users, Building2,
+  Rocket, Search, TestTube, ClipboardList, Cog
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -72,6 +73,102 @@ const localAreas = [
   "Infocity", "Jaydev Vihar", "Cuttack", "Rourkela", "Berhampur", "Puri", "Sambalpur"
 ];
 
+const trustMetrics = [
+  { value: "50+", label: "Projects Delivered", icon: <Briefcase className="w-5 h-5" /> },
+  { value: "8+", label: "Industries Served", icon: <Building2 className="w-5 h-5" /> },
+  { value: "6+", label: "Years of Engineering", icon: <Award className="w-5 h-5" /> },
+  { value: "100%", label: "Client Code Ownership", icon: <ShieldCheck className="w-5 h-5" /> },
+];
+
+const industryBadges = [
+  { name: "FinTech & Payments", href: "/industries/fintech" },
+  { name: "Healthcare & MedTech", href: "/industries/healthcare" },
+  { name: "E-Commerce & Retail", href: "/industries/ecommerce" },
+  { name: "SaaS & Startups", href: "/industries/saas" },
+  { name: "Education & EdTech", href: "/industries/education" },
+  { name: "Hospitality & Hotels", href: "/industries/hospitality-hotels" },
+];
+
+const sdlcSteps = [
+  {
+    step: "01",
+    title: "Discovery & Architecture",
+    icon: <Search className="w-6 h-6" />,
+    items: [
+      "Stakeholder requirement workshops (on-site in Bhubaneswar)",
+      "Technical architecture blueprint & system design",
+      "Technology stack selection & feasibility analysis"
+    ]
+  },
+  {
+    step: "02",
+    title: "UX/UI Design & Prototyping",
+    icon: <Monitor className="w-6 h-6" />,
+    items: [
+      "Wireframing & interactive Figma prototypes",
+      "Design system & component library creation",
+      "Usability testing & stakeholder feedback cycles"
+    ]
+  },
+  {
+    step: "03",
+    title: "Agile Sprint Development",
+    icon: <Code2 className="w-6 h-6" />,
+    items: [
+      "Bi-weekly iterative sprints with client demo reviews",
+      "Clean code with TypeScript, Go, or Python backends",
+      "Continuous integration with automated build pipelines"
+    ]
+  },
+  {
+    step: "04",
+    title: "QA Automation & Security",
+    icon: <TestTube className="w-6 h-6" />,
+    items: [
+      "End-to-end Playwright & Jest automated testing",
+      "Security vulnerability scanning & penetration testing",
+      "Load testing simulating 50,000+ concurrent users"
+    ]
+  },
+  {
+    step: "05",
+    title: "Cloud Deployment & Monitoring",
+    icon: <Cloud className="w-6 h-6" />,
+    items: [
+      "Zero-downtime deployment on AWS or Google Cloud",
+      "24/7 observability with Prometheus & Grafana",
+      "Ongoing maintenance, scaling & performance tuning"
+    ]
+  },
+];
+
+const caseStudyPreviews = [
+  {
+    badge: "FinTech SaaS",
+    title: "High-Concurrency FinTech SaaS Platform",
+    desc: "Architected a distributed microservices platform using Next.js, Go, and PostgreSQL with Redis caching on AWS EKS handling 2M+ concurrent transactions.",
+    metrics: [
+      { label: "Transaction Latency", value: "-65%" },
+      { label: "Active Concurrency", value: "2M+" },
+      { label: "Uptime", value: "99.99%" },
+      { label: "Dev Velocity", value: "3x Faster" },
+    ],
+    tech: ["Next.js", "Go", "PostgreSQL", "Redis", "AWS EKS", "Docker"]
+  },
+  {
+    badge: "QA Automation",
+    title: "End-to-End QA Automation & Performance Hardening",
+    desc: "Designed an automated testing framework using Playwright and TypeScript integrated into CI/CD pipelines, reducing regression testing from 18 hours to 8 minutes.",
+    metrics: [
+      { label: "Test Coverage", value: "92%" },
+      { label: "Production Bugs", value: "-75%" },
+      { label: "Release Cadence", value: "Weekly" },
+      { label: "Regression Time", value: "8 Mins" },
+    ],
+    tech: ["Playwright", "TypeScript", "Jest", "GitHub Actions", "Docker"]
+  },
+];
+
 const engineeringProofs = [
   { metric: "99.99%", label: "Target System Uptime", sub: "Production SLAs" },
   { metric: "40%", label: "Transaction Speed Lift", sub: "FinTech Platform" },
@@ -95,6 +192,18 @@ const faqs = [
   {
     q: "Can you take over and refactor an existing software project?",
     a: "Yes. We regularly perform comprehensive code audits to identify security vulnerabilities, memory leaks, and performance bottlenecks, followed by incremental refactoring into modern, maintainable architectures."
+  },
+  {
+    q: "How much does custom software development cost in Bhubaneswar?",
+    a: "Custom software development costs in Bhubaneswar typically range from ₹3–15 lakhs for MVPs and ₹15–80 lakhs for full enterprise platforms, depending on complexity, integrations, and timeline. Sociodigit provides transparent fixed-price quotes after a free technical discovery workshop."
+  },
+  {
+    q: "Do you work with startups and early-stage companies?",
+    a: "Absolutely. We partner with early-stage startups to build production-ready MVPs, SaaS platforms, and mobile apps using lean engineering sprints. Our startup engagements include architecture design, rapid prototyping, and cloud deployment optimized for cost efficiency."
+  },
+  {
+    q: "What industries do you serve from your Bhubaneswar office?",
+    a: "We serve FinTech, healthcare, e-commerce, SaaS, education, and hospitality industries from our Bhubaneswar office. Our engineering team has delivered platforms handling millions of transactions, patient management systems, and multi-tenant SaaS products across Odisha and globally."
   }
 ];
 
@@ -164,6 +273,44 @@ export default function SoftwareDevelopmentCompanyBhubaneswarPage() {
                   <div className="text-[11px] text-white/40 mt-1">{item.sub}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CLIENT TRUST & SOCIAL PROOF ── */}
+      <section className="py-16 border-t border-white/5">
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            {/* Trust Metrics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              {trustMetrics.map((item, idx) => (
+                <div key={idx} className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 text-center hover:border-brand-orange/30 transition-colors">
+                  <div className="inline-flex items-center justify-center p-2.5 rounded-xl bg-brand-orange/10 text-brand-orange mb-3">
+                    {item.icon}
+                  </div>
+                  <div className="text-2xl lg:text-3xl font-extrabold font-display text-white mb-1">{item.value}</div>
+                  <div className="text-xs font-semibold text-white/60 uppercase tracking-wider">{item.label}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Industry Badges */}
+            <div className="text-center">
+              <p className="text-sm font-semibold text-white/50 uppercase tracking-widest mb-4">
+                Trusted by startups & enterprises across industries
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                {industryBadges.map((badge, idx) => (
+                  <Link
+                    key={idx}
+                    href={badge.href}
+                    className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-semibold text-white/70 hover:border-brand-orange/40 hover:text-brand-orange transition-all duration-300"
+                  >
+                    {badge.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -267,6 +414,63 @@ export default function SoftwareDevelopmentCompanyBhubaneswarPage() {
         </div>
       </section>
 
+      {/* ── ENGINEERING PROCESS / SDLC ── */}
+      <section className="py-20 border-t border-white/5">
+        <div className="container-custom">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-14">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                <ClipboardList size={13} />
+                <span>Our Development Process</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+                How We Build <span className="gradient-text">Custom Software</span>
+              </h2>
+              <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto">
+                A battle-tested, five-phase engineering methodology refined across 50+ projects for startups and enterprises in Bhubaneswar and globally.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {sdlcSteps.map((step, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col md:flex-row gap-6 p-6 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-brand-orange/30 transition-all duration-300 group"
+                >
+                  <div className="flex items-start gap-4 md:min-w-[240px]">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/20 text-brand-orange shrink-0 group-hover:bg-brand-orange/20 transition-colors">
+                      {step.icon}
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-brand-orange/60 uppercase tracking-widest mb-1">Phase {step.step}</div>
+                      <h3 className="text-lg font-display font-bold text-white group-hover:text-brand-orange transition-colors">{step.title}</h3>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 flex-1">
+                    {step.items.map((item, i) => (
+                      <li key={i} className="flex items-start text-sm text-white/70">
+                        <CheckCircle2 size={15} className="text-emerald-400 shrink-0 mr-2.5 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-10">
+              <Link
+                href="/services/software-development"
+                className="inline-flex items-center text-sm font-bold text-brand-orange hover:text-white transition-colors group"
+              >
+                <span>Explore all our software development services</span>
+                <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── LOCAL ENGINEERING HUBS & CLIENTS ── */}
       <section className="py-20">
         <div className="container-custom max-w-5xl mx-auto">
@@ -328,6 +532,68 @@ export default function SoftwareDevelopmentCompanyBhubaneswarPage() {
         </div>
       </section>
 
+      {/* ── CASE STUDY PREVIEWS ── */}
+      <section className="py-20 border-t border-white/5">
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-14">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-semibold uppercase tracking-wider mb-4">
+                <Award size={13} />
+                <span>Proven Engineering Results</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+                Software We&apos;ve <span className="gradient-text">Engineered</span>
+              </h2>
+              <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto">
+                Real projects. Quantifiable outcomes. Here&apos;s what our custom software development delivers.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {caseStudyPreviews.map((cs, idx) => (
+                <div
+                  key={idx}
+                  className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-orange/30 transition-all duration-300 flex flex-col justify-between"
+                >
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-brand-orange/10 text-brand-orange border border-brand-orange/20 mb-4 inline-block">
+                      {cs.badge}
+                    </span>
+                    <h3 className="text-xl font-display font-bold text-white mb-3">{cs.title}</h3>
+                    <p className="text-sm text-white/60 leading-relaxed mb-6">{cs.desc}</p>
+
+                    <div className="grid grid-cols-2 gap-3 mb-6">
+                      {cs.metrics.map((m, i) => (
+                        <div key={i} className="p-3 rounded-xl bg-white/[0.03] border border-white/5 text-center">
+                          <div className="text-lg font-extrabold font-display text-brand-orange">{m.value}</div>
+                          <div className="text-[11px] text-white/50 font-semibold">{m.label}</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-1.5 mb-6">
+                      {cs.tech.map((t, i) => (
+                        <span key={i} className="px-2 py-0.5 rounded-md bg-white/5 text-[11px] font-mono text-white/60 border border-white/5">{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-10">
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center px-6 py-3 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/15 transition-all duration-300 group"
+              >
+                <span>View All Case Studies</span>
+                <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ SECTION ── */}
       <section className="py-20 border-t border-white/5">
         <div className="container-custom max-w-4xl mx-auto">
@@ -372,6 +638,33 @@ export default function SoftwareDevelopmentCompanyBhubaneswarPage() {
                   )}
                 </AnimatePresence>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── RELATED CONTENT ── */}
+      <section className="py-16 border-t border-white/5">
+        <div className="container-custom max-w-5xl mx-auto">
+          <h2 className="text-2xl font-display font-bold mb-6 text-center">
+            Related <span className="gradient-text">Resources</span>
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: "How Startups Build Scalable SaaS Platforms", href: "/blog/scalable-saas-platforms-startups" },
+              { title: "DevOps Best Practices for Scaling Startups", href: "/blog/devops-best-practices-scaling-startups-2026" },
+              { title: "Why Playwright is the Future of QA Testing", href: "/blog/playwright-future-automation-testing" },
+            ].map((post, idx) => (
+              <Link
+                key={idx}
+                href={post.href}
+                className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-brand-orange/30 transition-all duration-300 group"
+              >
+                <h3 className="text-sm font-bold text-white group-hover:text-brand-orange transition-colors mb-2">{post.title}</h3>
+                <span className="text-xs text-brand-orange font-semibold flex items-center gap-1">
+                  Read article <ChevronRight size={12} />
+                </span>
+              </Link>
             ))}
           </div>
         </div>
