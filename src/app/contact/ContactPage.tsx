@@ -118,7 +118,7 @@ const Contact = () => {
                       <div className="text-lg font-bold text-white leading-tight">HP4, Phase 2, Brit Colony,<br/>Laxmisagar, Bhubaneswar,<br/>Odisha 751006</div>
                       <div className="text-xs text-white/50 mt-1">Mon–Fri: 9:30 AM – 6:30 PM IST</div>
                       <a 
-                        href="https://maps.google.com/?q=20.2724,85.8488" 
+                        href="https://www.google.com/maps?cid=9060003420575086868" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-orange hover:text-white transition-colors mt-2"
@@ -346,27 +346,46 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Google Maps Embed */}
-      <section className="h-[450px] w-full relative overflow-hidden border-t border-white/5">
+      {/* Official Google Maps Embed */}
+      <section className="h-[480px] w-full relative overflow-hidden border-t border-white/5 bg-[#e5e3df]">
         <iframe
-          src="https://maps.google.com/maps?q=HP4+Phase+2+Brit+Colony+Laxmisagar+Bhubaneswar+Odisha+751006&t=&z=15&ie=UTF8&iwloc=&output=embed"
-          className="w-full h-full border-0 grayscale contrast-125 opacity-80"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.736564207318!2d85.8568727!3d20.269757399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a713a9ee5bb3%3A0x7dbb991beb33b914!2sSociodigit!5e0!3m2!1sen!2sin"
+          className="w-full h-full border-0"
           allowFullScreen
-          loading="lazy"
-          title="Sociodigit Office Location — Bhubaneswar, Odisha"
+          title="Sociodigit Official Google Business Profile Location — Bhubaneswar, Odisha"
           referrerPolicy="no-referrer-when-downgrade"
         />
-        {/* Overlay Pin Card */}
-        <div className="absolute top-6 left-6 md:left-12 glass px-6 py-4 rounded-2xl border-white/10 shadow-2xl">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-brand-orange rounded-xl flex items-center justify-center shrink-0">
+        {/* Top-Right Dedicated Action Card (Positioned away from Google's native top-left card) */}
+        <div className="absolute top-6 right-6 md:right-10 bg-[#0A0E1A]/95 border border-white/15 px-5 py-4 rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.65)] backdrop-blur-xl max-w-xs z-10 hidden sm:block">
+          <div className="flex items-start space-x-3 mb-3">
+            <div className="w-10 h-10 bg-brand-orange rounded-xl flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(255,102,0,0.4)]">
               <MapPin size={20} className="text-white" />
             </div>
             <div>
-              <p className="text-xs font-bold text-brand-orange uppercase tracking-widest">Our Office</p>
-              <p className="text-sm text-white font-semibold leading-tight">Laxmisagar, Bhubaneswar</p>
-              <p className="text-xs text-white/50">Odisha, India — 751006</p>
+              <p className="text-[11px] font-bold text-brand-orange uppercase tracking-wider">Verified Business Pin</p>
+              <p className="text-sm text-white font-bold leading-tight">Sociodigit Headquarters</p>
+              <p className="text-xs text-white/70 mt-0.5">Laxmisagar, Bhubaneswar</p>
             </div>
+          </div>
+          <div className="flex items-center space-x-2 pt-2.5 border-t border-white/10">
+            <a 
+              href="https://www.google.com/maps?cid=9060003420575086868"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-bold px-3 py-1.5 rounded-lg bg-brand-orange text-white hover:bg-brand-orange/90 transition-all inline-flex items-center space-x-1"
+            >
+              <span>Get Directions</span>
+              <ExternalLink size={11} />
+            </a>
+            <a 
+              href="https://search.google.com/local/writereview?placeid=ChIJs1vuqROnGTkRFLkztxubm30"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-bold px-3 py-1.5 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-all inline-flex items-center space-x-1"
+            >
+              <span>Review on Google</span>
+              <ExternalLink size={11} />
+            </a>
           </div>
         </div>
       </section>

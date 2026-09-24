@@ -6,7 +6,7 @@ import {
   ArrowRight, Phone, Mail, Sparkles, BrainCircuit, Globe, 
   Award, Zap, ChevronRight, HelpCircle, BarChart3, Clock, Check,
   Send, Building2, Compass, Activity, Star, Users, 
-  FileSearch, Cpu, LineChart, Layers, X, BarChart2
+  FileSearch, Cpu, LineChart, Layers, X, BarChart2, ExternalLink
 } from 'lucide-react';
 import Link from 'next/link';
 import AiSeoSection from '../../components/AiSeoSection';
@@ -658,6 +658,54 @@ const SeoAgencyBhubaneswarPage = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Embedded Official Google Maps Location */}
+            <div className="mt-10 pt-8 border-t border-white/10">
+              <div className="grid lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-5 space-y-3.5">
+                  <div className="inline-flex items-center space-x-2 text-xs font-bold text-brand-orange uppercase tracking-widest">
+                    <span className="w-2 h-2 rounded-full bg-brand-orange animate-ping" />
+                    <span>Verified Google Business Profile</span>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-white leading-tight">
+                    Visit Sociodigit Headquarters in Bhubaneswar
+                  </h3>
+                  <p className="text-white/60 text-xs md:text-sm leading-relaxed">
+                    Our team is headquartered at Laxmisagar, Bhubaneswar. Clients across Odisha meet our SEO strategists directly for technical audits and 3-Pack roadmaps.
+                  </p>
+                  <div className="flex flex-wrap gap-2.5 pt-1">
+                    <a
+                      href="https://www.google.com/maps?cid=9060003420575086868"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary text-xs !py-2.5 !px-4 inline-flex items-center space-x-1.5"
+                    >
+                      <span>Get Directions on Google Maps</span>
+                      <ExternalLink size={12} />
+                    </a>
+                    <a
+                      href="https://search.google.com/local/writereview?placeid=ChIJs1vuqROnGTkRFLkztxubm30"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-semibold text-white/80 hover:text-white hover:border-white/20 transition-all inline-flex items-center space-x-1.5"
+                    >
+                      <span>Review on Google</span>
+                      <ExternalLink size={12} />
+                    </a>
+                  </div>
+                </div>
+                <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-white/10 h-[280px] md:h-[320px] relative shadow-2xl bg-[#0a0f1d]">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.736564207318!2d85.8568727!3d20.269757399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a713a9ee5bb3%3A0x7dbb991beb33b914!2sSociodigit!5e0!3m2!1sen!2sin"
+                    className="w-full h-full border-0 contrast-105"
+                    allowFullScreen
+                    loading="eager"
+                    title="Sociodigit Official Google Business Profile Location — Bhubaneswar, Odisha"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
               </div>
             </div>
           </div>

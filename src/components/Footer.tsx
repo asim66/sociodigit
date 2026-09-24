@@ -129,7 +129,17 @@ const Footer = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start space-x-3 text-white/60">
                 <MapPin size={22} className="text-brand-orange shrink-0 mt-1" />
-                <span className="leading-relaxed">HP4, Phase 2, Brit Colony,<br/>Laxmisagar, Bhubaneswar,<br/>Odisha 751006</span>
+                <span className="leading-relaxed">
+                  <a 
+                    href="https://www.google.com/maps?cid=9060003420575086868"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-brand-orange transition-colors"
+                    title="View Sociodigit on Google Maps"
+                  >
+                    HP4, Phase 2, Brit Colony,<br/>Laxmisagar, Bhubaneswar,<br/>Odisha 751006
+                  </a>
+                </span>
               </li>
               <li className="flex items-center space-x-3 text-white/60">
                 <Phone size={18} className="text-brand-orange shrink-0" />

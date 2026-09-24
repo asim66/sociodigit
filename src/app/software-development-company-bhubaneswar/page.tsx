@@ -79,7 +79,7 @@ const jsonLd = [
       "latitude": "20.2724",
       "longitude": "85.8488"
     },
-    "hasMap": "https://maps.google.com/?q=20.2724,85.8488",
+    "hasMap": "https://www.google.com/maps?cid=9060003420575086868",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
