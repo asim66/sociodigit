@@ -2,13 +2,15 @@
 // @ts-nocheck
 
 import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'motion/react';
 import { usePathname } from 'next/navigation';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import ChatbotWidget from './ChatbotWidget';
 import SmoothScrollProvider from './SmoothScrollProvider';
 import ScrollProgressBar from './ScrollProgressBar';
+
+const ChatbotWidget = dynamic(() => import('./ChatbotWidget'), { ssr: false });
 
 import { MessageCircle, ArrowUp, X, Mail, Sparkles } from 'lucide-react';
 
