@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630,
     }],
-    locale: 'en_US',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
@@ -63,7 +63,7 @@ const jsonLd = [
     "@id": "https://sociodigit.in/contact#localbusiness",
     "name": "Sociodigit — Bhubaneswar Office",
     "url": "https://sociodigit.in/contact",
-    "telephone": "+91-7008381630",
+    "telephone": "+91 7008381630",
     "email": "hi@sociodigit.in",
     "priceRange": "₹₹₹",
     "address": {
@@ -79,7 +79,7 @@ const jsonLd = [
       "latitude": "20.2724",
       "longitude": "85.8488"
     },
-    "hasMap": "https://www.google.com/maps?cid=9060003420575086868",
+    "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJs1vuqROnGTkRFLkztxubm30",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -88,9 +88,9 @@ const jsonLd = [
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "64",
-      "bestRating": "5"
+      "ratingValue": 4.9,
+      "reviewCount": 64,
+      "bestRating": 5
     }
   }
 ];

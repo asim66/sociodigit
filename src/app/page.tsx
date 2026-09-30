@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630,
     }],
-    locale: 'en_US',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
@@ -88,8 +88,10 @@ const jsonLd = {
       },
       "image": "https://sociodigit.in/logo-dark.png",
       "email": "hi@sociodigit.in",
-      "telephone": "+91-7008381630",
+      "telephone": "+91 7008381630",
       "priceRange": "₹₹₹",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, Bank Transfer, UPI",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "HP4, Phase 2, Brit Colony, Laxmisagar",
@@ -103,7 +105,7 @@ const jsonLd = {
         "latitude": "20.2724",
         "longitude": "85.8488"
       },
-      "hasMap": "https://www.google.com/maps?cid=9060003420575086868",
+      "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJs1vuqROnGTkRFLkztxubm30",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -112,16 +114,22 @@ const jsonLd = {
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "64",
-        "bestRating": "5"
+        "ratingValue": 4.9,
+        "reviewCount": 64,
+        "bestRating": 5
       },
       "areaServed": [
         { "@type": "City", "name": "Bhubaneswar" },
-        { "@type": "State", "name": "Odisha" },
+        { "@type": "AdministrativeArea", "name": "Patia, Bhubaneswar" },
+        { "@type": "AdministrativeArea", "name": "Saheed Nagar, Bhubaneswar" },
+        { "@type": "AdministrativeArea", "name": "Infocity, Bhubaneswar" },
+        { "@type": "AdministrativeArea", "name": "Laxmisagar, Bhubaneswar" },
+        { "@type": "AdministrativeArea", "name": "Jaydev Vihar, Bhubaneswar" },
+        { "@type": "AdministrativeArea", "name": "Chandrasekharpur, Bhubaneswar" },
         { "@type": "City", "name": "Cuttack" },
-        { "@type": "City", "name": "Puri" },
         { "@type": "City", "name": "Rourkela" },
+        { "@type": "City", "name": "Puri" },
+        { "@type": "State", "name": "Odisha" },
         { "@type": "Country", "name": "India" }
       ],
       "knowsAbout": [

@@ -670,6 +670,62 @@ export default function SoftwareDevelopmentCompanyBhubaneswarPage() {
         </div>
       </section>
 
+      {/* ── LOCAL PRESENCE ── */}
+      <section className="py-20 border-t border-white/10">
+        <div className="container-custom">
+          <div className="glass p-8 md:p-14 rounded-[2.5rem] border border-white/10 relative overflow-hidden">
+            <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-10">
+              <div className="lg:col-span-5 space-y-5">
+                <div className="inline-flex items-center space-x-2 text-xs font-bold text-brand-orange uppercase tracking-widest">
+                  <span className="w-2 h-2 rounded-full bg-brand-orange animate-ping" />
+                  <span>Verified Google Business Profile</span>
+                </div>
+                <h2 className="text-xl md:text-2xl font-display font-bold text-white leading-tight">
+                  Visit Our Software Engineering Office in Bhubaneswar
+                </h2>
+                <address className="not-italic space-y-2 text-sm text-white/70 leading-relaxed">
+                  <p className="font-semibold text-white">Sociodigit — Software Development Company</p>
+                  <p>HP4, Phase 2, Brit Colony, Laxmisagar,<br />Bhubaneswar, Odisha 751006</p>
+                  <p>📞 <a href="tel:+917008381630" className="hover:text-brand-orange transition-colors">+91 7008381630</a></p>
+                  <p>✉️ <a href="mailto:hi@sociodigit.in" className="hover:text-brand-orange transition-colors">hi@sociodigit.in</a></p>
+                  <p className="text-white/50 text-xs">Mon–Fri: 9:30 AM – 6:30 PM IST</p>
+                </address>
+                <div className="flex flex-wrap gap-2.5 pt-2">
+                  <a
+                    href="https://www.google.com/maps/place/?q=place_id:ChIJs1vuqROnGTkRFLkztxubm30"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary text-xs !py-2.5 !px-4 inline-flex items-center space-x-1.5"
+                  >
+                    <span>Get Directions on Google Maps</span>
+                  </a>
+                  <a
+                    href="https://search.google.com/local/writereview?placeid=ChIJs1vuqROnGTkRFLkztxubm30"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-semibold text-white/80 hover:text-white hover:border-white/20 transition-all inline-flex items-center space-x-1.5"
+                  >
+                    <span>Review on Google</span>
+                  </a>
+                </div>
+              </div>
+              <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-white/10 h-[280px] md:h-[320px] relative shadow-2xl bg-[#0a0f1d]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.736564207318!2d85.8568727!3d20.269757399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a713a9ee5bb3%3A0x7dbb991beb33b914!2sSociodigit!5e0!3m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  className="border-0 grayscale-[30%]"
+                  allowFullScreen
+                  loading="lazy"
+                  title="Sociodigit Software Development Company — Bhubaneswar, Odisha Office Location"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA SECTION ── */}
       <section className="py-20 border-t border-white/10 bg-gradient-to-b from-space-blue to-[#0b1021]">
         <div className="container-custom max-w-4xl mx-auto text-center">
