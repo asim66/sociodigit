@@ -4,15 +4,19 @@ import HospitalityHotelsPage from './HospitalityHotelsPage';
 
 export const metadata: Metadata = {
   title: 'Hotel ORM, Fake Website Takedown & GMB Protection Agency | Sociodigit',
-  description: 'National brand defense for luxury hotels & resorts in India. Fast takedown of fake booking websites, Google Maps phone hijack recovery, and 24/7 hospitality ORM.',
+  description: 'National and Odisha brand defense for luxury hotels & resorts. Fast takedown of fake booking websites, Google Maps phone hijack recovery, and 24/7 ORM across Puri, Goa, Rajasthan & India.',
   keywords: [
     'hotel orm services india',
+    'hotel orm services puri odisha',
     'fake hotel website takedown',
+    'hotel brand defense puri',
+    'puri resort fake booking website takedown',
     'hotel brand impersonation removal india',
     'hotel google my business phone number fraud',
-    'hotel reputation management company india',
+    'hotel reputation management odisha',
+    'puri hotel gmb fraud recovery',
     'tripadvisor review management agency',
-    'resort brand protection goa jaipur udaipur',
+    'resort brand protection puri goa jaipur udaipur',
     'hotel cyber fraud takedown dmca'
   ],
   alternates: {
@@ -38,7 +42,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://sociodigit.in/industries/hospitality-hotels',
     title: 'Hotel ORM, Fake Website Takedown & GMB Protection Agency | Sociodigit',
-    description: 'Protect your hotel brand from fake booking sites, hijacked Google Maps phone numbers, and negative review attacks. 24/7 Hospitality ORM across India.',
+    description: 'Protect your hotel brand from fake booking sites, hijacked Google Maps phone numbers, and negative review attacks. 24/7 Hospitality ORM in Puri, Odisha & across India.',
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -52,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@sociodigit',
     title: 'Hotel ORM, Fake Website Takedown & GMB Protection Agency | Sociodigit',
-    description: 'Fast takedown of fake booking websites, Google Maps phone hijack recovery, and 24/7 hospitality ORM across India.',
+    description: 'Fast takedown of fake booking websites, Google Maps phone hijack recovery, and 24/7 hospitality ORM in Puri, Odisha and across India.',
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };
@@ -64,7 +68,7 @@ const jsonLd = [
     "@id": "https://sociodigit.in/industries/hospitality-hotels#main",
     "url": "https://sociodigit.in/industries/hospitality-hotels",
     "name": "Hotel ORM, Fake Website Takedown & GMB Protection Services",
-    "description": "National brand defense for luxury hotels, boutique properties, and resorts in India. Fast fake website takedowns, Google Business Profile recovery, and 24/7 review sentiment management.",
+    "description": "National brand defense for luxury hotels, boutique properties, and resorts in India and Odisha. Fast fake website takedowns, Google Business Profile recovery in Puri and across India, and 24/7 review sentiment management.",
     "publisher": {
       "@type": "Organization",
       "name": "Sociodigit",
@@ -82,11 +86,21 @@ const jsonLd = [
       "name": "Sociodigit",
       "url": "https://sociodigit.in"
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "India"
-    },
-    "description": "Full-spectrum cyber defense and online reputation management for Indian hotels. Removing lookalike scam domains, recovering hijacked Google Maps listings, removing fake 1-star reviews, and elevating genuine guest ratings.",
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "India"
+      },
+      {
+        "@type": "State",
+        "name": "Odisha"
+      },
+      {
+        "@type": "City",
+        "name": "Puri"
+      }
+    ],
+    "description": "Full-spectrum cyber defense and online reputation management for Indian hotels. Removing lookalike scam domains, recovering hijacked Google Maps listings, removing fake 1-star reviews, and elevating genuine guest ratings across Puri, Odisha, Goa, Rajasthan, and national hospitality corridors.",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Hospitality Reputation & Defense Stack",
@@ -146,10 +160,18 @@ const jsonLd = [
       },
       {
         "@type": "Question",
+        "name": "Do you provide localized on-ground brand protection for hotels in Puri and Odisha?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Headquartered in Bhubaneswar, Sociodigit has deep boots-on-the-ground experience protecting luxury beachfront resorts and pilgrim hotels across Puri, Konark, Gopalpur, and Bhubaneswar. We actively handle high-volume Rath Yatra booking scam surges and work in direct alignment with regional cyber enforcement."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "How do you protect hotels across India on an ongoing basis?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We operate continuous 24/7 keyword and domain monitoring, tracking new lookalike domain registrations, unauthorized Google Search Ads, and map edits across popular hospitality corridors including Goa, Rajasthan (Jaipur, Udaipur), Kerala, Delhi-NCR, Mumbai, and Himachal Pradesh."
+          "text": "We operate continuous 24/7 keyword and domain monitoring, tracking new lookalike domain registrations, unauthorized Google Search Ads, and map edits across popular hospitality corridors including Puri & Odisha, Goa, Rajasthan (Jaipur, Udaipur), Kerala, Delhi-NCR, Mumbai, and Himachal Pradesh."
         }
       }
     ]

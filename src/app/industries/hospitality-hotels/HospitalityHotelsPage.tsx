@@ -98,6 +98,13 @@ export default function HospitalityHotelsPage() {
 
   const nationalCorridors = [
     {
+      region: "Puri & Odisha Heritage Coastline",
+      hubs: "Puri Golden Beach, Marine Drive, Swargadwar, Konark, Bhubaneswar",
+      desc: "Pilgrim & luxury beach resort hub facing rampant Rath Yatra & winter holiday scam spikes. We protect premier Puri hotel brands with active local cyber surveillance, on-ground verification, and rapid takedowns.",
+      threatLevel: "Critical",
+      isLocalBase: true
+    },
+    {
       region: "Goa & Coastal Belt",
       hubs: "Candolim, Calangute, Anjuna, Morjim, South Goa Beachfronts",
       desc: "India's highest volume market for fake luxury villa and beachfront resort booking scams. We protect resort brands from rogue Google Ads and WhatsApp booking impostors.",
@@ -141,6 +148,10 @@ export default function HospitalityHotelsPage() {
     {
       q: "Can you help remove 1-star negative reviews left by scammed guests?",
       a: "Yes. When travelers are cheated by rogue websites or fake phone numbers, they frequently write furious 1-star reviews on TripAdvisor and Google Maps blaming the authentic property. We gather cyber incident proof and file specialized disputes under Google's Misrepresentation & Offline Scam policy to successfully remove unwarranted reviews."
+    },
+    {
+      q: "Do you provide localized on-ground brand protection for hotels in Puri and Odisha?",
+      a: "Yes. Headquartered in Bhubaneswar, Sociodigit has deep boots-on-the-ground experience protecting luxury beachfront resorts and pilgrim hotels across Puri, Konark, Gopalpur, and Bhubaneswar. We actively handle high-volume Rath Yatra booking scam surges, coordinate with Odisha cyber law enforcement, and resolve GMB issues with local entity verification."
     },
     {
       q: "How do you protect hotels across India on an ongoing basis?",
@@ -192,7 +203,7 @@ export default function HospitalityHotelsPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-semibold text-xs md:text-sm mb-6 uppercase tracking-wider">
               <Sparkles size={14} className="text-blue-400" />
-              National Hotel Brand Defense &amp; ORM
+              National &amp; Odisha Hotel Brand Defense • Active in Puri &amp; Beyond
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.12] mb-6 text-white font-display">
@@ -203,7 +214,7 @@ export default function HospitalityHotelsPage() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-neutral-300 mb-8 md:mb-10 font-normal max-w-3xl mx-auto leading-relaxed">
-              India&apos;s specialized digital defense partner for luxury hotels, heritage resorts, and boutique chains. We neutralize lookalike booking sites stealing your direct revenue, recover hijacked Google Maps listings, and engineer 5-star reputation across TripAdvisor &amp; OTAs.
+              India&apos;s specialized digital defense partner for luxury hotels, heritage resorts, and boutique chains. From premier beachfront properties in Puri and Goa to royal havelis in Rajasthan, we neutralize lookalike booking sites stealing your direct revenue, recover hijacked Google Maps listings, and engineer 5-star reputation across TripAdvisor &amp; OTAs.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -399,17 +410,17 @@ export default function HospitalityHotelsPage() {
           </div>
         </section>
 
-        {/* National Tourism Corridor Coverage (SEO Geo-Clusters) */}
+        {/* National & Regional Tourism Corridor Coverage (SEO Geo-Clusters) */}
         <section className="mb-20 md:mb-28">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-xs uppercase font-extrabold tracking-widest text-blue-400 bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-500/20">
-              National Footprint
+              National &amp; Regional Footprint
             </span>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-black mt-4 mb-4 text-white font-display">
               Protecting Properties Across India&apos;s Tourism Corridors
             </h2>
             <p className="text-neutral-400 text-sm md:text-base">
-              From beach resorts in Goa to heritage havelis in Rajasthan, our brand defense coverage spans every high-value hospitality cluster in the country.
+              From beachfront properties in Puri and Goa to royal palace havelis in Rajasthan, our cyber brand defense actively shields leading hotels and resorts across India.
             </p>
           </div>
 
@@ -417,38 +428,60 @@ export default function HospitalityHotelsPage() {
             {nationalCorridors.map((corridor, idx) => (
               <div
                 key={idx}
-                className="bg-neutral-900/60 border border-neutral-800 rounded-3xl p-6 hover:border-neutral-700 transition-colors"
+                className={`rounded-3xl p-6 transition-all duration-300 relative overflow-hidden flex flex-col justify-between ${
+                  corridor.isLocalBase
+                    ? 'bg-gradient-to-b from-emerald-950/40 via-neutral-900 to-neutral-900 border-2 border-emerald-500/50 shadow-xl shadow-emerald-950/40'
+                    : 'bg-neutral-900/60 border border-neutral-800 hover:border-neutral-700'
+                }`}
               >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-bold text-rose-400 bg-rose-500/10 px-2.5 py-1 rounded-full border border-rose-500/20">
-                    Threat: {corridor.threatLevel}
-                  </span>
-                  <MapPin size={16} className="text-neutral-500" />
+                {corridor.isLocalBase && (
+                  <div className="absolute top-0 right-0 bg-emerald-500 text-neutral-950 font-black text-[10px] uppercase tracking-wider px-3 py-1 rounded-bl-xl shadow-md">
+                    Home Base • Active in Puri
+                  </div>
+                )}
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${
+                      corridor.isLocalBase
+                        ? 'text-emerald-300 bg-emerald-500/20 border-emerald-500/40'
+                        : 'text-rose-400 bg-rose-500/10 border-rose-500/20'
+                    }`}>
+                      {corridor.isLocalBase ? 'Threat: Critical • Local Ground Defense' : `Threat: ${corridor.threatLevel}`}
+                    </span>
+                    <MapPin size={16} className={corridor.isLocalBase ? 'text-emerald-400' : 'text-neutral-500'} />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">{corridor.region}</h3>
+                  <p className={`text-xs font-bold mb-3 ${corridor.isLocalBase ? 'text-emerald-300' : 'text-emerald-400'}`}>{corridor.hubs}</p>
+                  <p className="text-xs text-neutral-400 leading-relaxed">{corridor.desc}</p>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{corridor.region}</h3>
-                <p className="text-xs font-bold text-emerald-400 mb-3">{corridor.hubs}</p>
-                <p className="text-xs text-neutral-400 leading-relaxed">{corridor.desc}</p>
+
+                {corridor.isLocalBase && (
+                  <div className="mt-4 pt-3 border-t border-emerald-500/20 flex items-center justify-between text-[11px] text-emerald-400 font-semibold">
+                    <span>Active client protection in Puri</span>
+                    <Check size={14} className="text-emerald-400" />
+                  </div>
+                )}
               </div>
             ))}
+          </div>
 
-            {/* Quick Threat Scanner Action Box */}
-            <div className="bg-gradient-to-br from-blue-900/40 via-neutral-900 to-emerald-950/40 border border-blue-500/30 rounded-3xl p-6 flex flex-col justify-between">
-              <div>
-                <span className="text-xs font-bold text-blue-300 bg-blue-500/20 px-2.5 py-1 rounded-full border border-blue-500/30">
-                  Instant Diagnostic
-                </span>
-                <h3 className="text-lg font-bold text-white mt-3 mb-2">Is Your Property Exposed?</h3>
-                <p className="text-xs text-neutral-300 leading-relaxed mb-4">
-                  Run an instant automated check across active lookalike domains, fake booking listings, and Google Maps phone changes.
-                </p>
+          {/* Full-width Instant Diagnostic Action Banner */}
+          <div className="mt-8 bg-gradient-to-r from-blue-950/60 via-neutral-900 to-emerald-950/60 border border-blue-500/30 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+            <div className="text-center md:text-left">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-blue-300 bg-blue-500/20 px-3 py-1 rounded-full border border-blue-500/30 mb-2">
+                <Sparkles size={13} /> Instant Brand Exposure Diagnostic
               </div>
-              <Link
-                href="/hotel-fraud-control"
-                className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl transition-colors shadow-lg shadow-blue-600/30"
-              >
-                Run Free Property Threat Scan <ExternalLink size={14} />
-              </Link>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">Is Your Property Exposed in Puri, Goa, or Across India?</h3>
+              <p className="text-xs sm:text-sm text-neutral-300 mt-1 max-w-xl">
+                Run an automated 60-second diagnostic across lookalike domains, rogue Google Search Ads, and Google Maps phone changes.
+              </p>
             </div>
+            <Link
+              href="/hotel-fraud-control"
+              className="shrink-0 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm uppercase tracking-wider py-4 px-6 sm:px-8 rounded-2xl transition-all hover:scale-105 shadow-xl shadow-blue-600/30"
+            >
+              Run Free Property Threat Scan <ExternalLink size={16} />
+            </Link>
           </div>
         </section>
 
