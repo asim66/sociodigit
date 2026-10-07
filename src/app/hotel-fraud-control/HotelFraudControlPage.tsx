@@ -2,6 +2,7 @@
 // @ts-nocheck
 
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   ShieldAlert,
@@ -1321,6 +1322,16 @@ export default function HotelFraudControl() {
           <p className="text-white/30 text-xs mt-8 font-medium">
             Free audit • No credit card required • Results in 60 seconds
           </p>
+
+          <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-2 text-xs text-white/50">
+            <span>Looking for full-spectrum brand defense &amp; review management?</span>
+            <Link
+              href="/industries/hospitality-hotels"
+              className="text-brand-orange hover:text-white font-semibold inline-flex items-center gap-1 transition-colors"
+            >
+              Explore Hotel ORM &amp; Brand Defense Services <ChevronRight size={13} />
+            </Link>
+          </div>
         </div>
       </section>
 

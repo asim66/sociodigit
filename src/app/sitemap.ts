@@ -54,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/industries/fintech', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-15' },
     { url: '/industries/healthcare', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-13' },
     { url: '/industries/education', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-11' },
-    { url: '/industries/hospitality-hotels', priority: 0.85, changeFrequency: 'monthly' as const, lastModified: '2026-08-22' },
+    { url: '/industries/hospitality-hotels', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: '2026-10-07' },
     { url: '/industries/enterprises', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-12' },
     { url: '/industries/non-profits', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: '2026-08-08' },
     { url: '/industries/saas', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-16' },
