@@ -30,6 +30,7 @@ import {
   Check
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import HotelHeroImage from '../../../assets/generated/hotel_luxury_lobby_render.png';
 import StressedOwnerImage from '../../../assets/generated/hotel_owner_stressed.png';
 import ReceptionDisputeImage from '../../../assets/generated/hotel_reception_dispute.png';
@@ -377,11 +378,14 @@ export default function HospitalityHotelsPage() {
               </div>
 
               <div className="relative">
-                <div className="relative rounded-2xl overflow-hidden border border-neutral-700/60 shadow-2xl">
-                  <img
+                <div className="relative rounded-2xl overflow-hidden border border-neutral-700/60 shadow-2xl bg-neutral-900">
+                  <Image
                     src={ReceptionDisputeImage}
                     alt="Hotel reception dispute caused by fake booking scam"
+                    width={800}
+                    height={533}
                     className="w-full h-auto object-cover"
+                    priority={false}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-transparent to-transparent flex flex-col justify-end p-6">
                     <span className="text-xs font-bold text-rose-400 uppercase tracking-wider">The Reality At Reception</span>
