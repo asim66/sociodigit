@@ -25,10 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/csr', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: '2026-08-10' },
     { url: '/hotel-fraud-control', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-18' },
     
-    // Bhubaneswar Hubs (High Intent)
+    // Bhubaneswar Hubs & Interactive Tools (High Intent)
     { url: '/seo-agency-bhubaneswar', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: '2026-09-30' },
     { url: '/digital-marketing-agency-bhubaneswar', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: '2026-09-30' },
     { url: '/software-development-company-bhubaneswar', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: '2026-09-30' },
+    { url: '/free-seo-audit', priority: 0.95, changeFrequency: 'weekly' as const, lastModified: '2026-10-14' },
 
     // Services
     { url: '/services', priority: 0.9, changeFrequency: 'weekly' as const, lastModified: '2026-08-22' },

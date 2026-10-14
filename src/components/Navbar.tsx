@@ -71,11 +71,12 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
           ]
         },
         {
-          title: 'Odisha Hubs',
+          title: 'Odisha Hubs & Tools',
           links: [
             { name: 'SEO Agency Bhubaneswar', path: '/seo-agency-bhubaneswar' },
             { name: 'Digital Marketing Bhubaneswar', path: '/digital-marketing-agency-bhubaneswar' },
             { name: 'Software Company Bhubaneswar', path: '/software-development-company-bhubaneswar' },
+            { name: 'Free SEO Audit Tool', path: '/free-seo-audit' },
           ]
         }
       ]
@@ -119,6 +120,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
         }
       ]
     },
+    { name: 'Free SEO Audit', path: '/free-seo-audit' },
     { name: 'About', path: '/about' },
   ];
 
