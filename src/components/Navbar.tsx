@@ -18,6 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const location = usePathname();
+  const navRef = React.useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +27,39 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Automatically close mega menu, mobile menu, and search on route change
+  useEffect(() => {
+    setActiveMegaMenu(null);
+    setIsOpen(false);
+    setSearchOpen(false);
+  }, [location]);
+
+  // Close menus on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveMegaMenu(null);
+        setIsOpen(false);
+        setSearchOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  // Close mega menu when clicking outside the navbar
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setActiveMegaMenu(null);
+      }
+    };
+    if (activeMegaMenu) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [activeMegaMenu]);
 
   // Unified styles for a premium dark look site-wide
   const textColorClass = 'text-white/70';
@@ -126,6 +160,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
 
   return (
     <nav 
+      ref={navRef}
       className="fixed w-full z-50 transition-all duration-500"
       onMouseLeave={() => setActiveMegaMenu(null)}
     >
@@ -136,15 +171,15 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
       {/* Top Bar */}
       <div className={`border-b ${borderColorClass} py-2 hidden lg:block transition-all duration-500 ${scrolled ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100 h-auto'}`}>
         <div className={`container-custom flex justify-end space-x-6 text-[10px] font-bold uppercase tracking-widest ${topBarTextColor}`}>
-          <Link href="/csr" className={`${textHoverClass} transition-colors`}>CSR</Link>
-          <Link href="/contact" className={`${textHoverClass} transition-colors`}>Contact Us</Link>
+          <Link href="/csr" onClick={() => setActiveMegaMenu(null)} className={`${textHoverClass} transition-colors`}>CSR</Link>
+          <Link href="/contact" onClick={() => setActiveMegaMenu(null)} className={`${textHoverClass} transition-colors`}>Contact Us</Link>
         </div>
       </div>
 
       <div className={`transition-all duration-500 ${scrolled ? 'py-3' : 'py-6'}`}>
         <div className="container-custom flex justify-between items-center">
           <div className="flex items-center space-x-12">
-            <Link href="/">
+            <Link href="/" onClick={() => setActiveMegaMenu(null)}>
               <Logo theme={theme} />
             </Link>
 
@@ -157,6 +192,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
                 onMouseEnter={() => setActiveMegaMenu(link.megaMenu ? link.name : null)}
               >
                 <Link href={link.path}
+                  onClick={() => setActiveMegaMenu(null)}
                   className={`text-sm font-bold transition-all ${textHoverClass} flex items-center space-x-1 group ${location === link.path ? activeTextClass : textColorClass}`}
                 >
                   <span className={isLight && location === link.path ? 'text-space-blue' : ''}>{link.name}</span>
@@ -183,7 +219,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
             </button>
           </div>
           
-          <Link href="/contact" className="hidden lg:block btn-primary !py-2.5 !px-6 text-sm">
+          <Link href="/contact" onClick={() => setActiveMegaMenu(null)} className="hidden lg:block btn-primary !py-2.5 !px-6 text-sm">
             <span>Contact Us</span>
           </Link>
 
@@ -224,6 +260,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
                       {section.links.map((link) => (
                         <li key={link.name}>
                           <Link href={link.path}
+                            onClick={() => setActiveMegaMenu(null)}
                             className="text-white/60 hover:text-white transition-colors flex items-center group"
                           >
                             <span>{link.name}</span>
@@ -243,7 +280,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
                     <p className="text-sm text-white/60 mb-6 relative z-10">
                       Discover how we're helping enterprises scale with AI-driven DevOps.
                     </p>
-                    <Link href="/blog" className="text-brand-orange font-bold text-sm flex items-center group/link">
+                    <Link href="/blog" onClick={() => setActiveMegaMenu(null)} className="text-brand-orange font-bold text-sm flex items-center group/link">
                       Read Case Study
                       <ChevronRight size={16} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
                     </Link>
@@ -252,6 +289,21 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
               </div>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Backdrop overlay when Mega Menu is active - click to close */}
+      <AnimatePresence>
+        {activeMegaMenu && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+            className="fixed inset-0 top-0 left-0 w-full h-screen bg-black/40 backdrop-blur-[2px] hidden lg:block"
+            style={{ zIndex: 40 }}
+            onClick={() => setActiveMegaMenu(null)}
+          />
         )}
       </AnimatePresence>
 
