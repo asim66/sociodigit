@@ -32,6 +32,7 @@ const Footer = () => {
     { name: 'Software Company Bhubaneswar', path: '/software-development-company-bhubaneswar' },
     { name: 'Digital Marketing Bhubaneswar', path: '/digital-marketing-agency-bhubaneswar' },
     { name: 'SEO Agency Bhubaneswar', path: '/seo-agency-bhubaneswar' },
+    { name: 'Free SEO & Speed Audit Tool', path: '/free-seo-audit' },
   ];
 
   return (

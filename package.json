@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node scripts/audit-server.mjs & next dev",
     "build": "next build",
     "deploy": "echo 'Deployments are managed automatically via GitHub pushes to Cloudflare Pages'",
     "start": "next start",

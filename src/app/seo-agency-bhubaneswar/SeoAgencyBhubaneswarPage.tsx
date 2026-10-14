@@ -6,7 +6,7 @@ import {
   ArrowRight, Phone, Mail, Sparkles, BrainCircuit, Globe, 
   Award, Zap, ChevronRight, HelpCircle, BarChart3, Clock, Check,
   Send, Building2, Compass, Activity, Star, Users, 
-  FileSearch, Cpu, LineChart, Layers, X, BarChart2, ExternalLink
+  FileSearch, Cpu, LineChart, Layers, X, BarChart2, ExternalLink, Gauge
 } from 'lucide-react';
 import Link from 'next/link';
 import AiSeoSection from '../../components/AiSeoSection';
@@ -278,6 +278,10 @@ const SeoAgencyBhubaneswarPage = () => {
                   <Sparkles size={18} />
                   <span>Get Free Bhubaneswar SEO Audit</span>
                 </a>
+                <Link href="/free-seo-audit" className="btn-outline inline-flex items-center space-x-2 text-base md:text-lg px-7 py-3.5 bg-white/5 border border-white/20 hover:border-brand-orange text-white">
+                  <Gauge size={18} className="text-brand-orange" />
+                  <span>Live Website & Speed Audit</span>
+                </Link>
                 <a href="tel:+917008381630" className="btn-outline inline-flex items-center space-x-2 text-base md:text-lg px-7 py-3.5">
                   <Phone size={18} />
                   <span>Call +91 7008381630</span>

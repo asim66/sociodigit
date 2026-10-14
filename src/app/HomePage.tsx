@@ -7,7 +7,7 @@ import {
   ArrowRight, CheckCircle2, Users, Rocket, 
   Zap, Server, Search, 
   ChevronRight, Terminal, Database, Cloud, Activity,
-  MapPin, TrendingUp, Sparkles, Building2
+  MapPin, TrendingUp, Sparkles, Building2, Gauge
 } from 'lucide-react';
 import Link from 'next/link';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -552,6 +552,42 @@ const Home = () => {
               <span>Visit our Bhubaneswar Office</span>
               <ChevronRight size={14} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Free SEO & Speed Audit Feature Banner */}
+      <section className="py-12 relative overflow-hidden">
+        <div className="container-custom">
+          <div className="p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-r from-brand-orange/15 via-white/[0.03] to-blue-500/10 border border-brand-orange/30 backdrop-blur-2xl flex flex-col lg:flex-row items-center justify-between gap-8 relative">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/20 text-brand-amber text-xs font-bold uppercase tracking-wider mb-4">
+                <Sparkles size={14} className="text-brand-orange" />
+                <span>Interactive Diagnostic Tool</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
+                Test Your Website's <span className="gradient-text">SEO &amp; Loading Speed</span> Free
+              </h2>
+              <p className="text-sm md:text-base text-white/70 leading-relaxed mb-6">
+                Discover why your site isn't ranking on Google. Get instant diagnostics for Core Web Vitals, server response time (TTFB), missing meta tags, and mobile readiness in 10 seconds.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 text-xs text-white/60">
+                <span className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-emerald-400" /> 100% Free &amp; Instant</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-emerald-400" /> Core Web Vitals &amp; TTFB</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-emerald-400" /> Actionable Fix Roadmap</span>
+              </div>
+            </div>
+
+            <div className="shrink-0 w-full sm:w-auto">
+              <Link
+                href="/free-seo-audit"
+                className="btn-primary inline-flex items-center justify-center space-x-3 text-base md:text-lg px-8 py-4 w-full sm:w-auto shadow-2xl shadow-brand-orange/30 hover:scale-105 active:scale-95 transition-all"
+              >
+                <Gauge size={20} />
+                <span>Launch Free Audit Tool</span>
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
