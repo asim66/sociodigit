@@ -83,7 +83,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-display font-bold mb-6 text-white">Services</h4>
+            <h3 className="text-lg font-display font-bold mb-6 text-white">Services</h3>
             <ul className="space-y-3">
               {serviceLinks.map((item) => (
                 <li key={item.name}>
@@ -95,11 +95,11 @@ const Footer = () => {
               ))}
             </ul>
             <div className="mt-6 pt-5 border-t border-white/5">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-orange/60 mb-3">Odisha Hubs</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-orange mb-3">Odisha Hubs</p>
               <ul className="space-y-3">
                 {localHubLinks.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.path} className="text-white/50 hover:text-brand-orange transition-colors flex items-center group text-sm">
+                    <Link href={item.path} className="text-white/60 hover:text-brand-orange transition-colors flex items-center group text-sm">
                       <ChevronRight size={14} className="mr-2 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" />
                       {item.name}
                     </Link>
@@ -111,7 +111,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="text-lg font-display font-bold mb-6 text-white">Company</h4>
+            <h3 className="text-lg font-display font-bold mb-6 text-white">Company</h3>
             <ul className="space-y-3">
               {companyLinks.map((item) => (
                 <li key={item.name}>
@@ -126,7 +126,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-display font-bold mb-6 text-white">Contact</h4>
+            <h3 className="text-lg font-display font-bold mb-6 text-white">Contact</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start space-x-3 text-white/60">
                 <MapPin size={22} className="text-brand-orange shrink-0 mt-1" />
@@ -155,10 +155,10 @@ const Footer = () => {
         </div>
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-white/40 text-sm">
+          <p className="text-white/60 text-sm">
             © {currentYear} Sociodigit. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-6 text-sm text-white/40">
+          <div className="flex flex-wrap gap-6 text-sm text-white/60">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
             <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>

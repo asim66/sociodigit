@@ -16,6 +16,10 @@ const Logo: React.FC<LogoProps> = ({ className = "", showIcon = true, theme = 'd
         <img 
           src={logoSrc} 
           alt="Sociodigit" 
+          width={160}
+          height={40}
+          fetchPriority="high"
+          decoding="async"
           className="h-12 lg:h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:drop-shadow-[0_0_25px_rgba(232,66,26,0.5)] transition-all duration-300"
         />
       </div>

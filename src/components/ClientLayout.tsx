@@ -22,6 +22,20 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
   const pathname = usePathname();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [showExitPopup, setShowExitPopup] = useState(false);
+  const [loadChatbot, setLoadChatbot] = useState(false);
+
+  useEffect(() => {
+    // Defer chatbot load until browser is idle or 2.5s after mount to prioritize critical render
+    if (typeof window !== 'undefined') {
+      if ('requestIdleCallback' in window) {
+        const id = (window as any).requestIdleCallback(() => setLoadChatbot(true), { timeout: 3000 });
+        return () => (window as any).cancelIdleCallback(id);
+      } else {
+        const timer = setTimeout(() => setLoadChatbot(true), 2500);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -144,8 +158,8 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
         )}
       </AnimatePresence>
 
-      {/* Sociodigit Chatbot Widget */}
-      <ChatbotWidget />
+      {/* Sociodigit Chatbot Widget - deferred for initial load performance */}
+      {loadChatbot && <ChatbotWidget />}
     </div>
     </SmoothScrollProvider>
   );

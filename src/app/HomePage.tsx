@@ -10,11 +10,23 @@ import {
   MapPin, TrendingUp, Sparkles, Building2, Gauge
 } from 'lucide-react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import AnimatedCounter from '../components/AnimatedCounter';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '../components/ScrollReveal';
-import BionicOperationsHub from '../components/BionicOperationsHub';
-import InteractiveHeroDashboard from '../components/InteractiveHeroDashboard';
-import AiSeoSection from '../components/AiSeoSection';
+const InteractiveHeroDashboard = dynamic(() => import('../components/InteractiveHeroDashboard'), {
+  loading: () => <div className="glass rounded-[2rem] border border-white/5 bg-white/[0.01] p-6 w-full h-[400px]" />,
+  ssr: true,
+});
+
+const BionicOperationsHub = dynamic(() => import('../components/BionicOperationsHub'), {
+  loading: () => <div className="py-20 min-h-[300px]" />,
+  ssr: true,
+});
+
+const AiSeoSection = dynamic(() => import('../components/AiSeoSection'), {
+  loading: () => <div className="py-20 min-h-[300px]" />,
+  ssr: true,
+});
 
 const Home = () => {
   const services = [
@@ -140,7 +152,7 @@ const Home = () => {
         <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-deep-space-blue to-transparent z-10 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-deep-space-blue to-transparent z-10 pointer-events-none"></div>
         <div className="container-custom">
-          <p className="text-center text-[10px] md:text-xs font-bold text-white/30 uppercase tracking-[0.3em] mb-6 md:mb-8">Powered by next-gen technologies</p>
+          <p className="text-center text-[10px] md:text-xs font-bold text-white/60 uppercase tracking-[0.3em] mb-6 md:mb-8">Powered by next-gen technologies</p>
         </div>
         
         <div className="flex marquee-container overflow-hidden w-full">
