@@ -99,7 +99,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative pt-48 pb-32 lg:pt-64 lg:pb-48 grid-bg">
+      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 lg:pt-64 lg:pb-48 grid-bg">
         {/* Animated Background Elements */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 overflow-hidden">
           <div className="glow-bg top-[-10%] left-[-10%] w-[50%] h-[50%] bg-brand-orange/20" />

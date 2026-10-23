@@ -50,7 +50,7 @@ export default function RootLayout({
   const gscId = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
 
   return (
-    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -62,7 +62,7 @@ export default function RootLayout({
         <meta name="ICBM" content="20.2724, 85.8488" />
         {gscId && <meta name="google-site-verification" content={gscId} />}
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-KRR2NJB3"

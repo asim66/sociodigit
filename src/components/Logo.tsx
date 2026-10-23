@@ -9,19 +9,24 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ className = "", showIcon = true, theme = 'dark' }) => {
-  const logoSrc = theme === 'light' ? '/logo-light.png' : '/logo-dark.png';
+  const isLight = theme === 'light';
+  const webpSrc = isLight ? '/logo-light.webp' : '/logo-dark.webp';
+  const pngSrc = isLight ? '/logo-light.png' : '/logo-dark.png';
+
   return (
     <div className={`flex items-center group ${className}`}>
       <div className="transition-transform group-hover:scale-105">
-        <img 
-          src={logoSrc} 
-          alt="Sociodigit" 
-          width={160}
-          height={40}
-          fetchPriority="high"
-          decoding="async"
-          className="h-12 lg:h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:drop-shadow-[0_0_25px_rgba(232,66,26,0.5)] transition-all duration-300"
-        />
+        <picture>
+          <source srcSet={webpSrc} type="image/webp" />
+          <img 
+            src={pngSrc} 
+            alt="Sociodigit" 
+            width={160}
+            height={42}
+            decoding="async"
+            className="h-12 lg:h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:drop-shadow-[0_0_25px_rgba(232,66,26,0.5)] transition-all duration-300"
+          />
+        </picture>
       </div>
     </div>
   );
