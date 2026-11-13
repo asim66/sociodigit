@@ -4,7 +4,7 @@ import ServicesPage from './ServicesPage';
 
 export const metadata: Metadata = {
   title: 'Full-Stack Digital & Engineering Services | Sociodigit',
-  description: "Explore Sociodigit's service suite: custom software development, cloud DevOps, QA testing, UI/UX design, digital marketing, and IT consulting.",
+  description: "Explore Sociodigit's service suite: custom software development, cloud DevOps, QA testing, product management, UI/UX design, digital marketing, and IT consulting.",
   alternates: {
     canonical: 'https://sociodigit.in/services',
     languages: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://sociodigit.in/services',
     title: 'Full-Stack Digital & Engineering Services | Sociodigit',
-    description: "Explore Sociodigit's service suite: custom software development, cloud DevOps, QA testing, UI/UX design, digital marketing, and IT consulting.",
+    description: "Explore Sociodigit's service suite: custom software development, cloud DevOps, QA testing, product management, UI/UX design, digital marketing, and IT consulting.",
     siteName: 'Sociodigit',
     images: [{
       url: 'https://sociodigit.in/og-banner.jpg',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@sociodigit',
     title: 'Full-Stack Digital & Engineering Services | Sociodigit',
-    description: "Explore Sociodigit's service suite: custom software development, cloud DevOps, QA testing, UI/UX design, digital marketing, and IT consulting.",
+    description: "Explore Sociodigit's service suite: custom software development, cloud DevOps, QA testing, product management, UI/UX design, digital marketing, and IT consulting.",
     images: ['https://sociodigit.in/og-banner.jpg'],
   },
 };
@@ -47,7 +47,7 @@ const jsonLd = {
       "@id": "https://sociodigit.in/services#collection",
       "url": "https://sociodigit.in/services",
       "name": "Full-Stack Digital & Engineering Services | Sociodigit",
-      "description": "Explore Sociodigit's complete service suite covering software development, DevOps, QA testing, UI/UX design, digital marketing, and IT consulting.",
+      "description": "Explore Sociodigit's complete service suite covering software development, DevOps, QA testing, product management, UI/UX design, digital marketing, and IT consulting.",
       "publisher": {
         "@id": "https://sociodigit.in/#organization"
       }
@@ -70,7 +70,8 @@ const jsonLd = {
         { "@type": "ListItem", "position": 11, "url": "https://sociodigit.in/services/custom-apps", "name": "Custom Apps" },
         { "@type": "ListItem", "position": 12, "url": "https://sociodigit.in/services/infrastructure", "name": "Infrastructure" },
         { "@type": "ListItem", "position": 13, "url": "https://sociodigit.in/services/strategy-roadmap", "name": "Strategy & Roadmap" },
-        { "@type": "ListItem", "position": 14, "url": "https://sociodigit.in/services/tech-audit", "name": "Tech Audit" }
+        { "@type": "ListItem", "position": 14, "url": "https://sociodigit.in/services/tech-audit", "name": "Tech Audit" },
+        { "@type": "ListItem", "position": 15, "url": "https://sociodigit.in/services/product-management", "name": "Product Management" }
       ]
     }
   ]

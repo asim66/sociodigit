@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/services/digital-transformation', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-18' },
     { url: '/services/user-experience', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-15' },
     { url: '/services/consulting', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-14' },
+    { url: '/services/product-management', priority: 0.85, changeFrequency: 'monthly' as const, lastModified: '2026-10-29' },
     { url: '/services/product-design', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-15' },
     { url: '/services/custom-apps', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-18' },
     { url: '/services/infrastructure', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-17' },

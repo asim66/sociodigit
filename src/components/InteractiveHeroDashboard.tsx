@@ -77,6 +77,9 @@ const InteractiveHeroDashboard = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as TabType)}
+              role="tab"
+              aria-selected={activeTab === tab.id}
+              aria-label={tab.label}
               className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                 activeTab === tab.id
                   ? "bg-white/10 text-white border border-white/5"

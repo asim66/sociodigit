@@ -20,6 +20,7 @@ const Footer = () => {
 
   const serviceLinks = [
     { name: 'Software Development', path: '/services/software-development' },
+    { name: 'Product Management', path: '/services/product-management' },
     { name: 'Cloud & DevOps', path: '/services/devops' },
     { name: 'QA Automation', path: '/services/qa-automation' },
     { name: 'Digital Marketing', path: '/services/digital-marketing' },

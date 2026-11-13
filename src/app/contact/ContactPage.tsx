@@ -288,6 +288,7 @@ const Contact = () => {
 
                         <option value="" className="bg-deep-space-blue">Select Project Type</option>
                         <option value="software" className="bg-deep-space-blue">Software Development</option>
+                        <option value="product-management" className="bg-deep-space-blue">Product Management</option>
                         <option value="cloud" className="bg-deep-space-blue">Cloud & DevOps</option>
                         <option value="qa" className="bg-deep-space-blue">QA Automation</option>
                         <option value="marketing" className="bg-deep-space-blue">Digital Marketing</option>

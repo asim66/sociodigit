@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 import { 
   Code2, Cpu, Shield, Server, Search, Layers, 
   CheckCircle2, ArrowRight, Globe, Database, 
-  Settings, BarChart, Lock, Map, RefreshCw, FileSearch, Pen
+  Settings, BarChart, Lock, Map, RefreshCw, FileSearch, Pen, Target
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -71,6 +71,16 @@ const Services = () => {
       category: "Digital Experience",
       color: "from-blue-500/20 to-purple-500/10",
       services: [
+        {
+          id: "product-management",
+          title: "Product Management",
+          path: "/services/product-management",
+          icon: <Target size={40} />,
+          desc: "End-to-end product discovery, agile roadmap execution, and sprint backlog leadership to build software users love.",
+          benefits: ["Faster Time-to-Market", "RICE Prioritization", "Cross-Team Alignment", "Outcome-Driven OKRs"],
+          tech: ["Linear", "Jira", "Mixpanel", "Amplitude", "LaunchDarkly"],
+          process: ["Discovery", "Framing", "Sprint Execution", "Launch", "Measurement"]
+        },
         {
           id: "design",
           title: "Product Design",
@@ -166,6 +176,7 @@ const Services = () => {
     "software-dev": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
     "qa": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80",
     "infrastructure": "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1200&auto=format&fit=crop",
+    "product-management": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1200&auto=format&fit=crop",
     "design": "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1200&auto=format&fit=crop",
     "marketing": "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop",
     "ux": "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1200&auto=format&fit=crop",
