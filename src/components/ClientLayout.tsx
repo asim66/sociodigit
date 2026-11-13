@@ -101,10 +101,9 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
             onClick={scrollToTop}
+            aria-label="Scroll to top"
             className="fixed bottom-20 right-4 md:right-8 z-40 w-10 h-10 md:w-12 md:h-12 glass text-brand-orange rounded-full flex items-center justify-center shadow-2xl hover:bg-brand-orange hover:text-white transition-all duration-300 border border-white/10"
-
           >
-
             <ArrowUp size={24} />
           </motion.button>
         )}
@@ -125,6 +124,7 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
               
               <button 
                 onClick={closeExitPopup}
+                aria-label="Close dialog"
                 className="absolute top-6 right-6 text-white/40 hover:text-white transition-colors"
               >
                 <X size={24} />

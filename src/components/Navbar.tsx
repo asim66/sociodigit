@@ -89,6 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
         {
           title: 'Digital Experience',
           links: [
+            { name: 'Product Management', path: '/services/product-management' },
             { name: 'Product Design', path: '/services/product-design' },
             { name: 'Digital Marketing', path: '/services/digital-marketing' },
             { name: 'User Experience', path: '/services/user-experience' },
@@ -227,6 +228,8 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
           <button 
             className={`lg:hidden p-2 ${iconColorClass}`}
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -327,6 +330,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
               <button 
                 onClick={() => setSearchOpen(false)}
                 className="text-white/40 hover:text-white transition-colors"
+                aria-label="Close search"
               >
                 <X size={24} />
               </button>
@@ -350,6 +354,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
               <button 
                 onClick={() => setIsOpen(false)} 
                 className="text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors"
+                aria-label="Close navigation menu"
               >
                 <X size={28} />
               </button>
