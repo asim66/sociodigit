@@ -101,25 +101,27 @@ const cases = [
     ]
   },
   {
-    title: "Local SEO & High-Intent Patient Lead Generation",
-    client: "Apex Healthcare & Specialty Clinic [Anonymized Case Study]",
+    title: "Healthcare Practice Relocation, Local SEO & Meta Ads Dominance",
+    client: "Kedia Dental Care (Dr. Shiv Dayal Kedia & Associates), Forest Park, Bhubaneswar",
     category: "Digital Marketing & SEO",
-    timeline: "5 Months Campaign",
-    badge: "Healthcare Local SEO (Anonymized)",
-    problem: "Low local search visibility for specialized treatments across Bhubaneswar, Saheed Nagar, and Patia with high acquisition cost from paid search.",
-    strategy: "Restructured website architecture with high-intent localized treatment pages, schema markup, Google Business Profile ranking signals, and E-E-A-T medical content optimization.",
+    timeline: "0 to Sustained Scale",
+    badge: "Healthcare & Patient Acquisition",
+    href: "/case-studies/kedia-dental-care",
+    problem: "A premier dental practice with 22+ years of offline clinical mastery faced relocation to Shuvam Towers (Forest Park) with zero organized digital footprint, competing against aggressive corporate dental chains.",
+    strategy: "Engineered an end-to-end patient growth engine: Next.js sub-second web architecture, Google Business Profile & Map Pack dominance, compliant high-ticket Meta Ads (Implants, Aligners, Laser RCT), and automated WhatsApp triage.",
     execution: [
-      "Optimized Google Business Profile and claimed verified local citations across Odisha medical directories",
-      "Achieved Top 3 Google Map Pack rankings for 18+ high-intent search terms",
-      "Deployed responsive, sub-second landing pages with direct WhatsApp and appointment booking funnels",
-      "Engineered structured JSON-LD MedicalWebPage and Physician schema markup"
+      "Achieved Top-3 Google Map Pack rankings for 18+ high-intent search terms across Bhubaneswar",
+      "Delivered 1,602 verified Google Business Profile interactions (755 calls, 679 directions) in 6 months",
+      "Generated 2,622,213 Meta Ads reach driving 120+ qualified patient inquiries/month with 4.8x ROAS",
+      "Automated discharge counter review capture flywheel scaling to 4.8★ across 212+ verified reviews (scaling to 500+)",
+      "Implemented sub-5 minute front-desk WhatsApp response protocol, lifting show-up rate to 78%"
     ],
-    techStack: ["Next.js", "JSON-LD Schema", "Google Business Profile", "Google Tag Manager", "GA4"],
+    techStack: ["Next.js", "Medical Schema JSON-LD", "Google Business Profile", "Meta Ads Manager", "WhatsApp Business API", "Google Tag Manager"],
     metrics: [
-      { label: "Organic Search Growth", value: "+380%" },
-      { label: "Monthly Patient Inquiries", value: "+120%" },
-      { label: "Top 3 Map Keywords", value: "18+" },
-      { label: "PageSpeed Index", value: "99/100" }
+      { label: "Organic Search Growth", value: "+1,040%" },
+      { label: "GBP Patient Actions (6 Mo)", value: "1,602" },
+      { label: "Meta Ads Reach", value: "2.62M" },
+      { label: "Blended ROAS", value: "4.8x" }
     ]
   }
 ];
@@ -199,9 +201,18 @@ export default function CaseStudiesPage() {
                   </div>
 
                   <div>
-                    <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-2">
-                      {c.title}
-                    </h2>
+                    {c.href ? (
+                      <Link href={c.href} className="group/title block">
+                        <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-2 group-hover/title:text-brand-orange transition-colors flex items-center gap-2">
+                          <span>{c.title}</span>
+                          <ArrowRight size={20} className="inline opacity-0 -translate-x-2 group-hover/title:opacity-100 group-hover/title:translate-x-0 transition-all text-brand-orange shrink-0" />
+                        </h2>
+                      </Link>
+                    ) : (
+                      <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-2">
+                        {c.title}
+                      </h2>
+                    )}
                     <div className="text-sm font-semibold text-brand-orange/90 flex items-center gap-2">
                       <span>Client:</span>
                       <span className="text-white/80">{c.client}</span>
@@ -259,6 +270,23 @@ export default function CaseStudiesPage() {
                       </div>
                     ))}
                   </div>
+
+                  {c.href && (
+                    <Link
+                      href={c.href}
+                      className="p-5 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-brand-orange/20 border border-emerald-500/40 text-center hover:border-brand-orange/60 transition-all group block shadow-lg"
+                    >
+                      <div className="text-xs uppercase font-mono tracking-wider text-emerald-400 font-bold mb-1 flex items-center justify-center gap-1.5">
+                        <Sparkles size={14} />
+                        <span>Dedicated Case Study & Telemetry</span>
+                      </div>
+                      <div className="font-display font-bold text-white text-base group-hover:text-brand-orange transition-colors flex items-center justify-center gap-2">
+                        <span>Read Full Verified Case Study</span>
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
+                      <p className="text-[11px] text-white/70 mt-1">Includes 6-month GBP dashboard & verified Meta Ads reach metrics</p>
+                    </Link>
+                  )}
 
                   <div className="p-6 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 text-center">
                     <h3 className="font-display font-bold text-white text-lg mb-2">Looking for similar results?</h3>

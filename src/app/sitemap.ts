@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogRoutes,
     { url: '/careers', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: '2026-08-15' },
     { url: '/case-studies', priority: 0.85, changeFrequency: 'weekly' as const, lastModified: '2026-08-26' },
+    { url: '/case-studies/kedia-dental-care', priority: 0.9, changeFrequency: 'weekly' as const, lastModified: '2026-11-23' },
     { url: '/csr', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: '2026-08-10' },
     { url: '/hotel-fraud-control', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-18' },
     
