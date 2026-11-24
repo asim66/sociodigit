@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import { 
-  ArrowLeft, CheckCircle2, TrendingUp, Users, Phone, MapPin, 
-  Sparkles, Star, Calendar, MessageSquare, Award, Shield, 
-  ArrowRight, Share2, Copy, Check, Clock, Eye, Target, 
+import {
+  ArrowLeft, CheckCircle2, TrendingUp, Users, Phone, MapPin,
+  Sparkles, Star, Calendar, MessageSquare, Award, Shield,
+  ArrowRight, Share2, Copy, Check, Clock, Eye, Target,
   Stethoscope, Activity, BarChart3, ChevronRight, Zap, ExternalLink
 } from 'lucide-react';
 
@@ -39,11 +39,11 @@ Full Case Study URL: https://sociodigit.in/case-studies/kedia-dental-care`;
 
   return (
     <div className="pt-28 pb-24 bg-space-blue text-white selection:bg-brand-orange selection:text-white min-h-screen">
-      
+
       {/* ── TOP BREADCRUMB & SHARE BAR ── */}
       <div className="border-b border-white/5 bg-surface/80 backdrop-blur-md sticky top-20 z-30 py-3">
         <div className="container-custom mx-auto flex flex-wrap items-center justify-between gap-4">
-          <Link 
+          <Link
             href="/case-studies"
             className="inline-flex items-center text-xs font-bold text-white/60 hover:text-brand-orange transition-colors"
           >
@@ -70,7 +70,7 @@ Full Case Study URL: https://sociodigit.in/case-studies/kedia-dental-care`;
             </button>
 
             <a
-              href="https://wa.me/917873087575?text=Hi%20Sociodigit%20team%2C%20I%20reviewed%20your%20Kedia%20Dental%20Care%20case%20study%20and%20would%20like%20to%20discuss%20growing%20our%20healthcare%20practice."
+              href="https://wa.me/917008381630?text=Hi%20Sociodigit%20team%2C%20I%20reviewed%20your%20Kedia%20Dental%20Care%20case%20study%20and%20would%20like%20to%20discuss%20growing%20our%20healthcare%20practice."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 border border-emerald-500/30 transition-colors"
@@ -536,8 +536,8 @@ Full Case Study URL: https://sociodigit.in/case-studies/kedia-dental-care`;
               {/* Creative Sets Highlight */}
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-white/70">
                 <span className="font-bold text-white">Live Ad Sets Configured: </span>
-                <code>Video set Kedia Continue</code> (new video Oct 2026, carousel series 2–5), 
-                <code> New Location Awareness</code> (New Location Update addressing address transition), 
+                <code>Video set Kedia Continue</code> (new video Oct 2026, carousel series 2–5),
+                <code> New Location Awareness</code> (New Location Update addressing address transition),
                 <code> New Awareness Ad Set - Copy</code>, and <code>New Awareness Ad Set</code>.
               </div>
             </div>
@@ -680,7 +680,7 @@ Full Case Study URL: https://sociodigit.in/case-studies/kedia-dental-care`;
                     <td className="py-3 px-4 font-semibold text-white">Top 3 Map Pack Rankings</td>
                     <td className="py-3 px-4 text-white/50">0 keywords</td>
                     <td className="py-3 px-4 font-bold text-emerald-400">18+ high-intent keywords</td>
-                  <td className="py-3 px-4 text-white/70">Category Leader in Bhubaneswar</td>
+                    <td className="py-3 px-4 text-white/70">Category Leader in Bhubaneswar</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 font-semibold text-white">Meta Ads Awareness</td>
@@ -868,13 +868,13 @@ Full Case Study URL: https://sociodigit.in/case-studies/kedia-dental-care`;
 
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <a
-                href="https://wa.me/917873087575?text=Hi%20Sociodigit%20team%2C%20I%20reviewed%20your%20Kedia%20Dental%20Care%20case%20study%20and%20would%20like%20to%20discuss%20growing%20our%20healthcare%20practice."
+                href="https://wa.me/917008381630?text=Hi%20Sociodigit%20team%2C%20I%20reviewed%20your%20Kedia%20Dental%20Care%20case%20study%20and%20would%20like%20to%20discuss%20growing%20our%20healthcare%20practice."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-6 py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl text-sm transition-all shadow-lg shadow-emerald-500/20"
               >
                 <MessageSquare size={16} />
-                <span>Discuss on WhatsApp (+91 78730 87575)</span>
+                <span>Discuss on WhatsApp</span>
               </a>
 
               <Link
