@@ -2,10 +2,149 @@ import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Calendar, User, ArrowLeft, ChevronRight, Share2 } from 'lucide-react';
+import { Calendar, User, ArrowLeft, ChevronRight, Share2, CheckCircle2 } from 'lucide-react';
 import { BLOG_POSTS, getBlogPostBySlug } from '../../../data/blogPosts';
 
 export const dynamic = 'force-static';
+
+function renderInline(text: string): React.ReactNode {
+  const parts: React.ReactNode[] = [];
+  const regex = /(\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    if (match[2] && match[3]) {
+      const linkText = match[2];
+      const linkUrl = match[3];
+      const isInternal = linkUrl.startsWith('/') || linkUrl.includes('sociodigit.in');
+      const href = linkUrl.replace('https://sociodigit.in', '') || linkUrl;
+      parts.push(
+        <Link
+          key={match.index}
+          href={href.startsWith('/') ? href : linkUrl}
+          className="text-secondary font-semibold hover:underline"
+          {...(!isInternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        >
+          {linkText}
+        </Link>
+      );
+    } else if (match[4]) {
+      parts.push(
+        <strong key={match.index} className="font-bold text-white">
+          {match[4]}
+        </strong>
+      );
+    }
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+}
+
+function renderContentBlock(block: string, idx: number) {
+  // 1. Image: ![alt](url)
+  const imgMatch = block.match(/^!\[([^\]]*)\]\(([^)]+)\)/);
+  if (imgMatch) {
+    const alt = imgMatch[1];
+    const src = imgMatch[2];
+    return (
+      <div key={idx} className="my-8 overflow-hidden rounded-2xl border border-primary/10 bg-surface/50">
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-auto object-cover max-h-[500px]"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+
+  // 2. Heading 2: ## ...
+  if (block.startsWith('## ')) {
+    return (
+      <h2 key={idx} className="text-2xl md:text-3xl font-display font-bold text-white mt-12 mb-4 pt-6 border-t border-primary/10">
+        {renderInline(block.replace(/^## /, ''))}
+      </h2>
+    );
+  }
+
+  // 3. Heading 3: ### ...
+  if (block.startsWith('### ')) {
+    return (
+      <h3 key={idx} className="text-xl md:text-2xl font-display font-bold text-white/95 mt-8 mb-3 text-secondary">
+        {renderInline(block.replace(/^### /, ''))}
+      </h3>
+    );
+  }
+
+  // 4. Markdown Table: rows with | ... |
+  if (block.includes('|') && block.split('\n').filter(r => r.trim().startsWith('|')).length > 1) {
+    const rows = block.split('\n').map(r => r.trim()).filter(r => r.startsWith('|') && r.endsWith('|'));
+    const headerRow = rows[0]?.split('|').map(c => c.trim()).filter(Boolean);
+    const bodyRows = rows.slice(2).map(r => r.split('|').map(c => c.trim()).filter(Boolean));
+    return (
+      <div key={idx} className="my-8 overflow-x-auto rounded-2xl border border-primary/10 bg-surface/50 shadow-xl">
+        <table className="w-full text-left text-sm md:text-base">
+          <thead className="bg-primary/5 text-white font-mono uppercase text-xs border-b border-primary/10">
+            <tr>
+              {headerRow?.map((h, i) => (
+                <th key={i} className="py-3 px-4 font-bold">{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-primary/5 text-primary/80">
+            {bodyRows.map((r, ri) => (
+              <tr key={ri} className="hover:bg-primary/[0.02]">
+                {r.map((cell, ci) => (
+                  <td key={ci} className="py-3 px-4">{renderInline(cell)}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
+  // 5. Unordered list of lines starting with -
+  if (block.includes('\n- ') || block.startsWith('- ')) {
+    const lines = block.split('\n');
+    const headerLine = !lines[0].startsWith('- ') ? lines[0] : null;
+    const items = lines.filter(l => l.trim().startsWith('- '));
+    return (
+      <div key={idx} className="my-4 space-y-3">
+        {headerLine && (
+          <p className="text-lg md:text-xl text-primary/90 font-medium">
+            {renderInline(headerLine)}
+          </p>
+        )}
+        <ul className="space-y-2 list-none">
+          {items.map((item, li) => (
+            <li key={li} className="flex items-start text-base md:text-lg text-primary/80">
+              <span className="text-secondary mr-2.5 mt-1">•</span>
+              <span>{renderInline(item.replace(/^- /, ''))}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  // 6. Normal paragraph
+  return (
+    <p key={idx} className="text-lg md:text-xl text-primary/80 leading-relaxed">
+      {renderInline(block)}
+    </p>
+  );
+}
 
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
@@ -128,7 +267,7 @@ export default async function BlogPostPage({
       <article className="pt-32 pb-24">
         {/* Header */}
         <section className="section-padding bg-surface/50 border-b border-primary/5">
-          <div className="container-custom max-w-4xl">
+          <div className="container-custom max-w-4xl mx-auto">
             <Link
               href="/blog"
               className="inline-flex items-center text-sm font-bold text-primary/60 hover:text-secondary mb-8 transition-colors"
@@ -161,13 +300,9 @@ export default async function BlogPostPage({
 
         {/* Content Body */}
         <section className="section-padding">
-          <div className="container-custom max-w-4xl">
-            <div className="prose prose-lg max-w-none text-primary/80 leading-relaxed space-y-6">
-              {post.content.map((paragraph, idx) => (
-                <p key={idx} className="text-xl leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
+          <div className="container-custom max-w-4xl mx-auto">
+            <div className="max-w-none space-y-6">
+              {post.content.map((block, idx) => renderContentBlock(block, idx))}
             </div>
 
             {/* Author Card */}
