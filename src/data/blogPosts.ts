@@ -20,8 +20,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "SEO Company in Bhubaneswar: Honest 2026 Guide",
     category: "SEO",
     author: {
-      name: "Subham Rout",
-      role: "Senior SEO & Organic Growth Specialist",
+      name: "Sociodigit",
+      role: "SEO & Digital Strategy Team",
     },
     date: "Nov 26, 2026",
     isoDate: "2026-11-26T09:00:00Z",
@@ -172,8 +172,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Is SEO Dead? Debunking the Myths in the Age of AI",
     category: "SEO",
     author: {
-      name: "Subham Rout",
-      role: "Senior SEO & Organic Growth Specialist",
+      name: "Sociodigit",
+      role: "SEO & Digital Strategy Team",
     },
     date: "Mar 16, 2026",
     isoDate: "2026-03-16T09:00:00Z",
@@ -267,8 +267,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "SEO Strategies for Startups: Beyond Keywords",
     category: "SEO",
     author: {
-      name: "Subham Rout",
-      role: "Senior SEO & Organic Growth Specialist",
+      name: "Sociodigit",
+      role: "SEO & Digital Strategy Team",
     },
     date: "Mar 05, 2026",
     isoDate: "2026-03-05T09:00:00Z",

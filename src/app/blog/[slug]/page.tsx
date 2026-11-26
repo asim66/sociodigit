@@ -214,9 +214,9 @@ export default async function BlogPostPage({
     dateModified: post.isoDate,
     mainEntityOfPage: canonicalUrl,
     author: {
-      '@type': 'Person',
+      '@type': post.author.name === 'Sociodigit' ? 'Organization' : 'Person',
       name: post.author.name,
-      jobTitle: post.author.role,
+      ...(post.author.name === 'Sociodigit' ? {} : { jobTitle: post.author.role }),
       worksFor: {
         '@id': 'https://sociodigit.in/#organization',
       },
