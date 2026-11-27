@@ -432,7 +432,7 @@ export default function BlogPostArticle({ post, relatedPosts }: BlogPostArticleP
                                 <ArrowRight size={16} />
                               </Link>
                               <a
-                                href="https://wa.me/917008381630?text=Hi%20Sociodigit%2C%20I%20want%20a%20local%20SEO%20consultation%20for%20my%20Bhubaneswar%20business."
+                                href="https://wa.me/919886001422?text=Hi%20Sociodigit%2C%20I%20want%20a%20local%20SEO%20consultation%20for%20my%20Bhubaneswar%20business."
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center space-x-2 px-6 py-3 bg-white/10 hover:bg-white/15 text-white font-bold rounded-xl text-sm transition-all border border-white/10"
@@ -512,7 +512,7 @@ export default function BlogPostArticle({ post, relatedPosts }: BlogPostArticleP
                   </p>
                   <div className="space-y-2 pt-2">
                     <a
-                      href="https://wa.me/917008381630?text=Hi%20Sociodigit%2C%20I%20want%20to%20discuss%20SEO%20services%20for%20my%20business%20in%20Bhubaneswar."
+                      href="https://wa.me/919886001422?text=Hi%20Sociodigit%2C%20I%20want%20to%20discuss%20SEO%20services%20for%20my%20business%20in%20Bhubaneswar."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full inline-flex items-center justify-center space-x-2 py-3 px-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl transition-all shadow-lg shadow-emerald-500/20"

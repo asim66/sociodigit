@@ -40,7 +40,7 @@ export default function HospitalityHotelsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   // Quick Crisis Contact Trigger
-  const emergencyWhatsAppUrl = "https://wa.me/917008129798?text=Hello%20Sociodigit%20Team%2C%20our%20hotel%20is%20facing%20an%20urgent%20brand%20impersonation%20%2F%20GMB%20issue.%20Please%20help.";
+  const emergencyWhatsAppUrl = "https://wa.me/919886001422?text=Hello%20Sociodigit%20Team%2C%20our%20hotel%20is%20facing%20an%20urgent%20brand%20impersonation%20%2F%20GMB%20issue.%20Please%20help.";
 
   const defensePillars = [
     {

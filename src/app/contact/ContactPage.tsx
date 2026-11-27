@@ -184,7 +184,7 @@ const Contact = () => {
                   Need an immediate answer? Chat with our team on WhatsApp.
                 </p>
                 <a 
-                  href="https://wa.me/917008381630" 
+                  href="https://wa.me/919886001422" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn-primary w-full flex justify-center items-center space-x-2 !py-3 relative z-10"

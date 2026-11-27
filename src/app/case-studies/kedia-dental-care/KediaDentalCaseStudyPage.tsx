@@ -70,7 +70,7 @@ Full Case Study URL: https://sociodigit.in/case-studies/kedia-dental-care`;
             </button>
 
             <a
-              href="https://wa.me/917008381630?text=Hi%20Sociodigit%20team%2C%20I%20reviewed%20your%20Kedia%20Dental%20Care%20case%20study%20and%20would%20like%20to%20discuss%20growing%20our%20healthcare%20practice."
+              href="https://wa.me/919886001422?text=Hi%20Sociodigit%20team%2C%20I%20reviewed%20your%20Kedia%20Dental%20Care%20case%20study%20and%20would%20like%20to%20discuss%20growing%20our%20healthcare%20practice."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 border border-emerald-500/30 transition-colors"
@@ -868,7 +868,7 @@ Full Case Study URL: https://sociodigit.in/case-studies/kedia-dental-care`;
 
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <a
-                href="https://wa.me/917008381630?text=Hi%20Sociodigit%20team%2C%20I%20reviewed%20your%20Kedia%20Dental%20Care%20case%20study%20and%20would%20like%20to%20discuss%20growing%20our%20healthcare%20practice."
+                href="https://wa.me/919886001422?text=Hi%20Sociodigit%20team%2C%20I%20reviewed%20your%20Kedia%20Dental%20Care%20case%20study%20and%20would%20like%20to%20discuss%20growing%20our%20healthcare%20practice."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-6 py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl text-sm transition-all shadow-lg shadow-emerald-500/20"

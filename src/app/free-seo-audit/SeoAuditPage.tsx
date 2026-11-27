@@ -1180,7 +1180,7 @@ export default function SeoAuditPage() {
                   </button>
 
                   <a
-                    href={`https://wa.me/917008381630?text=${encodeURIComponent(
+                    href={`https://wa.me/919886001422?text=${encodeURIComponent(
                       `Hi Sociodigit, I ran the free SEO preview on ${
                         auditData?.hostname || urlInput || "my website"
                       } and would like to discuss a full SEO & performance audit.`

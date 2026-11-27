@@ -80,7 +80,7 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Sticky WhatsApp Button */}
       <a
-        href="https://wa.me/917008381630"
+        href="https://wa.me/919886001422"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp"

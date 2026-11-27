@@ -147,7 +147,7 @@ export default function HotelFraudControl() {
       `My contact number is: ${whatsappNumber}\n\n` +
       `Please send me the GMB Integrity & Fraud Audit Report!`
     );
-    return `https://wa.me/917008381630?text=${text}`;
+    return `https://wa.me/919886001422?text=${text}`;
   };
 
   const scrollToForm = () => {
@@ -218,7 +218,7 @@ export default function HotelFraudControl() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <a
-              href="https://wa.me/917008381630?text=Hi%20Sociodigit%2C%20I%20want%20to%20know%20how%20to%20protect%20my%20hotel%20from%20Google%20Map%20scammers%20and%20fake%20listings."
+              href="https://wa.me/919886001422?text=Hi%20Sociodigit%2C%20I%20want%20to%20know%20how%20to%20protect%20my%20hotel%20from%20Google%20Map%20scammers%20and%20fake%20listings."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline w-full sm:w-auto flex items-center justify-center gap-2 text-base md:text-lg px-8 py-5 cursor-pointer text-white/90 hover:text-white"
@@ -1310,7 +1310,7 @@ export default function HotelFraudControl() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <a
-              href="https://wa.me/917008381630?text=Hi%20Sociodigit%2C%20I%20need%20urgent%20help%20protecting%20my%20hotel%20from%20Google%20Maps%20fraud."
+              href="https://wa.me/919886001422?text=Hi%20Sociodigit%2C%20I%20need%20urgent%20help%20protecting%20my%20hotel%20from%20Google%20Maps%20fraud."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline flex items-center justify-center gap-2 text-base md:text-lg px-8 py-5 w-full sm:w-auto cursor-pointer text-white/90 hover:text-white"
