@@ -69,10 +69,10 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <SmoothScrollProvider>
       <ScrollProgressBar />
-    <div className="relative min-h-screen flex flex-col bg-deep-space-blue text-white">
+    <div className="relative min-h-dvh flex flex-col bg-deep-space-blue text-white overflow-x-clip">
       <Navbar />
       
-      <main className="flex-grow">
+      <main className="flex-grow min-w-0">
         {children}
       </main>
 
@@ -83,11 +83,10 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
         href="https://wa.me/917008381630"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 left-4 md:left-8 z-40 w-12 h-12 md:w-14 md:h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 group"
+        aria-label="Chat with us on WhatsApp"
+        className="fixed bottom-4 left-3 sm:bottom-6 sm:left-4 md:left-8 z-40 w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 group"
       >
-
-
-        <MessageCircle size={32} />
+        <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
         <span className="absolute left-full ml-4 px-4 py-2 glass text-white text-sm font-bold rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-white/10">
           Chat with us
         </span>
@@ -117,7 +116,7 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-lg glass p-10 rounded-[2.5rem] shadow-2xl text-center border-white/10 neon-border overflow-hidden"
+              className="relative w-full max-w-lg glass p-6 sm:p-10 rounded-3xl sm:rounded-[2.5rem] shadow-2xl text-center border-white/10 neon-border overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-full grid-bg opacity-10 -z-10"></div>
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-orange/20 rounded-full blur-3xl -z-10" />
@@ -125,17 +124,17 @@ const ClientLayout: React.FC<LayoutProps> = ({ children }) => {
               <button 
                 onClick={closeExitPopup}
                 aria-label="Close dialog"
-                className="absolute top-6 right-6 text-white/40 hover:text-white transition-colors"
+                className="absolute top-5 right-5 sm:top-6 sm:right-6 text-white/40 hover:text-white transition-colors"
               >
                 <X size={24} />
               </button>
               
-              <div className="w-20 h-20 bg-brand-orange/10 text-brand-orange rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-[0_0_20px_rgba(0,85,255,0.2)]">
-                <Sparkles size={40} />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-brand-orange/10 text-brand-orange rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8 shadow-[0_0_20px_rgba(0,85,255,0.2)]">
+                <Sparkles size={34} />
               </div>
               
-              <h3 className="text-3xl font-display font-bold mb-4 text-white">Wait! Before you go...</h3>
-              <p className="text-white/60 mb-8 text-lg">
+              <h3 className="text-2xl sm:text-3xl font-display font-bold mb-3 sm:mb-4 text-white">Wait! Before you go...</h3>
+              <p className="text-white/60 mb-6 sm:mb-8 text-base sm:text-lg">
                 Get our exclusive <span className="text-brand-orange font-bold">"SaaS Scaling Guide"</span> and a free 30-minute tech audit for your startup.
               </p>
               

@@ -24,7 +24,7 @@ const Logo: React.FC<LogoProps> = ({ className = "", showIcon = true, theme = 'd
             width={160}
             height={42}
             decoding="async"
-            className="h-12 lg:h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:drop-shadow-[0_0_25px_rgba(232,66,26,0.5)] transition-all duration-300"
+            className="h-9 sm:h-11 lg:h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(232,66,26,0.3)] hover:drop-shadow-[0_0_25px_rgba(232,66,26,0.5)] transition-all duration-300"
           />
         </picture>
       </div>

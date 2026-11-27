@@ -177,9 +177,9 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark' }) => {
         </div>
       </div>
 
-      <div className={`transition-all duration-500 ${scrolled ? 'py-3' : 'py-6'}`}>
-        <div className="container-custom flex justify-between items-center">
-          <div className="flex items-center space-x-12">
+      <div className={`transition-all duration-500 ${scrolled ? 'py-2.5 sm:py-3' : 'py-4 sm:py-6'}`}>
+        <div className="container-custom flex justify-between items-center gap-2">
+          <div className="flex items-center space-x-4 sm:space-x-12 min-w-0">
             <Link href="/" onClick={() => setActiveMegaMenu(null)}>
               <Logo theme={theme} />
             </Link>

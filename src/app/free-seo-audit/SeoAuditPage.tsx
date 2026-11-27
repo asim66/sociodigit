@@ -515,7 +515,7 @@ export default function SeoAuditPage() {
             </div>
 
             {/* Top Overview Scorecard */}
-            <div className="p-8 md:p-10 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-2xl shadow-2xl relative overflow-hidden">
+            <div className="p-5 sm:p-8 md:p-10 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-2xl shadow-2xl relative overflow-hidden">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                 {/* Overall Score Circle */}
                 <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
@@ -597,11 +597,11 @@ export default function SeoAuditPage() {
                 </div>
 
                 {/* 4 Category Score Pills */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full lg:w-auto">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full lg:w-auto">
                   {Object.entries(auditData.categories).map(([key, cat]) => (
                     <div
                       key={key}
-                      className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 text-center min-w-[120px]"
+                      className="p-3 sm:p-4 rounded-2xl bg-white/[0.02] border border-white/5 text-center min-w-0"
                     >
                       <div className={`text-2xl font-bold mb-1 ${getScoreColor(cat.score).split(" ")[0]}`}>
                         {cat.score}

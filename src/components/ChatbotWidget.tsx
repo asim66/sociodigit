@@ -346,8 +346,19 @@ export default function ChatbotWidget() {
 .sd-gone { display: none !important; }
 
 @media (max-width: 420px) {
-  #sd-chat { width: calc(100vw - 18px); right: 9px; bottom: 94px; height: 520px; }
+  #sd-chat {
+    width: calc(100vw - 16px);
+    max-width: 375px;
+    right: 8px;
+    bottom: 84px;
+    height: min(500px, calc(100dvh - 104px));
+  }
   #sd-launcher { right: 12px; bottom: 16px; }
+}
+@media (max-width: 360px) {
+  #sd-launcher { width: 50px; height: 50px; border-radius: 14px; right: 12px; bottom: 16px; }
+  #sd-launcher svg { width: 22px; height: 22px; }
+  #sd-chat { bottom: 76px; height: min(460px, calc(100dvh - 94px)); }
 }
       `;
       document.head.appendChild(style);
